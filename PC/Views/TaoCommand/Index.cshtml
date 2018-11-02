@@ -1,0 +1,348 @@
+﻿@{
+    Layout = "~/Views/Index/_Layout.cshtml";
+    string basePath = Url.Content("~/Content/TaoCommand/");
+}
+
+<link href="../../Themes/default/styles/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet"href="@(basePath)css/style.css">
+
+<div class="ka1st-banner">
+    <div class="ins">
+        <p class="title">卡首屏淘口令</p>
+        <span class="desc">提高宝贝权重＼提高宝贝关键词权重＼补单首选工具</span>
+    </div>
+</div>
+<div class="ka1st-tkl">
+    <div class="ka1st-tkl-main">
+        <h3>生成淘口令</h3>
+        <form id="form1">
+            <input placeholder="关键词(限30个汉字)" id="keyWork" name="keyWork" class="tkl-control" maxlength="30" /><br />
+            <input placeholder="宝贝链接（需为淘宝/天猫链接）" id="goodsLink" name="goodsLink" class="tkl-control" /><br />
+            <input placeholder="备注（限制100个汉字）" id="remark" name="remark" class="tkl-control" maxlength="100" />
+            @*        <button >生成淘口令</button>*@
+            <input type="button" id="btnCreateCommand" class="btnAdd" value="生成淘口令" />
+        </form>
+        <div class="summary">
+            使用卡首屏淘口令，可以生成具有搜索关键词权重的淘口令。<br />
+            每个淘口令有效期为30天(淘宝官方限制)
+        </div>
+    </div>
+    <div class="ka1st-tkl-sidebar">
+        <img src="@(basePath)images/ka1st.jpg"/>
+    </div>
+</div>
+
+<div id="PopInfo" style="display: none;">
+    <div class="ka1st-tklPop" id="ka1st-tklPop">
+        <h3>成功生成淘口令</h3>
+        <p class="summary">微信/QQ群推广文案</p>
+        <div class="tkl-info">淘口令 <span class="tkl" id="taoCommandSpan"></span> 复制这条信息，打开「手机淘宝」选择搜索排名第二的商品立即购买</div>
+        <input type="button" id="btnCopyData" class="btnAdd2" value="一键复制" />
+    </div>
+    <div class="ka1st-shopFormPop" id="ka1st-shopFormPop">
+        <h3>登记店铺信息</h3>
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" placeholder="请输入手机号码" class="form-control" id="txtMobile" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-8">
+                        <input placeholder="短信验证码" class="form-control" id="txtCheckcode" />
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="button" class="btn btn-default" style="width: 100%;" value="发送验证码" id="btngetcode" onclick="getCode()" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" placeholder="请输入店铺名" class="form-control" id="txtShopName" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" placeholder="请输入姓名" class="form-control" id="txtName" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" placeholder="请输入QQ号" class="form-control" id="txtQQ" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" placeholder="请输入地址" class="form-control" id="txtAddress" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12 submi">
+                        <input type="button" value="提交" class="btnAdd2" id="btnSubmit" onclick="submitData()" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script src="/Scripts/plugins/layer/layer.min.js"></script>
+    <script src="../../Scripts/clipboard.min.js"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+    <script type="text/javascript">
+
+        var openIndex = -1;
+        var taoCommandhtml = null;
+        var shopHtml=null;
+
+        var verificationCodeIntervalTime = @ViewData["WaitSeconds"];
+        var countdown = verificationCodeIntervalTime;
+        var constCountdown = verificationCodeIntervalTime;
+        var timer = null;
+        var timerMsg = null;
+        var cname =null;
+
+        $(function () {   
+            cname = returnCitySN["cname"]; 
+
+            var clipboard = new Clipboard('#btnCopyData');
+            clipboard.on('success', function (e) {
+                alert('复制成功!')
+                e.clearSelection();
+            });
+            clipboard.on('error', function (e) {
+                alert('复制失败，请手动复制')
+            });
+
+
+            taoCommandhtml = $("#ka1st-tklPop").prop("outerHTML");
+            $("#ka1st-tklPop").prop("outerHTML", ''); 
+
+            shopHtml = $("#ka1st-shopFormPop").prop("outerHTML");
+            $("#ka1st-shopFormPop").prop("outerHTML", ''); 
+
+
+            $("#loginDiv").hide();
+
+            $("#btnCreateCommand").click(function () {
+
+                var keyWork = $.trim($('#keyWork').val());
+                var goodsLink = $.trim($('#goodsLink').val());
+                
+                if (keyWork == "") { 
+                    alert("请输入正确的关键词");
+                    return;
+                }  
+                if (goodsLink == "") {
+                    alert("请输入正确的宝贝地址"); 
+                    return;
+                }  
+                
+
+                $.ajax({
+                    url: '/TaoCommand/CreateTaoCommand',
+                    data: $('#form1').serialize(),
+                    type: 'post',
+                    async: false,
+                    cache: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        if (response.Success == -1) {
+                            try {
+                                PopShopForm(); 
+                                $("#txtAddress").val(cname);
+                            } catch (e) {
+                                alert("请先填写资料2");
+                            }
+                            return;
+                        } else {
+                            if (response.Success == 0) {
+                                alert(response.ErrorMessage);
+                            } else {
+                                PopTklTips();
+                                $("#taoCommandSpan").html(response.TaoCommand);
+                                $("#btnCopyData").attr("data-clipboard-text", response.TaoCommand); 
+                                //$('#keyWork').val('');
+                                //$('#goodsLink').val('');
+                                //$('#remark').val('');
+                            }
+                        }
+                    },
+                    error: function (data) {
+                        alert("生成淘口令失败！");
+                    }
+                });
+            });
+        });
+
+
+        //获取验证码
+        function getCode() {
+            var mobile = $.trim($("#txtMobile").val());
+            var pattern = /^((13)|(15)|(17)|(18))[0-9]{9}$/;           // /^(?:13\d|15\d|18\d)\d{5}(\d{3}|\*{3})$/;
+            if (!pattern.test(mobile)) {
+                alert("请输入正确的手机号码");
+                return false;
+            }
+
+            //发送验证码
+            $.ajax({
+                type: "post",
+                url: "/TaoCommand/GetCode?m=" + mobile,
+                dataType: "json",
+                beforeSend: function myfunction() {
+                    //禁用
+                    $('#btngetcode').attr("disabled", true);
+                    $('#btngetcode').val("发送中");
+                },
+                async: true,
+                success: function (response) { 
+                    //var r = eval("(" + response + ")");
+                    if (response.success == "err") {
+                        //解禁发送按钮
+                        $('#btngetcode').attr("disabled", false);
+                        $('#btngetcode').val("获取验证码");
+
+                        alert(response.msg);
+                    }
+                    else {
+                        if (countdown == 0) {
+                            countdown = verificationCodeIntervalTime;
+                        }
+                        var $val = $('#btngetcode');                        
+                        clearInterval(timer);
+                        timer = setInterval(function () { settime($val) }, 1000);
+                        alert("验证码已发送，请注意查收");
+                    }
+                }, error: function (response) {
+                }
+            });
+
+        }
+
+        //倒计时
+        function settime(val) {
+            if (countdown == 0) {
+                val.attr("disabled", false);
+                val.val("获取验证码");
+
+            }
+            else {
+                val.attr("disabled", true);
+                val.val("重新发送 "+countdown);
+                countdown--;
+            }
+        }
+          
+        //提交数据
+        function submitData() {
+            //btnSubmit
+            var Mobile = $.trim($("#txtMobile").val());
+            var Checkcode = $.trim($("#txtCheckcode").val());
+            var ShopName = $.trim($("#txtShopName").val());
+            var Name = $.trim($("#txtName").val());
+            var QQ = $.trim($("#txtQQ").val());
+            var Address = $.trim($("#txtAddress").val());
+
+            if (Mobile == "") {
+                alert("请输入手机号码");
+                return false;
+            } else {
+                var pattern = /^((13)|(15)|(17)|(18))[0-9]{9}$/;          // /^(?:13\d|15\d|17\d|18\d)\d{5}(\d{3}|\*{3})$/;
+                if (!pattern.test(Mobile)) {
+                    alert("请输入正确的手机号码");
+                    return false;
+                }
+            }
+
+            if (Checkcode == "") {
+                alert("请输入收到的短信验证码");
+                return false;
+            }
+
+            if (ShopName == "") {
+                alert("请输入店铺名");
+                return false;
+            }
+
+            if (Name == "") {
+                alert("请输入姓名");
+                return false;
+            }
+
+            if (QQ == "") {
+                alert("请输入QQ号");
+                return false;
+            }else{ 
+                var pattern = /^\d{5,}$/;          
+                if (!pattern.test(QQ)) {
+                    alert("请输入正确的QQ号（5位数以上）");
+                    return false;
+                }
+            }
+
+            if (Address == "") {
+                alert("请输入地址");
+                return false;
+            }
+
+            $('#btnSubmit').prop("disabled", "disabled");
+
+            $.ajax({
+                type: "post",
+                url: "/TaoCommand/AddShopInfo",
+                data: { Mobile: Mobile, Checkcode: Checkcode, ShopName: ShopName, Name: Name, QQ: QQ, Address: Address },
+                dataType: "json",
+                async: false,
+                beforeSend: function() {
+                    //禁用
+                    
+                },
+                async: false,
+                success: function (response) {
+                    //解禁提交按钮
+                    $('#btnSubmit').removeProp("disabled");
+                    if (response.Success == 0) { 
+                        alert(response.ErrorMessage);
+                    }
+                    else {
+                        layer.close(openIndex);
+                        $("#btnCreateCommand").click();
+                    }
+                }, error: function (response) {
+                }
+            });
+
+        }
+
+        function PopTklTips() {
+            layer.open({
+                type: 1,
+                title: false,
+                skin: 'smsPop-bg',
+                closeBtn: 1, //不显示关闭按钮
+                area: ['608px', '390px'],
+                anim: 2,
+                shadeClose: true, //开启遮罩关闭
+                content: taoCommandhtml
+            });
+        }
+        function PopShopForm() {
+            openIndex = layer.open({
+                id: 'shopForm',
+                type: 1,
+                title: false,
+                skin: 'smsPop-bg',
+                closeBtn: 0, //不显示关闭按钮
+                area: ['500px', '500px'],
+                anim: 2,
+                shadeClose: true, //开启遮罩关闭
+                content: shopHtml
+            });
+        }
+    </script>
+}

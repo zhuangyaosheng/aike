@@ -1,0 +1,173 @@
+
+
+
+.merchant-form h4{
+    color: #333333;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 15px 0;
+}
+.merchant-form table {
+    text-align: center;
+    width: 585px;
+    margin:0 auto;
+}
+.merchant-form table  td{
+    padding: 10px 0;
+    font-size: 20px;
+}
+.merchant-form table  tr td:only-child{
+    text-align: center;
+}
+.merchant-form table  td:first-child{
+    width: 30%;
+    color: #999999;
+    vertical-align: middle;
+    text-align: right;
+}
+.merchant-form table  td i{
+    display: inline-block;
+    vertical-align: middle;
+    color: #ff0000;
+    font-style: normal;
+}
+.merchant-form table  td input{
+    border:1px solid #cccccc;
+    padding:10px;
+    width: 80%;
+}
+.merchant-form table  td input[type='button']{
+    background-color: #63a1ff;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 20px;
+    border-radius: 50px;
+    max-width: 187px;
+    width: 55%;
+    cursor: pointer;
+    margin:0 auto;
+}
+.hp-heade-v2 {
+    height:563px;
+    width:100%;
+    width: auto;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    background-color: #5d8def;
+}
+.hp-heade-v2 .pic{
+    width:1920px;
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-960px;
+}
+.mp-section{
+    min-width:1200px;
+}
+.mp-section .p1{
+    background-color:#d7e7f9;
+    padding-bottom:40px;
+}
+.mp-section .inner{
+    width:862px;
+    margin:0 auto;
+    position:relative;
+}
+.mp-section .p1-top{
+    position:absolute;
+    top:-81px;
+}
+.mp-part-2{
+    background:url("../images/p2-1.jpg") center center no-repeat;
+    height:694px;
+
+}
+.mp-section .p3,
+.mp-section .p4{
+    width:891px;
+    margin:0 auto;
+}
+.mp-form{
+    background-color:#f8fafc;
+}
+.mp-form .inner{
+    width:891px;
+    margin:0 auto;
+}
+.mp-form h1{
+    font-size:36px;
+    text-align:center;
+    padding-top:55px;
+    color:#333333;
+}
+.mp-form .desc{
+    color:#666666;
+    text-align:center;
+    font-size:18px;
+    padding:20px 0 45px 0;
+}
+.mp-form .desc .b{
+    color:#e70013;
+}
+.form-table{
+    width:100%;
+}
+.merchant-form table label{
+    font-size:14px;
+    color:#000000;
+}
+.mp-section .p5{
+    width:968px;
+    margin:0 auto;
+}
+.mp-section .p5 h1{
+    font-size:24px;
+    color:#33373a;
+    padding:48px 0;
+    line-height:1;
+    text-align:center;
+}
+.mp-section .p5 .list {
+    margin-left:-7px;
+    margin-right:-7px;
+}
+.mp-section .p5 .list li{
+    float:left;
+    margin:0 7px;
+}
+.mp-section .p5 .link{
+    padding:33px 0;
+    text-align:center;
+}
+
+
+.scroll-menu{
+    display:block;
+}
+.mp-menu-rt{
+    display:none;
+    background:url(../images/menu.png) no-repeat;
+    width:202px;
+    height:399px;
+    position:fixed;
+    right:0;
+    top:35%;
+}
+.mp-menu-rt a{
+    display:block;
+    position:absolute;
+    width:102px;
+    height:30px;
+    left:53px;
+}
+.mp-menu-rt .a1{
+    top:168px;
+}
+.mp-menu-rt .a2{
+    top:219px;
+}
+.mp-menu-rt .a3{
+    top:254px;
+}

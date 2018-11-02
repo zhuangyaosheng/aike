@@ -1,0 +1,1740 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 12px;
+    background-color: #f5f5f5;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    line-height: 1.414;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+text-justify {
+    text-align: justify !important;
+}
+
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-lowercase {
+    text-transform: lowercase !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+.font-weight-light {
+    font-weight: 300 !important;
+}
+
+.font-weight-normal {
+    font-weight: 400 !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.font-italic {
+    font-style: italic !important;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.min-width {
+    min-width: 1000px;
+    margin: 0 auto;
+}
+
+.inner-width {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.layer-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.72);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+}
+
+.feitao-head__content {
+    height: 100%;
+    position: relative;
+}
+
+.feitao-head {
+    height: 313px;
+    position: relative;
+    background: url("../images/heand.jpg") top center no-repeat;
+}
+
+.feitao-hc {
+    background-color: #f0f0f0;
+    min-height: 618px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.feitao-tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 75px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+    .feitao-tabs > li {
+        float: left;
+        position: relative;
+        top: 9px;
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+        text-align: center;
+        width: 25%;
+        height: 66px;
+        line-height: 66px;
+        background-color: #f8f8f8;
+        color: #a0a0a0;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+#keyWorkCategory {
+    cursor: pointer;
+}
+
+.feitao-tabs > li.active {
+    top: 0;
+    height: 75px;
+    line-height: 75px;
+    background-color: #ffffff;
+    color: #333333;
+    border-right: 1px solid #e9e9e9;
+    border-left: 1px solid #e9e9e9;
+    border-bottom: none;
+}
+
+.feitao-tabs > li:first-child.active {
+    border-left: none;
+}
+
+.feitao-tabs > li:last-child.active {
+    border-right: none;
+}
+
+.feitao-item:not(:first-child) {
+    display: none;
+}
+
+.feitao-item {
+    overflow: hidden;
+    padding: 32px;
+    min-height: 413px;
+    text-align: left;
+    background-color: #fff;
+}
+
+    .feitao-item:last-child .feitao-item__bd {
+        padding-top: 40px;
+    }
+
+        .feitao-item:last-child .feitao-item__bd .feitao-item__bd--cell:nth-last-of-type(2) {
+            margin-bottom: 60px;
+        }
+
+.feitao-item__bd {
+    display: inline-block;
+    width: 574px;
+    border-right: 1px dashed #e9e9e9;
+}
+
+.feitao-item__bd--cell {
+    line-height: 40px;
+    height: 40px;
+    margin-bottom: 25px;
+}
+
+    .feitao-item__bd--cell label {
+        display: inline-block;
+        width: 60px;
+        margin-right: 10px;
+        text-align: right;
+    }
+
+    .feitao-item__bd--cell .feitao-item__input {
+        width: 466px;
+        height: 37px;
+        line-height: 37px;
+        padding: 0 15px;
+        border: 1px solid #e5e6e7;
+        background-color: transparent;
+    }
+
+        .feitao-item__bd--cell .feitao-item__input::-webkit-input-placeholder {
+            color: #999;
+        }
+
+        .feitao-item__bd--cell .feitao-item__input::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #999;
+        }
+
+        .feitao-item__bd--cell .feitao-item__input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #999;
+        }
+
+        .feitao-item__bd--cell .feitao-item__input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #999;
+        }
+
+.feitao-item__input + .addon {
+    width: 28px;
+    height: 36px;
+    text-align: center;
+    display: inline-block;
+    background-color: #f1f1f1;
+    position: relative;
+    left: -29px;
+    top: 2px;
+}
+
+.feitao-item__input + .addlink {
+    width: 28px;
+    height: 35px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: -35px;
+    top: 0;
+    cursor:pointer;
+}
+
+.feitao-item__bd--cell.feitao-item__bd--cellset {
+    margin-bottom: 5px;
+}
+
+    .feitao-item__bd--cell.feitao-item__bd--cellset + .feitao-item__bd--cell {
+        margin-bottom: 10px;
+    }
+
+        .feitao-item__bd--cell.feitao-item__bd--cellset + .feitao-item__bd--cell .feitao-item__input {
+            margin-top: 3px;
+            margin-left: 73px;
+        }
+
+.addGoodsLink {
+    width: 94px;
+    height: 27px;
+    line-height: 27px;
+    display: inline-block;
+    color: #427fdb;
+    border: 1px solid #427fdb;
+    border-radius: 3px;
+    margin-right: 32px;
+    text-align: center;
+    position: relative;
+    top: -5px;
+}
+
+.feitao-item__form--submit {
+    background-color: #379ef0;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    height: 48px;
+    line-height: 48px;
+    width: 174px;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.feitao-item__ft {
+    display: inline-block;
+    width: 335px;
+    height: 260px;
+    margin-left: 20px;
+    position: relative;
+    vertical-align: top;
+}
+#rememberme { 
+     cursor:pointer;
+}
+
+    .feitao-item__ft p {
+        color: #333333;
+        font-size: 13px;
+        margin-top: 0;
+    }
+
+.feitao-item__tips {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .feitao-item__tips li {
+        font-size: 12px;
+        color: #666666;
+        line-height: 1.8;
+        margin-bottom: 10px;
+    }
+
+        .feitao-item__tips li > em.cost {
+            color: #cc3333;
+            font-style: normal;
+        }
+
+.icon-tip {
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+    background: url("../images/icon-tip.png") center center no-repeat;
+}
+
+.icon-link {
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+    color: #438beb;
+    font-size: 20px;
+    font-style: normal;
+    position: relative;
+    top: -15px;
+}
+
+#categorylayer .layer-alert {
+    border-radius: 0;
+    width: 923px;
+    height: 544px;
+    margin-left: -461px;
+    margin-top: -272px;
+}
+
+    #categorylayer .layer-alert .layer-bd {
+        padding: 0;
+        height: 100%;
+    }
+
+    #categorylayer .layer-alert .layer-hd {
+        position: absolute;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        padding: 0;
+        z-index: 99;
+    }
+
+        #categorylayer .layer-alert .layer-hd .wrap-layer__close {
+        }
+
+.category-scrolltab {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+}
+
+.category-scrolltab__nav {
+    width: 150px;
+    height: 100%;
+    display: inline-block;
+    overflow-y: auto;
+}
+
+.category-scrolltab__item {
+    display: block;
+    width: 132px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    background-color: #f7f7f7;
+}
+
+.category-scrolltab__title {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #fff;
+}
+
+.category-scrolltab--active {
+    background-color: #fff;
+    padding: 1px;
+}
+
+    .category-scrolltab--active .category-scrolltab__title {
+        color: #379ef0;
+        border-left: 3px solid #379ef0;
+    }
+
+.category-scrolltab__content {
+    display: inline-block;
+    vertical-align: top;
+    width: 768px;
+    height: 100%;
+    padding-bottom: 20px;
+    overflow-y: auto;
+}
+
+.category-scrolltab__content-title {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #000000;
+    position: relative;
+    margin: 5px;
+}
+
+    .category-scrolltab__content-title:before, .category-scrolltab__content-title:after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        width: 50px;
+        height: 1px;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    .category-scrolltab__content-title:before {
+        margin-left: -80px;
+    }
+
+    .category-scrolltab__content-title:after {
+        margin-left: 30px;
+    }
+
+.category-scrolltab__list {
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+    .category-scrolltab__list li {
+        float: left;
+        color: #ccc;
+        font-size: 15px;
+        border: 1px solid #ccc;
+        width: 140px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 3px;
+        margin: 5px;
+    }
+
+        .category-scrolltab__list li:hover, .category-scrolltab__list li.active {
+            color: #fff;
+            background-color: #379ef0;
+            border: none;
+        }
+
+.feitao-tb {
+    width: 100%;
+    min-height: 835px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+    .feitao-tb form {
+        margin: 0 auto;
+        background-color: #fff;
+        width: 1000px;
+        height: 100%;
+        padding: 20px 40px 40px;
+    }
+
+    .feitao-tb .feitao-tb__hd {
+        text-align: left;
+        display: inline-block;
+        width: 998px;
+        height: 53px;
+        line-height: 53px;
+        vertical-align: middle;
+    }
+
+        .feitao-tb .feitao-tb__hd h3 {
+            margin: 0;
+            display: inline-block;
+            text-align: left;
+            width: 400px;
+        }
+
+    .feitao-tb .feitao-tb__hd--fns {
+        display: inline-block;
+        text-align: right;
+        width: 515px;
+    }
+
+        .feitao-tb .feitao-tb__hd--fns > * {
+            margin-left: 10px;
+        }
+
+        .feitao-tb .feitao-tb__hd--fns select {
+            height: 38px;
+            line-height: 38px;
+            width: 206px;
+            border: 1px solid #cccccc;
+            cursor:pointer;
+        }
+
+.feitao-tb__hd--fns .feitao-btn--search {
+    border: 1px solid #1ab394;
+    background-color: transparent;
+    color: #1ab394;
+    border-radius: 3px;
+    height: 38px;
+    line-height: 38px;
+    width: 83px;
+    cursor:pointer;
+}
+
+.feitao-tb__hd--fns .feitao-btn--generate {
+    background-color: #1ab394;
+    color: #fff;
+    border-radius: 3px;
+    height: 38px;
+    line-height: 38px;
+    width: 113px;
+    border: none;
+    cursor:pointer;
+}
+
+table.feiTaoCommand {
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid #e4eaed;
+    border-right: 1px solid #e4eaed;
+}
+
+    table.feiTaoCommand thead td {
+        height: 37px;
+        background-color: #f9fbfd;
+    }
+
+    table.feiTaoCommand tbody td {
+        height: 66px;
+    }
+
+    table.feiTaoCommand td {
+        color: #85919b;
+        border-top: 1px solid #e4eaed;
+        border-left: 1px solid #e4eaed;
+    }
+
+        table.feiTaoCommand td a {
+            color: #0f58ad;
+        }
+
+        table.feiTaoCommand td i {
+            margin-right: 5px;
+        }
+
+.td select {
+    height: 38px;
+    line-height: 38px;
+    width: 106px;
+    border: 1px solid #cccccc;
+    cursor:pointer;
+}
+
+
+.feitao-head__form {
+    width: 1000px;
+    min-height: 398px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    border: 1px solid #e9e9e9;
+    border-top: none;
+    /*background: url("../images/head-from.png") center center no-repeat;*/
+}
+
+.feitao-head__form--cell {
+    height: 40px;
+    margin-right: 114px;
+}
+
+.feitao-head__form .feitao-head__form--cell:nth-child(2) {
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+.feitao-head__form--submit {
+    position: absolute;
+    width: 114px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border: 0;
+    background: transparent;
+}
+
+.feitao-head__input {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    border: 0;
+    background-color: transparent;
+}
+
+.feitao-head-nav {
+    position: absolute;
+    top: 10px;
+    left: 150px;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+    .feitao-head-nav a {
+        display: inline-block;
+        vertical-align: middle;
+        color: #FFFFFF;
+        margin: 0 30px;
+        padding: 2px 5px;
+    }
+
+    .feitao-head-nav .active {
+        border-bottom: 2px #FFFFFF solid;
+    }
+
+.head-link {
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    top: 16px;
+    border-radius: 15px;
+    color: #ffffff;
+    border: 1px #ffffff solid;
+}
+
+.hm-hd-tips {
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 5px 15px 0 15px;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 122px;
+    height: 52px;
+    background: url("../images/logo.png") no-repeat;
+}
+
+.btn-login {
+    right: 90px;
+}
+
+.btn-reg {
+    background-color: #f5f5f5;
+    right: 0;
+    color: #1171d4;
+}
+
+.login-card {
+    width: 170px;
+    position: absolute;
+    top: 16px;
+    right: 0;
+    z-index: 8;
+}
+
+.login-info {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 0 18px;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+    .login-info .icon-p {
+        display: inline-block;
+        width: 19px;
+        height: 19px;
+        vertical-align: middle;
+        background: url("../images/icon-p.png") center center no-repeat;
+        margin-right: 8px;
+        margin-top: -5px;
+    }
+
+.icon-down {
+    display: inline-block;
+    width: 8px;
+    height: 4px;
+    background: url("../images/icon-down.png") center no-repeat;
+    margin-top: 13px;
+    float: right;
+}
+
+.input-group-addon .icon-down {
+    margin-top: 0;
+}
+
+.user-profile {
+    width: 100%;
+    border: 1px #e0e0e0 solid;
+    background-color: #ffffff;
+    font-size: 12px;
+    color: #3e3e3e;
+    display: none;
+}
+
+    .user-profile .cell {
+        display: block;
+        margin: 0 4px;
+        padding: 10px 8px;
+        border-top: 1px #e0e0e0 solid;
+        overflow: hidden;
+    }
+
+    .user-profile .amount {
+        color: #cc3333;
+    }
+
+    .user-profile .cz {
+        color: #1181f5;
+        display: block;
+    }
+
+    .user-profile .cell:first-child {
+        border-top: 0;
+    }
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.user-profile .login-out {
+    display: block;
+    color: #999999;
+    background-color: #efefef;
+    margin: 0;
+    text-align: center;
+}
+
+.login-card:hover .user-profile {
+    display: block;
+}
+
+.feitao-hm {
+    background-color: #f5f5f5;
+    padding-bottom: 60px;
+}
+
+.feitao-hm__hd {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.feitao-hm__hd--tl {
+    font-size: 26px;
+    color: #333333;
+}
+
+.feitao-hm__hd--desc {
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+}
+
+.feitao-head__nav-tl {
+    font-size: 18px;
+    color: #333333;
+}
+
+.feitao-head__nav-ds {
+    font-size: 14px;
+    color: #666666;
+}
+
+.feitao-head__nav-text {
+    text-align: center;
+    padding: 15px 0;
+    line-height: 1.6;
+}
+
+.feitao-hm__bd {
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+    .feitao-hm__bd .col:first-child {
+        float: left;
+    }
+
+    .feitao-hm__bd .col:last-child {
+        float: right;
+    }
+
+.feitao-footer {
+    background-color: #1a232b;
+}
+
+.feitao-footer__contact {
+    color: #fcfdfe;
+    font-size: 16px;
+    text-align: center;
+    padding: 18px 0;
+    border-bottom: 1px #2a3641 solid;
+}
+
+    .feitao-footer__contact .phone {
+        font-size: 40px;
+    }
+
+.feitao-copyright {
+    color: #858686;
+    text-align: center;
+    line-height: 36px;
+}
+
+.wrap-layer {
+    width: 460px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    bottom: auto;
+    margin-top: -200px;
+    margin-left: -230px;
+    overflow: hidden;
+}
+
+.wrap-layer__close {
+    display: block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: url("../images/icon-close.png") center center no-repeat;
+}
+
+.wrap-layer--login {
+    width: 460px;
+    margin-top: -240px;
+    margin-left: -230px;
+}
+
+.wrap-layer--reg {
+    margin-top: -291px;
+}
+
+.wrap-layer--forget {
+    margin-top: -188px;
+}
+
+.layer-hd {
+    position: relative;
+    font-size: 24px;
+    height: 58px;
+    line-height: 58px;
+    padding-left: 24px;
+    color: #333333;
+    background-color: #f6f6f6;
+    border-bottom: 1px #e5e5e5 solid;
+}
+
+.layer-bd {
+    padding: 35px 55px;
+}
+
+.layer__input-box {
+    border: 1px #e4eaec solid;
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 12px;
+    position: relative;
+}
+
+    .layer__input-box:first-child {
+        margin-top: 0;
+    }
+
+    .layer__input-box .input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding: 0 15px;
+        background-color: transparent;
+    }
+
+.v-code-box .input {
+    padding-right: 155px;
+}
+
+.v-code-box .v-code {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 140px;
+    text-align: center;
+    line-height: 40px;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    cursor:pointer;    
+}
+
+.v-code-msBox .input {
+    padding-right: 105px;
+}
+
+.v-code-msBox .v-code {
+    width: 90px;
+    background-color: #e0e1e2;
+    color: #575757;
+    overflow: hidden;
+}
+
+.layer-bd__ft {
+    font-size: 14px;
+    padding: 12px 0;
+    overflow: hidden;
+}
+
+    .layer-bd__ft .remember {
+        color: #778490;
+        cursor:pointer;
+    }
+
+    .layer-bd__ft .findpaw {
+        color: #1181f5;
+    }
+
+        .layer-bd__ft .findpaw a {
+            color: inherit;
+        }
+
+.layer-submit__wp {
+    padding: 15px 0;
+}
+
+.layer-btn-submit {
+    display: block;
+    width: 100%;
+    background-color: #1181f5;
+    height: 42px;
+    border: 0;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 4px;
+    cursor:pointer;
+}
+#moneylayer .layer-submit__wp a {
+    display: inline-block;
+    background-color: #1181f5;
+    width: 150px;
+    line-height: 42px;
+    height: 42px;
+    border: 0;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 4px;
+    cursor:pointer;
+}
+#moneylayer .layer-submit__wp a.layer-btn-cancel {
+    background-color:#999;
+    margin-right:30px;
+}
+#moneylayer .layer-submit__wp a.layer-btn-submit {
+    background-color:#21ba45;
+}
+
+.layer-ft__filedset {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 1px #e1e1e2 solid;
+}
+
+    .layer-ft__filedset legend {
+        text-align: center;
+        color: #666666;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 0 18px;
+    }
+
+.layer-ft__filedset--cns {
+    padding-top: 25px;
+    text-align: center;
+}
+
+.btn-reg__s2 {
+    display: inline-block;
+    width: 134px;
+    height: 36px;
+    background: url("../images/btn-reg.png") center center no-repeat;
+    cursor:pointer;
+}
+
+.btn-login__s2 {
+    display: inline-block;
+    width: 134px;
+    height: 36px;
+    background: url("../images/btn-login.png") center center no-repeat;
+    cursor:pointer;
+}
+
+.icon-warn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+    background: url("../images/icon-warn.png") center center no-repeat;
+}
+
+.layer-bd__ft--tips {
+    color: #778490;
+    font-size: 14px;
+}
+
+.wrap-layer--TbToken .layer-hd {
+    text-align: center;
+    color: #1ba16d;
+}
+
+.tbToken-tl {
+    color: #999999;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tbToken-content {
+    padding: 50px 24px;
+    border: 1px #ff5722 dashed;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tbToken-content__text {
+    color: #ff5722;
+    font-weight: bold;
+}
+
+.tbToken-ft {
+    overflow: hidden;
+}
+
+    .tbToken-ft .col {
+        width: 50%;
+    }
+
+        .tbToken-ft .col:first-child {
+            padding-right: 8px;
+        }
+
+        .tbToken-ft .col:last-child {
+            padding-left: 8px;
+        }
+
+    .tbToken-ft .btn-copy {
+        background-color: #ffffff;
+        color: #666666;
+        border: 1px #dcdcdc solid;
+    }
+
+.layer-alert {
+    width: 460px;
+}
+
+    .layer-alert .layer-hd {
+        background-color: transparent;
+        border-bottom: 0;
+    }
+
+    .layer-alert .layer-bd {
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .layer-alert .tl {
+        color: #cc3333;
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .layer-alert .desc {
+        font-size: 18px;
+        color: #333333;
+    }
+
+    .layer-alert .layer-submit__wp {
+        margin-top: 25px;
+    }
+
+    .layer-alert .layer-btn-submit {
+        margin: 0 auto;
+        font-size: 13px;
+        color: #ffffff;
+        width: 216px;
+        line-height: 42px;
+        background-color: #21ba45;
+    }
+
+.head-ins {
+    height: 75px;
+    background-color: #4884e8;
+}
+
+.feitao-insBody {
+    background-color: #ffffff;
+    margin-top: 47px;
+    padding: 36px 40px;
+}
+
+.feitao-waitBody {
+    margin-bottom: 200px;
+}
+
+.feitao-pay__tl {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.feitao-pay__desc {
+    color: #6b6b6b;
+    font-size: 12px;
+    padding: 10px 0 10px 0;
+}
+
+.feitao-pay__account {
+    font-size: 16px;
+    color: #1181f5;
+    padding: 10px 0 40px 0;
+}
+
+.feitao-pay__row {
+    margin-bottom: 20px;
+}
+
+    .feitao-pay__row .hd {
+        font-size: 16px;
+        color: #333333;
+        margin-bottom: 10px;
+    }
+
+.feitao-pay__amwrap {
+    overflow: hidden;
+}
+
+.feitao-pay__amount {
+    float: left;
+    width: 132px;
+    position: relative;
+    height: 78px;
+    line-height: 78px;
+    font-size: 16px;
+    color: #999999;
+    text-align: center;
+    border: 1px #e5e5e5 solid;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.feitao-pay__amwrap .active {
+    border-color: #1ab394;
+}
+
+    .feitao-pay__amwrap .active:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url("../images/icon-select.png") no-repeat;
+    }
+
+.feitao-pay-input {
+    border: 1px #cccccc solid;
+    height: 45px;
+    padding: 17px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.pay-type {
+    display: inline-block;
+    width: 152px;
+    height: 41px;
+    border: 2px #e5e6e7 solid;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+    .pay-type.active {
+        border-color: #e33b41;
+        position: relative;
+    }
+
+        .pay-type.active:after {
+            content: '';
+            display: block;
+            width: 14px;
+            height: 13px;
+            position: absolute;
+            bottom: 0;
+            right: -1px;
+            background: url("../images/icon-select-red.png");
+        }
+
+.alipay {
+    background-image: url("../images/pay-alipay.png");
+}
+
+.weixinpay {
+    background-image: url("../images/pay-weixin.png");
+}
+
+.feitao-pay__footer {
+    margin: 30px 0 10px 0;
+    border-top: 1px #e5e5e5 solid;
+    padding-top: 44px;
+    text-align: right;
+}
+
+.total-amount {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #999999;
+}
+
+    .total-amount .num {
+        font-size: 28px;
+        color: #4baf50;
+    }
+
+.pay-submit {
+    width: 205px;
+    height: 46px;
+    background-color: #4cb051;
+    border: 0;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-left: 40px;
+    cursor:pointer;
+}
+
+.feitao-pay-wait {
+    padding-left: 54px;
+    padding-right: 54px;
+}
+
+.pay-wait__hd {
+    text-align: center;
+    color: #4cb051;
+    font-size: 36px;
+    padding-top: 38px;
+    padding-bottom: 74px;
+}
+
+.pay-loading {
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    background: url("../images/loading.png") no-repeat;
+    animation: rotate 2s linear infinite;
+}
+
+.pay-wait__hd .text {
+    padding-left: 36px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.feitao-pay-wait__bd {
+    background-color: #f8f8f8;
+    padding: 25px;
+}
+
+    .feitao-pay-wait__bd .feitao-pay__desc {
+        padding-top: 0;
+    }
+
+.pay-order {
+    border-top: 1px #e5e5e5 solid;
+    font-size: 14px;
+    color: #333333;
+    padding-top: 26px;
+}
+
+    .pay-order .th {
+        width: 100px;
+        text-align: right;
+    }
+
+    .pay-order table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .pay-order td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .pay-order .td {
+        padding-left: 30px;
+    }
+
+    .pay-order .lt-td {
+        width: 340px;
+    }
+
+.pay-wait__ft {
+    margin-top: 64px;
+}
+
+.pay-fail {
+    color: #bd6868;
+    border: 1px #e1b4b4 solid;
+    background-color: #fff6f6;
+}
+
+.head-banner {
+    height: 226px;
+    background: url("../images/banner.jpg") center center no-repeat;
+}
+
+.feitao-info {
+    width: 1100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 30px 50px;
+    background-color: #ffffff;
+    min-height: 500px;
+}
+
+.btn-default {
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px 25px;
+    color: #ffffff;
+    background-color: #1ab394;
+    border-radius: 4px;
+}
+
+.feitao-info__hd {
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.feitao-info__hd--tl {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.feitao-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .feitao-table td, .feitao-table th {
+        border: 1px #e4eaec solid;
+    }
+
+    .feitao-table th, .feitao-table .th {
+        font-weight: normal;
+        background-color: #f9fbfd;
+        padding: 10px;
+        font-size: 14px;
+        color: #52606a;
+    }
+
+    .feitao-table td, .feitao-table .td {
+        padding: 20px 8px;
+    }
+
+    .feitao-table a {
+        color: #0f58ad;
+    }
+
+    .feitao-table .icon {
+        vertical-align: middle;
+    }
+
+.icon-del {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url("../images/icon-del.png") center center no-repeat;
+}
+
+.icon-tips {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url("../images/icon-tips.png") center center no-repeat;
+}
+
+.feitao-table .icon {
+    margin: 0 5px;
+}
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+    .pagination > li {
+        display: inline;
+    }
+
+        .pagination > li > a, .pagination > li > span {
+            position: relative;
+            float: left;
+            padding: 6px 12px;
+            margin-left: -1px;
+            line-height: 1.42857143;
+            color: #337ab7;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .pagination > li:first-child > a, .pagination > li:first-child > span {
+            margin-left: 0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .pagination > li:last-child > a, .pagination > li:last-child > span {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
+            z-index: 3;
+            color: #23527c;
+            background-color: #eee;
+            border-color: #ddd;
+        }
+
+    .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+        z-index: 2;
+        color: #fff;
+        cursor: default;
+        background-color: #337ab7;
+        border-color: #337ab7;
+    }
+
+    .pagination > .disabled > a, .pagination > .disabled > a:focus, .pagination > .disabled > a:hover, .pagination > .disabled > span, .pagination > .disabled > span:focus, .pagination > .disabled > span:hover {
+        color: #777;
+        cursor: not-allowed;
+        background-color: #fff;
+        border-color: #ddd;
+    }
+
+.pagination-lg > li > a, .pagination-lg > li > span {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+
+.pagination-lg > li:first-child > a, .pagination-lg > li:first-child > span {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.pagination-lg > li:last-child > a, .pagination-lg > li:last-child > span {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.pagination-sm > li > a, .pagination-sm > li > span {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.pagination-sm > li:last-child > a, .pagination-sm > li:last-child > span {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #f4f4f4;
+    border-color: #DDD;
+    color: inherit;
+    cursor: default;
+    z-index: 2;
+}
+
+.pagination > li > a, .pagination > li > span {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    color: inherit;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 4px 10px;
+    position: relative;
+    text-decoration: none;
+}
+
+.pagination {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+    .pagination > li:first-child > a, .pagination > li:first-child > span {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+
+    .pagination select {
+        height: 28px;
+        border: 1px #DDD solid;
+    }
+
+div.dataTables_info {
+    font-size: 12px;
+    color: #969696;
+    margin-bottom: 10px;
+}
+
+div.dataTables_paginate {
+    float: right;
+    margin: 0;
+}
+
+.dataTables_paginate .pagination {
+    margin: 0;
+}
+
+.feitao-pager {
+    padding: 45px 0 15px 0;
+    overflow: hidden;
+}
+
+.customer-xpense td,
+.customer-xpense .td {
+    color: #7a8893;
+}
+
+.table {
+    display: table;
+    border-collapse: collapse;
+}
+
+    .table .tr {
+        display: table-row;
+    }
+
+    .table .td {
+        display: table-cell;
+    }
+
+.input-group {
+    display: inline-table;
+    vertical-align: middle;
+    position: relative;
+    border-collapse: separate;
+    color: #666666;
+}
+
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    /*background-color: #eee;*/
+    border: 1px solid #e5e6e8;
+    border-radius: 2px;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: auto;
+    display: table-cell;
+}
+
+    .input-group .form-control:first-child,
+    .input-group-addon:first-child,
+    .input-group-btn:first-child > .btn,
+    .input-group-btn:first-child > .btn-group > .btn,
+    .input-group-btn:first-child > .dropdown-toggle,
+    .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+    .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .input-group-addon:first-child {
+        border-right: 0;
+    }
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #e5e6e8;
+    border-radius: 2px;
+    /*-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
+    /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    position: relative;
+    z-index: 2;
+    float: left;
+    margin-bottom: 0;
+}
+
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+
+.input-group-addon:last-child {
+    border-left: 0;
+}
+
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
+.input-group-btn:first-child > .btn:not(:first-child),
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn,
+.input-group-btn:last-child > .dropdown-toggle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group-addon.gray {
+    background-color: #eeeeee;
+}
+
+.input-group-addon.mid {
+    border-left: 0;
+    border-right: 0;
+}
+
+.feitao-info__board {
+    margin-bottom: 40px;
+}
+
+    .feitao-info__board .table {
+        width: 100%;
+    }
+
+.ftao-btn {
+    display: inline-block;
+    border: 1px #1ab394 solid;
+    font-size: 12px;
+    color: #1ab394;
+    padding: 9px 8px;
+    line-height: 1;
+    min-width: 62px;
+    background-color: transparent;
+    border-radius: 2px;
+     cursor:pointer;
+}
+
+    .ftao-btn.primary {
+        background-color: #1ab394;
+        color: #FFFFFF;
+       
+    }

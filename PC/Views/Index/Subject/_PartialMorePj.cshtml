@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+    string basePath = Url.Content("~/Content/Login/subject/com/");
+}
+<div class="partial-more-pj">
+    <ul>
+        @if (Model.filter != 0) { 
+            <li><a href="@Url.Action("MicroPartner","Index")" target="_blank"><img src="@(basePath)thematic01.png" /></a></li>
+        }
+        @if (Model.filter != 1) { 
+            <li><a href="@Url.Action("fans","Index")" target="_blank"><img src="@(basePath)thematic02.png" /></a></li>
+        }
+        @if (Model.filter != 2) { 
+            <li><a href="@Url.Action("Shop","Index")" target="_blank"><img src="@(basePath)thematic03.png" /></a></li>
+        }
+        @if (Model.filter != 3) {
+            <li><a href="@Url.Action("News", "Index", new { id="hotst"})" target="_blank"><img src="@(basePath)thematic04.png" /></a></li>
+        }
+        @if (Model.filter != 4) {
+            <li><a href="@Url.Action("News", "Index", new { id="hotjzts"})" target="_blank"><img src="@(basePath)thematic05.png" /></a></li>
+        }
+        @if (Model.filter != 5) { 
+            <li><a href="@Url.Action("News", "Index", new { id="hotjfsc"})" target="_blank"><img src="@(basePath)thematic06.png" /></a></li>
+        }
+    </ul>
+</div>
+<style type="text/css">
+    .partial-more-pj{}
+        .partial-more-pj ul:after {
+            content: '';
+            display:table;
+            clear:both;
+        }
+        .partial-more-pj ul li {
+            float:left;
+            margin:0 10px;
+        }
+</style>

@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+    bool webIsLogin = ViewBag.webIsLogin != null && ViewBag.webIsLogin == true;
+}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link href="@Url.Content("~/Content/bootstrap/css/bootstrap.min.css")" rel="stylesheet">
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/default/styles/login.css")">
+    @RenderSection("style", false)
+    <script type="text/javascript" src="@Url.Content("~/Content/Scripts/lib/modernizr/modernizr.custom.min.js")"></script>
+    @RenderSection("header_scripts", false)
+</head>
+<body>
+    <header class="minWidth">
+        <div class="wrapper clearfix">
+            <img src="@Url.Content("~/Content/themes/default/images/againlogo.png")"/>
+        </div>
+    </header>
+    @RenderBody()
+    <footer>
+        <div class="bnav"><a>联系我们</a>|<a>移动客户端</a>|<a>关注我们</a></div>
+       @* <div class="copyright">COPYTRIGHT © I-MYBEST.COM 广州麦优网络科技有限公司 版权所有　粤ICP备11059426号</div>*@
+    </footer>
+    <script src="@Url.Content("~/Content/Scripts/lib/jquery/jquery-1.11.min.js")"></script>
+    <script src="@Url.Content("~/Content/bootstrap/js/bootstrap.min.js")"></script>
+    @RenderSection("scripts", false)
+    <script>
+        $(function () {
+            var $footer = $('footer'),
+                h = $footer.innerHeight(),
+                height = $(document).height();
+            $footer.offset({ top: height - h });
+        });
+    </script>
+</body>
+</html>

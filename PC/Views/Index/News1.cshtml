@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "艾客介绍-艾客";
+    ViewBag.KeyWords = "艾客平台、社群营销、微信电商";
+    ViewBag.Description = "帮助电商商家借助微信与电商平台生意紧密结合，实现低成本、系统化社群营销，提高平台店铺的销售额和复购率";
+    Layout = "~/Views/Index/_LayerNews.cshtml";
+    string basePath = Url.Content("~/Content/Login/060511/");    
+}
+
+<div class="wrapper content-wrap">
+    <div class="inner-body">
+        <div class="table">
+            <div class="cell">
+                <div class="info-container">
+                    <h1 class="title">艾客介绍</h1>
+
+<div class="bdsharebuttonbox" style="margin-top:10px;"><span style="float:left;position:relative;top:4px;">分享：</span><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "24" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+
+                    <div class="cn-panel">
+                        <p class="text-center"><img src="@(basePath)images/content/01.jpg"></p>
+
+                        <p>
+                            <strong>艾客是什么？</strong><br/>
+                            “艾客”是国内首家借助微信打通全渠道的全新移动电商平台，也是电商商家首选的微信社群营销平台。我们的核心是帮助电商商家借助微信与电商平台生意紧密结合，实现低成本、系统化社群管理，提高平台店铺的销售额和复购率。
+                            艾客的使命是为企业打造创新的移动社群生态体系！<br/>
+
+                            <strong>运作模式</strong><br/>
+                            通过将淘宝、天猫、一号店、京东等电商平台会员打通，将平台的会员转化成商家的会员，建立商家的微信粉丝社群和粉丝系统化识别，实现大数据分析和精准营销。
+                            <br/>
+                            <strong>核心功能</strong><br/>
+                            1、全渠道会员体系搭建
+                        </p>
+                        <p class="text-center"><img src="@(basePath)images/content/02.jpg"></p>
+                        解决痛点：全渠道会员集中管理，借助微信更有效地触达并管理会员与粉丝<br/>
+                        2、精准营销<br/>
+                        艾客借助数据的匹配，帮助商家自动识别会员与粉丝， 实现精准化营销。
+                        <p class="text-center"><img src="@(basePath)images/content/03.jpg"></p>
+                        解决痛点：大幅提升阅读率、复购率，有效降低掉粉率。<br/>
+                        3、微信跳转任意商城<br/>
+                        艾客帮助商家在微信端直接跳转任意网络商城，包括淘宝、天猫、京东、一号店和各大微商城。
+                        <p class="text-center"><img src="@(basePath)images/content/04.jpg"></p>
+                        解决痛点：实现由沟通到购物的闭环。<br/>
+                        4、多元化营销与服务<br/>
+                        爆点营销功能1：快速提升淘宝店铺DSR
+                        <p class="text-center"><img src="@(basePath)images/content/05.jpg"></p>
+                        解决痛点：借助微信红包功能，系统优化店铺好评，大大降低运营成本和操作成本，并留存会员做二次复购。<br/>
+                        爆点营销功能2：微信端直接发送并领取淘宝优惠券
+                        <p class="text-center"><img src="@(basePath)images/content/06.jpg"></p>
+                        解决痛点：高效实现淘宝优惠券派发，增升店铺流量与销量。<br/>
+                        爆点营销功能3：精美画报生成
+                        <p class="text-center"><img src="@(basePath)images/content/07.jpg"></p>
+                        决痛点：高效率帮助商家拉新粉丝<br/>
+                        艾客还有砸金蛋、大转盘、刮刮卡、返利、拼团、生日收集与关怀、调查问卷、试用活动、全渠道积分商城、物流查询等多种营销工具等着你体验哦！
+                        <br/>
+                        <strong>部分合作客户</strong>
+                        <p class="text-center"><img src="@(basePath)images/content/08.jpg"></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cell news-list">
+                @{Html.RenderPartial("_NewsRightItems", basePath);}
+            </div>
+        </div>
+    </div>
+</div>

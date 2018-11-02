@@ -1,0 +1,272 @@
+﻿@{
+    Layout = "~/Views/Index/_Layout.cshtml";
+    ViewBag.Title = "艾客-微信快速拉粉新模式，全网独创DIY海报，裂变粉丝快人一步";
+    ViewBag.KeyWords = "微信快速拉粉、微海报、DIY海报、拉粉神器、微信拉粉神器、低成本拉粉、如何快速增加公众号粉丝";
+    ViewBag.Description = "艾客微海报是通过奖品吸引的方式展开，商家设计好DIY海报后，粉丝可上传图片并一键生成带专属二维码的海报，粉丝通过分享海报的方式让更多的人来关注与分享，粉丝拉人成功可获得积分，积分可兑换商品。DIY海报操作简单易上手，同时还有大量的顶级商家分享的营销干货，手把手教你怎么做好电商。";
+    string basePath = Url.Content("~/Content/Login/subject/fans/");
+}
+@section style{
+    <link rel="stylesheet"href="@(basePath)css/css.css">
+    <style type="text/css">
+        html, body {
+            background-color: #ffffff;
+        }
+    </style>
+}
+
+<div class="fans-main-wrap">
+    <div class="hp-heade-v2">
+        <div class="pic">
+            <img src="@(basePath)images/xfsq-01.jpg">
+        </div>
+    </div>
+    <div class="cns-wrap">
+        <div>
+            <img src="@(basePath)images/xfsq-02.jpg" />
+        </div>
+        <div>
+            <img src="@(basePath)images/xfsq-03.jpg" />
+        </div>
+        <div>
+            <img src="@(basePath)images/xfsq-04.jpg" />
+        </div>
+        <div>
+            <img src="@(basePath)images/xfsq-05.jpg" />
+        </div>
+        <div>
+            <img src="@(basePath)images/xfsq-06.jpg" />
+        </div>
+        <div>
+            <img src="@(basePath)images/xfsq-07.jpg" />
+        </div>
+        <div>
+            <img src="@(basePath)images/xfsq-08.jpg" />
+        </div>
+        <div>
+            <img src="@(basePath)images/xfsq-09.jpg" />
+        </div>
+        <div class="form-wrap">
+            <div id="hp-joinus">
+                <img src="@(basePath)images/xfsq-10.jpg" />
+            </div>
+            <div class="form-wra-v2">
+                <form action="" method="post">
+                    <div class="merchant-form">
+
+                        <input id="RequestType" name="RequestType" value="1" type="hidden">
+                        <input name="token" value="DC4EB0D9C60810E6C8087EFCE4F949AD" type="hidden">
+                        <input name="reqSource" value="Fanli" type="hidden">
+                        <input name="comeSource" value="" type="hidden">
+                        <table id="merchantForm" align="center">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label>公司名/店铺名<i>*</i></label></td>
+                                    <td>
+                                        <input id="txtCustomerName" name="CustomerName" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>联系人<i>*</i></label></td>
+                                    <td>
+                                        <input id="txtContacts" name="Contacts" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>职位<i>*</i></label></td>
+                                    <td>
+                                        <input id="txtPosition" name="Position" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>手机号码<i>*</i></label></td>
+                                    <td>
+                                        <input id="txtPhoneNumber" name="PhoneNumber" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>QQ号码<i>*</i></label></td>
+                                    <td>
+                                        <input id="txtQQNumber" name="QQNumber" type="text"></td>
+                                </tr>
+                                <tr style="display: none;">
+                                    <td>
+                                        <label for="txtEmail"><em>*</em>邮箱</label></td>
+                                    <td>
+                                        <input id="txtEmail" name="Email" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: left;">
+                                        <input class="submit" value="提交" id="btnSubmit" type="button">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        @*        <div><img src="@(basePath)images/xfsq-11.jpg" usemap="#map"  />
+            <map name="map">
+                <area shape="rect" coords="0,91,181,264" href="/Index/pjyl" />
+                <area shape="rect" coords="197,91,379,264" href="/Index/fl" />
+                <area shape="rect" coords="394,91,575,264" href="http://www.wechattaobao.com/" target="_blank" />
+                <area shape="rect" coords="592,91,772,264" href="/Index/News/1" />
+                <area shape="rect" coords="788,91,968,264" href="/Index/News/1" />
+            </map>
+        </div>*@
+
+    </div>
+    <div style="width:950px; margin:0 auto;">
+        <h1 style="font-size: 24px; color: #33373a; padding: 48px 0; line-height: 1; text-align: center;">我们还有更多劲爆功能，全面提升店铺销量</h1>
+        @{Html.RenderPartial("~/Views/Index/Subject/_PartialMorePj.cshtml", new { filter = 1 });}
+        <a href="/" class="link-more">
+            <img src="@(basePath)images/fl-p-btn-02.jpg" /></a>
+    </div>
+    <div class="pp-rt">
+        <img src="@(basePath)images/fl-rt-sc.png" /><a href="#hp-joinus" class="link"></a><a id="BtnRtClose" class="close"></a></div>
+
+</div>
+<div class="scroll-menu scroll-menu-fans">
+    <div class="inner">
+        <div class="content">
+            <div class="item">
+                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3004592282&amp;site=qq&amp;menu=yes"><span>
+                    <img border="0" src="http://wpa.qq.com/pa?p=2:3004592282:52"></span>QQ咨询</a>
+            </div>
+            @*<div class="item">
+                <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A5%BD%E8%AF%84%E5%88%A9%E5%99%A8&siteid=cntaobao&status=2&charset=utf-8"><img border="0" src="http://amos.alicdn.com/online.aw?v=2&uid=%E5%A5%BD%E8%AF%84%E5%88%A9%E5%99%A8&site=cntaobao&s=2&charset=utf-8" alt="点这里给我发消息" title="" /> 旺旺咨询</a>
+
+            </div>*@
+            <div class="concact fir">
+                <p>合作联系</p>
+                <p class="tel">13076703796 （邱小姐）</p>
+            </div>
+            <div class="concact">
+                <p>代理加盟</p>
+                <p class="tel">13588818179（清微）</p>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?579314a1703b14c2e0d838a79e8cf71c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#btnSubmit').click(function () {
+                if (checkInput() == true) {
+                    pageAjax();
+                }
+                else {
+                    return false;
+                }
+            });
+
+            $(".pjyl-scroll-form .close").click(function () {
+                $('.pjyl-scroll-form').hide();
+            });
+        });
+        function pageAjax() {
+            $.ajax({
+                type: "post",
+                url: "/CustomerRequestManage/CustomerRequest/CustomerRequestEdit",
+                data: $('form').serialize(),
+                dataType: "json",
+                async: false,
+                success: function (response) {
+                    if (response.Status == 1) {
+                        alert("提交成功！我们会在3个工作日内与您联系哦~");
+                    }
+                    else {
+                        alert('申请失败');
+                    }
+                },
+                error: function (response) { }
+            });
+
+        }
+
+        function checkInput() {
+            var customerName = $('#txtCustomerName').val();
+            var contacts = $('#txtContacts').val();
+            var position = $('#txtPosition').val();
+            var phoneNumber = $('#txtPhoneNumber').val();
+            var qqNumber = $('#txtQQNumber').val();
+
+            if (customerName == '' || lTrim(customerName) == '') {
+                alert('请输入公司/店铺名称');
+                return false;
+            }
+            if (customerName.length > 25) {
+                alert('公司/店铺名称不能超过 25字');
+                return false;
+            }
+
+            if (contacts == '' || lTrim(contacts) == '') {
+                alert('请输入联系人');
+                return false;
+            }
+            if (contacts.length > 25) {
+                alert('联系人不能超过 25字');
+                return false;
+            }
+
+            if (position == '' || lTrim(position) == '') {
+                alert('请输入职位');
+                return false;
+            }
+            if (position.length > 10) {
+                alert('职位不能超过 10字');
+                return false;
+            }
+
+            if (phoneNumber == '' || lTrim(phoneNumber) == '') {
+                alert('请输入手机号码');
+                return false;
+            }
+            if (isPhoneNumber(phoneNumber) == false) {
+                alert('手机号码输入不正确');
+                return false;
+            }
+
+            if (qqNumber == '' || lTrim(qqNumber) == '') {
+                alert('请输入QQ号码');
+                return false;
+            }
+            if (isQQNumber(qqNumber) == false) {
+                alert('QQ号码输入不正确（非零开头的四位以上的数字）');
+                return false;
+            }
+            if (qqNumber.length > 20) {
+                alert('QQ号码不能超过 20位');
+                return false;
+            }
+            return true;
+        }
+
+        //去除左侧空格
+        function lTrim(str) {
+            return str.replace(/(^\s*)/g, "");
+        }
+        //是否为手机号码
+        function isPhoneNumber(number) {
+            var reg = /^[1]{1}\d{10}$/;
+            return reg.test(number);
+        }
+
+        function isQQNumber(number) {
+            var reg = /^[1-9][0-9]{4,}$/;
+            return reg.test(number);
+        }
+
+    </script>
+}

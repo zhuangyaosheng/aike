@@ -1,0 +1,200 @@
+﻿@{
+    Layout = null;
+    string path = Url.Content("~/Content/Login/subject/appraise-5/");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>艾客-微信快速拉粉新模式，全网独创DIY海报，裂变粉丝快人一步</title>
+    <meta name="keywords" content="微信快速拉粉、微海报、DIY海报、拉粉神器、微信拉粉神器、低成本拉粉、如何快速增加公众号粉丝" />
+    <meta name="description" content="艾客微海报是通过奖品吸引的方式展开，商家设计好DIY海报后，粉丝可上传图片并一键生成带专属二维码的海报，粉丝通过分享海报的方式让更多的人来关注与分享，粉丝拉人成功可获得积分，积分可兑换商品。DIY海报操作简单易上手，同时还有大量的顶级商家分享的营销干货，手把手教你怎么做好电商。" />
+   <link rel="stylesheet"href="@(path)css/css.css">
+   <script src="/Scripts/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="pj-top pj-min"></div>
+<div class="pj-banner"></div>
+<div class="pj-content">
+    <div><img src="@(path)images/p1.jpg"></div>
+    <div><img src="@(path)images/p2.jpg"></div>
+    <div><img src="@(path)images/p3.jpg"></div>
+    <div><img src="@(path)images/p4.jpg"></div>
+    <div><img src="@(path)images/p5.jpg"></div>
+    <div><img src="@(path)images/p6.jpg"></div>
+    <div><img src="@(path)images/p7.jpg"></div>
+    <div id="fm" class="pj-form">
+        <form action="" method="post">
+            <div class="hd">现在申请并充值赠送增粉神器大礼包，每天限前10名赠送（抢到名额的联系客服领取）</div>
+            <div class="merchant-form">
+                <input id="RequestType" name="RequestType" value="1" type="hidden">
+                <input name="token" value="DC4EB0D9C60810E6C8087EFCE4F949AD" type="hidden">
+                <input name="reqSource" value="Fanli" type="hidden">
+                <input name="comeSource" value="" type="hidden">
+                <table id="merchantForm" align="center">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <label>公司名/店铺名<i>*</i></label></td>
+                        <td>
+                            <input id="txtCustomerName" name="CustomerName" type="text"></td>
+                    </tr><tr>
+                        <td>
+                            <label>联系人<i>*</i></label></td>
+                        <td>
+                            <input id="txtContacts" name="Contacts" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>职位<i>*</i></label></td>
+                        <td>
+                            <input id="txtPosition" name="Position" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>手机号码<i>*</i></label></td>
+                        <td>
+                            <input id="txtPhoneNumber" name="PhoneNumber" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>QQ号码<i>*</i></label></td>
+                        <td>
+                            <input id="txtQQNumber" name="QQNumber" type="text"></td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <label for="txtEmail"><em>*</em>邮箱</label></td>
+                        <td>
+                            <input id="txtEmail" name="Email" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:left;">
+                            <input class="submit" value="提交" id="btnSubmit" type="button">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="pj-ft">版权信息：copyright © 2017 www.168haopin.com All Rights Reserved     168好评版权所有</div>
+<div class="scroll-menu">
+    <div class="inner">
+        <a href="#fm" class="map"></a>
+        <a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3004592282&amp;site=qq&amp;menu=yes"></a>
+    </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $('#btnSubmit').click(function () {
+      if (checkInput() == true) {
+        pageAjax();
+      }
+      else {
+        return false;
+      }
+    });
+
+    $(".pjyl-scroll-form .close").click(function () {
+      $('.pjyl-scroll-form').hide();
+    });
+  });
+  function pageAjax() {
+    $.ajax({
+      type: "post",
+      url: "/CustomerRequestManage/CustomerRequest/CustomerRequestEdit",
+      data: $('form').serialize(),
+      dataType: "json",
+      async: false,
+      success: function (response) {
+        if (response.Status == 1) {
+          alert("提交成功！我们会在3个工作日内与您联系哦~");
+        }
+        else {
+          alert('申请失败');
+        }
+      },
+      error: function (response) { }
+    });
+
+  }
+
+  function checkInput() {
+    var customerName = $('#txtCustomerName').val();
+    var contacts = $('#txtContacts').val();
+    var position = $('#txtPosition').val();
+    var phoneNumber = $('#txtPhoneNumber').val();
+    var qqNumber = $('#txtQQNumber').val();
+
+    if (customerName == '' || lTrim(customerName) == '') {
+      alert('请输入公司/店铺名称');
+      return false;
+    }
+    if (customerName.length > 25) {
+      alert('公司/店铺名称不能超过 25字');
+      return false;
+    }
+
+    if (contacts == '' || lTrim(contacts) == '') {
+      alert('请输入联系人');
+      return false;
+    }
+    if (contacts.length > 25) {
+      alert('联系人不能超过 25字');
+      return false;
+    }
+
+    if (position == '' || lTrim(position) == '') {
+      alert('请输入职位');
+      return false;
+    }
+    if (position.length > 10) {
+      alert('职位不能超过 10字');
+      return false;
+    }
+
+    if (phoneNumber == '' || lTrim(phoneNumber) == '') {
+      alert('请输入手机号码');
+      return false;
+    }
+    if (isPhoneNumber(phoneNumber) == false) {
+      alert('手机号码输入不正确');
+      return false;
+    }
+
+    if (qqNumber == '' || lTrim(qqNumber) == '') {
+      alert('请输入QQ号码');
+      return false;
+    }
+    if (isQQNumber(qqNumber) == false) {
+      alert('QQ号码输入不正确（非零开头的四位以上的数字）');
+      return false;
+    }
+    if (qqNumber.length > 20) {
+      alert('QQ号码不能超过 20位');
+      return false;
+    }
+    return true;
+  }
+
+  //去除左侧空格
+  function lTrim(str) {
+    return str.replace(/(^\s*)/g, "");
+  }
+  //是否为手机号码
+  function isPhoneNumber(number) {
+    var reg = /^[1]{1}\d{10}$/;
+    return reg.test(number);
+  }
+
+  function isQQNumber(number) {
+    var reg = /^[1-9][0-9]{4,}$/;
+    return reg.test(number);
+  }
+
+</script>
+</body>
+</html>

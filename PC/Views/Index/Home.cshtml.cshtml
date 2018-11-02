@@ -1,0 +1,742 @@
+﻿@{
+    Layout = "_Layout.cshtml";
+    ViewBag.webIsLogin = true;
+    string basePath = Url.Content("~/Content/Login/v3/");
+    string regUrl = ViewData["AgentServer"] + "/UserRegister/Main";
+}
+<div class="home-banner">
+    <div class="slides" id="HomeBannerCarousel">
+        @*        <div class="carousel-wrap">
+            <div class="carousel-inside">
+                <div class="carouselContainer"></div>
+            </div>
+        </div>*@
+        <div class="i-side s6 it1">
+            <div class="container">
+                <div class="desc">
+                    <div class="slide-title">微信极速跳转淘宝</div>
+                    <div class="slide-detail">
+                        微信极速跳转淘宝<br />
+                        <span style="font-size:16px;">极速跳转＼安全稳定＼顶级域名＼个性设计＼永久免费</span>
+                    </div>
+                    <div class="side-action">
+                        <a href="http://www.wechattaobao.com/" class="btn-link">马上体验</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="i-side s1 it2">
+            <div class="container">
+                <div class="desc">
+                    <div class="slide-title">链接全网商城</div>
+                    <div class="slide-detail">
+                        商家使用艾客平台实现微信链接全网商城<br />
+                        实现由沟通到购物的闭环
+                    </div>
+                    <div class="side-action">
+                        <a href="@regUrl" class="btn-link">免费注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="i-side s2 it3">
+            <div class="container">
+                <div class="desc">
+                    <div class="slide-title">渠道客户转化</div>
+                    <div class="slide-detail">
+                        把渠道客户转化为自己的客户<br />
+                        借助微信打通全域消费者
+                    </div>
+                    <div class="side-action">
+                        <a href="@regUrl" class="btn-link">免费注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="i-side s3 it4">
+            <div class="container">
+                <div class="desc">
+                    <div class="slide-title">多元化会员服务和营销工具</div>
+                    <div class="slide-detail">
+                        艾客有评价有礼、淘宝卡券、画报功能、砸金蛋、<br />
+                        大转盘、刮刮卡、返利、拼团、生日收集与关怀、<br>
+                        调查问卷、试用活动、全渠道积分商城、物流查<br>
+                        询等多种营销工具
+                    </div>
+                    <div class="side-action">
+                        <a href="@regUrl" class="btn-link">免费注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="i-side s4 it5">
+            <div class="container">
+                <div class="desc">
+                    <div class="slide-title">建立全渠道会员体系</div>
+                    <div class="slide-detail">
+                        全渠道会员集中管理，借助微信更有效地触达<br />
+                        并管理会员与粉丝
+                    </div>
+                    <div class="side-action">
+                        <a href="@regUrl" class="btn-link">免费注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="i-side s5 it6">
+            <div class="container">
+                <div class="desc">
+                    <div class="slide-title">微信精准营销</div>
+                    <div class="slide-detail">
+                        艾客借助数据的匹配，帮助商家自动识别<br />
+                        会员与粉丝，实现精准化营销。<br />
+                        大大副提升阅读率、复购率有效减低掉粉率。
+                    </div>
+                    <div class="side-action">
+                        <a href="@regUrl" class="btn-link">免费注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-nav">
+        <h3 class="title">热点功能</h3>
+        <ul id="Pagination">
+            <li data-for=".it1"><a href="http://www.wechattaobao.com/" target="_blank"><span class="icon-s6"></span>微信跳转淘宝</a></li>
+            <li data-for=".it2"><a href="@(regUrl)"><span class="icon-s1"></span>链接全商城</a></li>
+            <li data-for=".it3"><a href="@(regUrl)"><span class="icon-s2"></span>渠道客户转化</a></li>
+            <li data-for=".it4"><a href="@(regUrl)"><span class="icon-s3"></span>营销工具</a></li>
+            <li data-for=".it5"><a href="@(regUrl)"><span class="icon-s4"></span>全渠道会员体系</a></li>
+            <li data-for=".it6"><a href="@(regUrl)"><span class="icon-s5"></span>微信精准营销</a></li>
+        </ul>
+    </div>
+</div>
+<div id="product" class="section section-product">
+    <div class="wrap">
+        <h1 class="c-title">产品中心</h1>
+        <div class="product-wrap">
+            <ul class="clearfix">
+                <li>
+                    <a href="@(ViewData["AgentServer"])/Index/pjyl">
+                        <div class="pic">
+                            <img src="@(basePath)images/p01.png" />
+                        </div>
+                        <div class="title"><span>评价有礼</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="@(ViewData["AgentServer"])/Index/News/1">
+                        <div class="pic">
+                            <img src="@(basePath)images/p02.png" />
+                        </div>
+                        <div class="title"><span>晒图有礼</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="@(ViewData["AgentServer"])/Index/fl">
+                        <div class="pic">
+                            <img src="@(basePath)images/p03.png" />
+                        </div>
+                        <div class="title"><span>返利</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.wechattaobao.com/" target="_blank">
+                        <div class="pic">
+                            <img src="@(basePath)images/p06.png" />
+                        </div>
+                        <div class="title"><span>微信跳转淘宝</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="@(ViewData["AgentServer"])/Index/News/1">
+                        <div class="pic">
+                            <img src="@(basePath)images/p05.png" />
+                        </div>
+                        <div class="title"><span>精准推送</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="@(ViewData["AgentServer"])/Index/News/1">
+                        <div class="pic">
+                            <img src="@(basePath)images/p06.png" />
+                        </div>
+                        <div class="title"><span>全渠道积分商城</span></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="section section-my">
+    <div class="wrap">
+        <h1 class="c-title">为什么选择艾客</h1>
+        <div class="my-wrap">
+            <ul class="clearfix">
+                <li>
+                    <img src="@(basePath)images/sl01.jpg"></li>
+                <li>
+                    <img src="@(basePath)images/sl02.jpg"></li>
+                <li>
+                    <img src="@(basePath)images/sl03.jpg"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="case" class="section section-case">
+    <div class="wrap">
+        <h1 class="c-title">成功案例</h1>
+        <div class="case-wrap">
+            <ul class="clearfix">
+                <li>
+                    <div class="pic">
+                        <img src="@(basePath)images/c05.jpg">
+                    </div>
+                    <div class="ins">
+                        <div class="text-ins">
+                            <div class="text-desc">
+                                <div class="doc-tp"></div>
+                                <div class="cn">内容为王的粉丝经济时代，艾客帮助我们更好地去做精准化营销，落地粉丝沉淀，提升粉丝粘性，帮我们更好的玩赚粉丝！<span class="doc-bt"></span></div>
+                            </div>
+                            <div class="b-title">七格格CRM主管<span class="name">郑昕</span></div>
+                        </div>
+                        <div class="qr-code">
+                            <div class="code">
+                                <img src="@(basePath)images/c05-code.jpg">
+                            </div>
+                            <div class="tx">扫码参观店铺</div>
+                        </div>
+                    </div>
+                    <div class="ft"><a href="@(ViewData["AgentServer"])/Index/News/11">微信吸粉的洪荒之力-微海报！</a></div>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="@(basePath)images/c06.jpg">
+                    </div>
+                    <div class="ins">
+                        <div class="text-ins">
+                            <div class="text-desc">
+                                <div class="doc-tp"></div>
+                                <div class="cn">艾客平台给马克华菲店铺会员提供了一个完整的社群系统，且具备跟电商关联度极高的功能以做到店铺和微信的完美结合！<span class="doc-bt"></span></div>
+                            </div>
+                            <div class="b-title">马克华菲市场部总监<span class="name">Sophie</span></div>
+                        </div>
+                        <div class="qr-code">
+                            <div class="code">
+                                <img src="@(basePath)images/c06-code.jpg">
+                            </div>
+                            <div class="tx">扫码参观店铺</div>
+                        </div>
+                    </div>
+                    <div class="ft"><a href="@(ViewData["AgentServer"])/Index/News/13">[男装干货大揭秘]如何做到1天增粉8K+，天猫复购翻番</a></div>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="@(basePath)images/c07.jpg">
+                    </div>
+                    <div class="ins">
+                        <div class="text-ins">
+                            <div class="text-desc">
+                                <div class="doc-tp"></div>
+                                <div class="cn">精准的营销，是基于完整的用户洞察。我们对粉丝互动从不吝啬，看见他们的所见所闻所感所想，能进一步提升营销效果！<span class="doc-bt"></span></div>
+                            </div>
+                            <div class="b-title">韩后会员管理总监<span class="name">赵晶</span></div>
+                        </div>
+                        <div class="qr-code">
+                            <div class="code">
+                                <img src="@(basePath)images/c07-code.jpg">
+                            </div>
+                            <div class="tx">扫码参观店铺</div>
+                        </div>
+                    </div>
+                    <div class="ft"><a href="@(ViewData["AgentServer"])/Index/News/9">【自寻短荐】揭秘美妆H品牌如何做到618一波微信推送，带来150多W天猫销售！</a></div>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="@(basePath)images/c08.jpg">
+                    </div>
+                    <div class="ins">
+                        <div class="text-ins">
+                            <div class="text-desc">
+                                <div class="doc-tp"></div>
+                                <div class="cn">完善的积分体系划分，更好地帮忙我们做好客户层级，针对不同层级客户采取不同的营销方式！<span class="doc-bt"></span></div>
+                            </div>
+                            <div class="b-title">汤臣倍健官方旗舰店总经理<span class="name">兰俊杰</span></div>
+                        </div>
+                        <div class="qr-code">
+                            <div class="code">
+                                <img src="@(basePath)images/c08-code.jpg">
+                            </div>
+                            <div class="tx">扫码参观店铺</div>
+                        </div>
+                    </div>
+                    <div class="ft"><a href="@(ViewData["AgentServer"])/Index/News/4">微信精准推送，助力老会员复购破百万！</a></div>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="@(basePath)images/c01.jpg">
+                    </div>
+                    <div class="ins">
+                        <div class="text-ins">
+                            <div class="text-desc">
+                                <div class="doc-tp"></div>
+                                <div class="cn">艾客的功能以电商平台的需求为导向，将微信和电商平台很好结合在一起，能很好地让用户通过公众号回流到天猫进行购买!<span class="doc-bt"></span></div>
+                            </div>
+                            <div class="b-title">康爱多电商运营总监<span class="name">黄钻柏</span></div>
+                        </div>
+                        <div class="qr-code">
+                            <div class="code">
+                                <img src="@(basePath)images/c01-code.jpg">
+                            </div>
+                            <div class="tx">扫码参观店铺</div>
+                        </div>
+                    </div>
+                    <div class="ft"><a href=@(ViewData["AgentServer"])/Index/News/14">返利冲刺—返利神器攻略</a></div>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="@(basePath)images/c02.jpg">
+                    </div>
+                    <div class="ins">
+                        <div class="text-ins">
+                            <div class="text-desc">
+                                <div class="doc-tp"></div>
+                                <div class="cn">让电商商家更有效快速地管理电商会员，并形成自己的品牌影响力和做更多的会员互动，降低成本，提高客户忠诚度！<span class="doc-bt"></span></div>
+                            </div>
+                            <div class="b-title">匹克官方旗舰店总经理<span class="name">沈阳</span></div>
+                        </div>
+                        <div class="qr-code">
+                            <div class="code">
+                                <img src="@(basePath)images/c02-code.jpg">
+                            </div>
+                            <div class="tx">扫码参观店铺</div>
+                        </div>
+                    </div>
+                    <div class="ft"><a href="@(ViewData["AgentServer"])/Index/News/12">【爆品推荐】双11准备工作之提升DSR！</a></div>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="@(basePath)images/c03.jpg">
+                    </div>
+                    <div class="ins">
+                        <div class="text-ins">
+                            <div class="text-desc">
+                                <div class="doc-tp"></div>
+                                <div class="cn">将认可子初的粉丝和在电商购买过子初的客户都圈到品牌公众号，并对每个客户贴上对应标签，从而可以更好地管理客户！<span class="doc-bt"></span></div>
+                            </div>
+                            <div class="b-title">子初官方旗舰店电商总经理<span class="name">邹鹏</span></div>
+                        </div>
+                        <div class="qr-code">
+                            <div class="code">
+                                <img src="@(basePath)images/c03-code.jpg">
+                            </div>
+                            <div class="tx">扫码参观店铺</div>
+                        </div>
+                    </div>
+                    <div class="ft"><a href="@(ViewData["AgentServer"])/Index/News/2">微信营销，助力女王节成交3万单</a></div>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="@(basePath)images/c04.jpg">
+                    </div>
+                    <div class="ins">
+                        <div class="text-ins">
+                            <div class="text-desc">
+                                <div class="doc-tp"></div>
+                                <div class="cn">评价有礼功能可快速提升店铺的动态评分，还可增加店铺的自然搜索权重，是电商商家必备的一个有效工具！<span class="doc-bt"></span></div>
+                            </div>
+                            <div class="b-title">古尚古旗舰店负责人<span class="name">陈经理</span></div>
+                        </div>
+                        <div class="qr-code">
+                            <div class="code">
+                                <img src="@(basePath)images/c04-code.jpg">
+                            </div>
+                            <div class="tx">扫码参观店铺</div>
+                        </div>
+                    </div>
+                    <div class="ft"><a href="@(ViewData["AgentServer"])/Index/News/3">探讨：淘宝客户引流到微信做好评返利提升DSR与做CRM的价值</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="" class="section section-customer">
+    <div class="wrap customer-wrap">
+        <h1 class="c-title">部份合作客户</h1>
+        <ul class="clearfix list">
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-01.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-01-1.jpg">
+                    </div>
+                </div>
+                <div class="title">云南白药健康汇</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-02.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-02-1.jpg">
+                    </div>
+                </div>
+                <div class="title">舒客Fit生活</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-03.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-03-1.jpg">
+                    </div>
+                </div>
+                <div class="title">我要好身材</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-04.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-04-1.jpg">
+                    </div>
+                </div>
+                <div class="title">周大生在线</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-05.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-05-1.jpg">
+                    </div>
+                </div>
+                <div class="title">时间说</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-06.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-06-1.jpg">
+                    </div>
+                </div>
+                <div class="title">Viennois</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-07.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-07-1.jpg">
+                    </div>
+                </div>
+                <div class="title">蜜色之吻HoneydewKiss</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-08.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-08-1.jpg">
+                    </div>
+                </div>
+                <div class="title">Artmi阿特蜜</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-09.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-09-1.jpg">
+                    </div>
+                </div>
+                <div class="title">kisscat会员俱乐部</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-10.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-10-1.jpg">
+                    </div>
+                </div>
+                <div class="title">Carter's</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-11.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-11-1.jpg">
+                    </div>
+                </div>
+                <div class="title">澳乐品牌</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-12.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-12-1.jpg">
+                    </div>
+                </div>
+                <div class="title">金飞讯</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-13.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-13-1.jpg">
+                    </div>
+                </div>
+                <div class="title">百雀羚官方旗舰店</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-14.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-14-1.jpg">
+                    </div>
+                </div>
+                <div class="title">水密码官方旗舰店</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-15.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-15-1.jpg">
+                    </div>
+                </div>
+                <div class="title">美肤宝官方旗舰店</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-16.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-16-1.jpg">
+                    </div>
+                </div>
+                <div class="title">植美村旗舰店</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-17.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-17-1.jpg">
+                    </div>
+                </div>
+                <div class="title">草木之心</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-18.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-18-1.jpg">
+                    </div>
+                </div>
+                <div class="title">杰威尔男士</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-19.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-19-1.jpg">
+                    </div>
+                </div>
+                <div class="title">熙世界服饰</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-20.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-20-1.jpg">
+                    </div>
+                </div>
+                <div class="title">笑涵阁</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-21.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-21-1.jpg">
+                    </div>
+                </div>
+                <div class="title">COCOBELLA</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-22.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-22-1.jpg">
+                    </div>
+                </div>
+                <div class="title">seven柒牌官方旗舰店</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-23.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-23-1.jpg">
+                    </div>
+                </div>
+                <div class="title">罗蒙官方微商城</div>
+            </li>
+            <li>
+                <div class="pic">
+                    <div class="mw">
+                        <img src="@(basePath)images/cs-24.jpg">
+                    </div>
+                    <div class="code">
+                        <img src="@(basePath)images/cs-24-1.jpg">
+                    </div>
+                </div>
+                <div class="title">A21</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="news" class="section section-news">
+    <div class="wrap h-news-content clearfix">
+        <h1 class="c-title">艾客动态</h1>
+        <div class="column column-1">
+            <div class="inside-wrap">
+                <div class="c-th"><a href="content1.html">关于艾客</a></div>
+                <div class="content">
+
+                    <p>“艾客”是国内首家借助微信打通全渠道的全新移动电商平台，也是电商商家首选的微信社群营销平台。我们的核心是帮助电商商家借助微信与电商平台生意最大化结合，实现低成本、系统化社群管理，提高平台店铺的销售额和复购率。</p>
+                    <p>艾客的使命是为企业打造创新的移动社群生态体系！</p>
+                    <div style="text-align: right"><a href="@Url.Action("News", "Index", new { id = 1 })" target="_blank">[更多]</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="column column-2">
+            <div class="inside-wrap">
+                <div class="c-th">行业动态</div>
+                <ul class="h-news-items">
+                    <li><a href="@(ViewData["AgentServer"])/Index/News/7" target="_blank">都说淘宝流量贵，看我怎么用微信逆袭女装店铺（微信版）</a></li>
+                    <li><a href="@(ViewData["AgentServer"])/Index/News/6" target="_blank">【干货分享】3C数码商家如何玩转社群营销</a></li>
+                    <li><a href="@(ViewData["AgentServer"])/Index/News/5" target="_blank">[男装干货大揭秘]如何做到1天增粉8K+，天猫复购翻番</a></li>
+
+                    <li><a href="@(ViewData["AgentServer"])/Index/News/3" target="_blank">揭秘：微信一个月快速提升天猫店铺DSR？！</a></li>
+                    <li><a href="@(ViewData["AgentServer"])/Index/News/2" target="_blank">微信营销，助力女王节成交3万单!</a></li>
+                    <li><a href="http://www.ebrun.com/20160314/168766.shtml" target="_blank">微信朋友圈可否募捐 还需法律实施细则</a></li>
+                    <li><a href="http://www.tmtpost.com/1654749.html" target="_blank">微信企业版真的来了 移动办公大战一触即发</a></li>
+                    <li><a href="http://www.ebrun.com/20160307/168136.shtml" target="_blank">微信回应群二维码将取消传言：子虚乌有</a></li>
+                    <li><a href="http://www.ebrun.com/20160301/167524.shtml" target="_blank">微信定制家具起纠纷 门店收近5万不送货</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column column-3">
+            <div class="inside-wrap">
+                <div class="c-th">合作媒体</div>
+                <ul class="con-items clearfix">
+                    <li>
+                        <img src="@(basePath)images/m01.png" alt="好评返现、艾客平台、微信营销"></li>
+                    <li class="c-fr">
+                        <img src="@(basePath)images/m02.png"></li>
+                    <li>
+                        <img src="@(basePath)images/m03.png" alt="艾客、淘宝优惠券"></li>
+                    <li class="c-fr">
+                        <img src="@(basePath)images/m04.png"></li>
+                    <li>
+                        <img src="@(basePath)images/m05.png" alt="微淘客、电商店铺、微信电商"></li>
+                    <li class="c-fr">
+                        <img src="@(basePath)images/m06.png"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section operator">
+    <div class="clearfix wrap">
+        <div class="fl lt-title">合作运营商</div>
+        <div class="fl items">
+            <span>
+                <img src="@(basePath)images/b01.png"></span>
+            <span>
+                <img src="@(basePath)images/b02.png"></span>
+           
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        $(".header .nav-link").on("click", function (e) {
+            e.preventDefault();
+            var href = $(this).attr('href');
+            if (href && href.indexOf('#') != -1) {
+                var anchor = this.hash;
+                if (anchor.indexOf('#') == -1) id = '#' + id;
+                $(anchor).ScrollTo(500);
+                $(this).addClass('active');
+                $(this).siblings().removeClass("active");
+            }
+        });
+        $(function () {
+            var $carousel = $('#HomeBannerCarousel');
+            $carousel.carouFredSel(
+            {
+                responsive: true,
+                items: 1,
+                scroll: {
+                    items: 1,
+                    fx: "crossfade",
+                    duration: 0,
+                    pauseOnHover: true,
+                    onAfter: function () {
+                        var $item = $carousel.triggerHandler("currentVisible");
+                        console.log($item.attr('class'));
+                    }
+                },
+                auto: false
+            });
+            var timeId = null;
+            $(".home-banner .slide-nav ul li").hover(function () {
+
+                // $carousel.trigger('stop');
+                var strClass = $(this).attr('data-for');
+                $(this).addClass('active').siblings().removeClass('active');
+                $carousel.trigger('slideTo', [$('#HomeBannerCarousel div' + strClass), 0, false]);
+            }, function () {
+                //$carousel.trigger('stop');
+            });
+        });
+
+    </script>
+}

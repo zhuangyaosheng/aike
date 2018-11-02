@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+    string basePath = Url.Content("~/Content/Login/060511/");    
+}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>@(ViewBag.Title ?? "艾客-专注电商的微信社群营销实效平台")</title>
+    <meta name="keywords" content="@ViewBag.KeyWords" />
+    <meta name="description" content="@ViewBag.Description" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="@(basePath)css/css.css">
+    <script type="text/javascript" src="@(basePath)js/jquery-1.11.min.js"></script>
+    <script type="text/javascript" src="@(basePath)js/jquery.carouFredSel-6.2.1.js"></script>
+    <script type="text/javascript" src="@(basePath)js/jquery.scrollTo.js"></script>
+    <style type="text/css">
+        body{ background-color: #f0f1f3;}
+    </style>
+</head>
+<body>
+    <div class="header-wrap">
+    <div class="header-main clearfix">
+        <div class="c-fl">
+            <a class="logo" href="/" ><img src="@(basePath)images/logo.jpg"></a>
+        </div>
+        <div class="c-fr">
+            <ul class="h-nav">
+                <li><a href="/">首页</a></li>
+                <li><a class="active" href="@Url.Action("News", "Index", new { id = 1 })" target="_blank">产品与服务</a></li>
+                <li><a href="/#case" class="active">合作案例</a></li>                
+                <li><a href="/#news">动态</a></li>
+                <li><a href="/#contact">合作联系</a></li>
+                <li><a href="/#contact">代理加盟</a></li>
+            </ul>
+            <div class="h-reg">
+                <a class="reg-link" href="/UserRegister/Main">注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+@RenderBody()
+@{Html.RenderPartial("_LoginFooter", basePath);}
+@{Html.RenderPartial("_ScrollMenu");}
+</body>
+</html>

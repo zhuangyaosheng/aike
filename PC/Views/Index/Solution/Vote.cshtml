@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "艾客功能解决方案-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/solution/");
+    ViewBag.TopMenuSolutionNavIndex = 3;
+}
+<link href="@Url.Content("~/Content/Login/solution/hm-solution.css")" rel="stylesheet">
+
+<div class="hm-solution-banner">
+    <div class="hm-slo-bnr__bd">
+        <h1 class="hm-slo-bnr__bd-title">艾客功能解决方案</h1>
+        <div class="hm-slo-bnr__bd-desc">艾客针对电商营销诸多痛点，从社群营销本质出发，以成功案例为载体，深入浅出的详解各类多元化营销工具使用方<br>法，给出针对性解决方案，让电商营销简单起来！
+        </div>
+    </div>
+</div>
+<div class="hm-slo-cns">
+    @{Html.RenderPartial("~/Views/Index/Solution/_PartialNav.cshtml", new { NavIndex = ViewBag.TopMenuSolutionNavIndex });}
+    <div class="hm-slo-article">
+        <div class="hm-slo-article__ins">
+            <h1 class="hm-slo-art__tl">杜绝无用功！你对手的运营大佬都在逼老板用这个……</h1>
+            <p>到底要生产多少个款式，才能有一个爆款？你的客户群体喜欢时尚潮流，还是复古典雅？生产成本投入多少合适？如果这款生产少了，万一火了没货岂不是白白看着软妹币随风飘逝……关于上新的十万个为什么我们暂时说到这里，问题是无穷无尽的，解决问题的有效方法是一样的。<br/>
+            投票选款是指商家通过发布选款投票活动，让粉丝帮助参与选款所进行的范围测试。至于它的绝佳妙用，嗯，我们还是举例说明吧。
+            </p>
+            <h2>活动背景</h2>
+            <p>某商家预计上新品，但是设计师太666，设计出的每一款都很好看，无法抉择的情况下只能给粉丝投票选款，再根据投票结果决定生产数量和主打新品。在2017/9/11-- 2017/9/15这段时间内在公众号搞事啦。</p>
+            <h2>活动投放</h2>
+            <p>活动期间进入该商家公众号页面福利菜单栏显示如下，粉丝可以通过投票选款获得一定的奖品，充分调动粉丝的积极性，同时也可以吸引新用户注册绑定会员。</p>
+            <p><img src="@(imgPath)tpxk-01.jpg"></p>
+            <p>参与活动后可设定抽奖，把活动的氛围搞起:</p>
+            <p><img src="@(imgPath)tpxk-02.jpg"></p>
+            <h2>后台操作</h2>
+            <p>艾客的尿性你们懂的……一如既往的傻瓜式操作，如果你说不会，小艾一定会理解为你是单纯的想撩我。</p>
+                <h3>（1）抽奖活动设置</h3>
+                <p>【艾客后台】—【营销活动】—【抽奖活动】—【点击新建】</p>
+                <p><img src="@(imgPath)tpxk-03.jpg"></p>
+                <h3>（2）奖品设置</h3>
+                <p>【艾客后台】—【营销活动】—【抽奖活动】—【奖品设置】</p>
+                <p><img src="@(imgPath)tpxk-04.jpg"></p>
+                <h3>（3）投票活动设置</h3>
+                <p>【艾客后台】-【营销活动】-【投票（选款）】-【新建】</p>
+                <p><img src="@(imgPath)tpxk-05.jpg"></p>
+                <p><img src="@(imgPath)tpxk-06.jpg"></p>
+                <p><img src="@(imgPath)tpxk-07.jpg"></p>
+            <h2>数据亮点</h2>
+            <p>好像很平平无奇的样子……小傻瓜，这只是个为期5天的活动，调动了400多人参与，小艾给满分好嘛！而且投票选款更多的是为上新做准备，属于前期消费者分析非常重要的一环。</p>
+            <p>
+            <table>
+                <tr>
+                    <td></td>
+                    <td>活动参与人数</td>
+                    <td>中奖人数</td>
+                    <td>粉丝量</td>
+                </tr>
+                <tr>
+                    <td>活动前</td>
+                    <td>／</td>
+                    <td>／</td>
+                    <td>54490</td>
+                </tr>
+                <tr>
+                    <td>活动后</td>
+                    <td>477</td>
+                    <td>399</td>
+                    <td>54862</td>
+                </tr>
+            </table>
+            </p>
+            <h2>小艾建议</h2>
+            <p>对自己的产品没有信心？请用投票选款！选择障碍症晚期？请用投票选款！<br/>
+              不知道自己的粉丝最爱什么？请用投票选款！精准客户群体做出的选择，最具参考意义。打造爆款之前，先问问为你产品买单的人。</p>
+        </div>
+    </div>
+</div>

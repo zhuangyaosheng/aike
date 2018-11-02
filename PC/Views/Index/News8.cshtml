@@ -1,0 +1,229 @@
+﻿@{
+    ViewBag.Title = "艾客-晒评价新模式，全网独家提高淘宝店铺DSR神器";
+    ViewBag.KeyWords = "好评返现，晒评价，如何提高淘宝好评,高效提高DSR，降低成本";
+    ViewBag.Description="提高好评率、打造爆款！高效提升DSR";
+    Layout = "~/Views/Index/_LayerNews.cshtml";
+    string basePath = Url.Content("~/Content/Login/060511/");
+}
+<header class="hp-header">
+  <img src="@(basePath)images/hp/01.jpg" alt="晒评价，店铺DSR 全网独家，评价神器，微信操作免封杀，微信服务号">
+  <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?579314a1703b14c2e0d838a79e8cf71c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+</header>
+<section class="hp-features">
+  <a href="#hp-joinus"><img src="@(basePath)images/hp/02.jpg" alt="高效提升店铺DSR，降低成本，提升复购，个人号，支付宝，申请入驻，卡片，返现，返红包，安全高效"></a>
+  <a href="#hp-joinus" class="hp-right-nav"><span>申请入驻</span></a>
+</section>
+<section class="hp-backpay">
+  <img src="@(basePath)images/hp/03.jpg" alt="个人号，返现，传统返现，支付宝返现，随机红包，维护成本高">
+</section>
+<section class="hp-godtool">
+  <img src="@(basePath)images/hp/04.jpg" alt="评价卡片，自动返红包，晒评价，晒图有礼，返现成本低，微信随机红包，评价神器，有效控制成本，提升复购率">
+</section>
+<section class="hp-partner">
+  <div class="hp-merchants">
+    <h4>合作案例</h4>
+    <ul>
+      <li>
+        <div class="marchant-logo">
+           <img src="@(basePath)images/hp/logo/01.jpg" alt="">
+         </div>
+      </li>
+      <li>
+        <div class="marchant-logo">
+           <img src="@(basePath)images/hp/logo/02.jpg" alt="">
+         </div>
+      </li>
+      <li>
+        <div class="marchant-logo">
+           <img src="@(basePath)images/hp/logo/03.jpg" alt="">
+         </div>
+      </li>
+      <li>
+        <div class="marchant-logo">
+           <img src="@(basePath)images/hp/logo/04.jpg" alt="">
+         </div>
+      </li>
+      <li>
+        <div class="marchant-logo">
+           <img src="@(basePath)images/hp/logo/05.jpg" alt="">
+         </div>
+      </li>
+      <li>
+        <div class="marchant-logo">
+           <img src="@(basePath)images/hp/logo/06.jpg" alt="">
+         </div>
+      </li>
+      <li>
+        <div class="marchant-logo">
+           <img src="@(basePath)images/hp/logo/07.jpg" alt="">
+         </div>
+      </li>
+      <li>
+        <div class="marchant-logo">
+           <img src="@(basePath)images/hp/logo/08.jpg" alt="">
+         </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="hp-form" id="hp-joinus">
+  <form action="" method="post">
+    <div class="merchant-form">
+	    <h3>申请入驻</h3>
+        <input id="RequestType" type="hidden" name="RequestType" value="1" />
+        <input type="hidden" name="token" value="@ViewData["token"]" />
+        <input type="hidden" name="reqSource" value="PraiseBack" />
+        <input type="hidden" name="comeSource" value="@ViewData["source"]" />
+	    <table align="center" id="merchantForm">
+	    <tr>
+	        <td><label>公司名/店铺名<i>*</i></label></td>
+	        <td><input type="text" id="txtCustomerName" name="CustomerName"></td>
+	    </tr>
+	    <tr>
+	        <td><label>联系人<i>*</i></label></td>
+	        <td><input type="text" id="txtContacts" name="Contacts" ></td>
+	    </tr>
+	    <tr>
+	        <td><label>职位<i>*</i></label></td>
+	        <td><input type="text" id="txtPosition" name="Position" ></td>
+	    </tr>
+	    <tr>
+	        <td><label>手机号码<i>*</i></label></td>
+	        <td><input type="text" id="txtPhoneNumber" name="PhoneNumber"></td>
+	    </tr>
+	    <tr>
+	        <td><label>QQ号码<i>*</i></label></td>
+	        <td><input type="text" id="txtQQNumber" name="QQNumber"></td>
+	    </tr>
+        <tr style="display:none;">
+            <td><label for="txtEmail"><em>*</em>邮箱</label></td>
+            <td><input type="text" id="txtEmail" name="Email" /></td>
+        </tr>
+	    <tr>
+	        <td colspan="2">
+	        <input type="button" value="提交" id="btnSubmit"/>
+	        </td>
+	    </tr>
+	    </table>
+    </div>
+</form>
+</section>
+<section class="hp-more">
+  <a href="/" target="_blank"><img src="@(basePath)images/hp/06.jpg" alt="艾客合作案例，艾客申请入驻， 返利，晒图有礼，微信淘宝，淘宝优惠券，全渠道，积分商城，精准推送"></a>
+</section>
+<script>
+    $(document).ready(function () {
+        $('#btnSubmit').click(function () {
+            if (checkInput() == true) {
+                pageAjax();
+            }
+            else {
+                return false;
+            }
+        });
+
+
+    });
+    function pageAjax() {
+        $.ajax({
+            type: "post",
+            url: "/CustomerRequestManage/CustomerRequest/CustomerRequestEdit",
+            data: $('form').serialize(),
+            dataType: "json",
+            async: false,
+            success: function (response) { 
+                if(response.Status == 1){
+                    alert("提交成功！我们会在3个工作日内与您联系哦~");
+                }
+                else{
+                    alert('申请失败');
+                }
+            },
+            error: function (response){ }
+        });
+
+    }
+
+    function checkInput() {
+        var customerName = $('#txtCustomerName').val();
+        var contacts = $('#txtContacts').val();
+        var position = $('#txtPosition').val();
+        var phoneNumber = $('#txtPhoneNumber').val();
+        var qqNumber = $('#txtQQNumber').val();
+
+        if (customerName == '' || lTrim(customerName) == '') {
+            alert('请输入公司/店铺名称');
+            return false;
+        }
+        if (customerName.length > 25) {
+            alert('公司/店铺名称不能超过 25字');
+            return false;
+        }
+
+        if (contacts == '' || lTrim(contacts) == '') {
+            alert('请输入联系人');
+            return false;
+        }
+        if (contacts.length > 25) {
+            alert('联系人不能超过 25字');
+            return false;
+        }
+
+        if (position == '' || lTrim(position) == '') {
+            alert('请输入职位');
+            return false;
+        }
+        if (position.length > 10) {
+            alert('职位不能超过 10字');
+            return false;
+        }
+
+        if (phoneNumber == '' || lTrim(phoneNumber) == '') {
+            alert('请输入手机号码');
+            return false;
+        }
+        if (isPhoneNumber(phoneNumber) == false) {
+            alert('手机号码输入不正确');
+            return false;
+        }
+
+        if (qqNumber == '' || lTrim(qqNumber) == '') {
+            alert('请输入QQ号码');
+            return false;
+        }
+        if (isQQNumber(qqNumber) == false) {
+            alert('QQ号码输入不正确（非零开头的四位以上的数字）');
+            return false;
+        }
+        if (qqNumber.length > 20) {
+            alert('QQ号码不能超过 20位');
+            return false;
+        }
+        return true;
+    }
+
+    //去除左侧空格
+    function lTrim(str) {
+        return str.replace(/(^\s*)/g, "");
+    }
+    //是否为手机号码
+    function isPhoneNumber(number) {
+        var reg = /^[1]{1}\d{10}$/;
+        return reg.test(number);
+    }
+
+    function isQQNumber(number) {
+        var reg = /^[1-9][0-9]{4,}$/;
+        return reg.test(number);
+    }
+   
+</script>

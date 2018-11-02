@@ -1,0 +1,119 @@
+﻿@using IMyBest.WeiXin.AgentServer.Services
+@{
+    Layout = null;
+    ViewBag.webIsLogin = true;
+    string basePath = Url.Content("~/Content/Login/v3/");
+
+    string pageTitle = ViewBag.Title ?? "艾客SCRM-国内领先社交电商工具平台，助力商家构建私域流量";
+
+    bool isFUP = FUPlanBaseService.CheckIsFUP(ViewData["platform"]);
+    if(isFUP)
+    {
+        basePath = Url.Content("~/Content/Login/fup_v1/");//返利联盟专用样式
+        pageTitle = "168微销-一个连接微信和淘宝的赚钱返利平台";
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@(pageTitle)</title>
+    <meta name="keywords" content="@(ViewBag.KeyWords ?? "艾客微信生态平台，微信电商，流量平台，淘宝好评返现，淘宝权重，淘宝微信分享，微信打开淘宝，提升动态评分，打造宝贝爆款，提升店铺DSR")" />
+    <meta name="description" content="@(ViewBag.Description ?? "艾客打造微信生态优选的电商工具和流量平台，商家通过微信引流淘宝购物；提高销量；好评返现提升店铺好率；精准推送提升客人的再次购买；抽奖活动提高粉丝活跃度等等的功能实现低成本、系统化社群营销和会员管理，提高平台店铺的销售额和复购率。操作简单易上手，同时还有大量的顶级商家分享的营销干货，手把手教你怎么做好电商。")" />   
+    @if (isFUP)
+    {
+        <link rel="shortcut icon" href="@(basePath)/images/favicon.ico" type="image/x-icon"/>
+    }
+    else
+    {
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    }
+    <link rel="stylesheet"href="@(basePath)css/css.css">
+    <link rel="stylesheet" href="/Content/new/css/base.css">
+    <link rel="stylesheet" href="/Content/new/css/global.css?t=1">
+    @RenderSection("style", false)
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.11.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.carouFredSel-6.2.1.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.scrollTo.js")"></script>
+    <style>
+        .home-layout{
+        height:39px;
+        }
+    </style>
+
+    @if (isFUP)
+    {
+        <style>
+            .layer-header .signin {
+                background-color: #fb6b47;
+                border-color: #fb6b47;
+            }
+
+            .login-header .login-main {
+                margin-top: 33px;
+            }
+
+            .layer-header .login {
+                color: #fb6b47;
+                border-color: #fb6b47;
+            }
+
+            .footer-layout .copy-right a {
+                color: #999999;
+            }
+
+        </style>
+    }
+</head>
+<body>
+    <div class="main-wrap login-header">
+       <div class="j-container">
+           @{Html.RenderPartial("_Header", basePath);}
+           @RenderBody()
+       </div>
+        @{Html.RenderPartial("_Footer", basePath);}
+    </div>
+    @if(!isFUP)
+    {
+        Html.RenderPartial("_Buoy");
+    }
+   <script type="text/javascript">
+       var layoutScrollTo = function (id) {
+           if (id.indexOf('#') == -1) id = '#' + id;
+           $(id).ScrollTo(500);
+           $(".header .nav-list a").each(function () {
+               if (this.hash == id) {
+                   $(this).addClass("active").siblings().removeClass("active");
+               }
+           });
+       };
+       layoutScrollTo(window.location.hash || '');
+       if (window.ActiveXObject && Number(navigator.userAgent.toLowerCase().match(/msie ([\d.]+)/)[1].indexOf("8")) <= 8) {
+           function viewMinSize() {
+               var width = document.documentElement.clientWidth || document.body.clientWidth;
+               if (width < 1200) {
+                   $('html').addClass('min1200');
+               } else {
+                   $('html').removeClass('min1200');
+               }
+           }
+           viewMinSize();
+           $(window).resize(function () {
+               viewMinSize();
+           })
+       }
+    </script>
+    @RenderSection("scripts", false)
+    @{
+       var route = Request.RequestContext.RouteData.Values;
+       string controller = route["controller"].ToString().ToLower();
+       string action = route["action"].ToString().ToLower();
+        }
+    @if (!(controller == "index" && action == "login"))
+    { 
+    <script type="text/javascript" src="https://ryak66.kuaishang.cn/bs/ks.j?cI=601997&fI=69397" charset="utf-8"></script>
+    }
+    
+</body>
+</html>

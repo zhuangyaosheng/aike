@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "艾客功能解决方案-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/solution/");
+    ViewBag.TopMenuSolutionNavIndex = 1;
+}
+<link href="@Url.Content("~/Content/Login/solution/hm-solution.css")" rel="stylesheet">
+
+<div class="hm-solution-banner">
+    <div class="hm-slo-bnr__bd">
+        <h1 class="hm-slo-bnr__bd-title">艾客功能解决方案</h1>
+        <div class="hm-slo-bnr__bd-desc">艾客针对电商营销诸多痛点，从社群营销本质出发，以成功案例为载体，深入浅出的详解各类多元化营销工具使用方<br>法，给出针对性解决方案，让电商营销简单起来！
+        </div>
+    </div>
+</div>
+<div class="hm-slo-cns">
+    @{Html.RenderPartial("~/Views/Index/Solution/_PartialNav.cshtml", new { NavIndex = ViewBag.TopMenuSolutionNavIndex });}
+    <div class="hm-slo-article">
+        <div class="hm-slo-article__ins">
+            <h1 class="hm-slo-art__tl">裂变粉丝还在傻傻集赞？这个走心走肾的裂变方式颠覆你的认知！</h1>
+            <p>现下最流行的社群营销模式回归本质来说就是一种信任营销，什么人的一句话会让你毫不犹豫的花钱？答案必须是朋友！<br/>
+              让客户认可你，客户喜欢你，跟客户打好关系，不仅仅是客户而是朋友。做任何事都是围绕着人而运作的，微合伙人应运而生，每一个粉丝的朋友都是你的潜在消费者。</p>
+            <h2>合作模式</h2>
+            <p>从商家的任务列表中获取推广素材，在微信分享，好友通过推广素材关注公众号或在淘宝产生购买，合伙人即可获取佣金.</p>
+            <p><img src="@(imgPath)whhr-01.jpg"></p>
+            <h2>显著效果</h2>
+            <p>下图为某商家2017年9月11日-9月18日微合伙人活动的有效成果！</p>
+            <p><img src="@(imgPath)whhr-02.jpg"></p>
+            <h2>操作详解</h2>
+            <p>
+                在艾客后台搭建任务：微合伙人版-微合伙人项目-编辑（如下图）
+            </p>
+            <p><img src="@(imgPath)whhr-03.jpg"></p>
+
+            <p>
+                任务搭建完毕后，将图文推送到商家微信公众平台，并发送到淘客群或者朋友圈进行大量轰炸式传播。发动每一个人去辐射他的朋友圈，转发一下就有钱拿，何乐而不为。
+            </p>
+            <p><img src="@(imgPath)whhr-04.jpg"></p>
+            <h2>小艾建议</h2>
+            <p>现在大部分的微合伙人都专注于公众号的推送，其实微信个人号和淘客群也是不容小觑的强势力量呢！个人号的优势在于提升信任度，淘客群则是手握大量资源，商家一定要多渠道多平台转发，同时确保佣金的按时发放，才能可持续发展哦！</p>
+        </div>
+    </div>
+</div>

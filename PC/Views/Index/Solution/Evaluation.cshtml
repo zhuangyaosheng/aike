@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "艾客功能解决方案-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/solution/");
+    ViewBag.TopMenuSolutionNavIndex = 0;
+}
+<link href="@Url.Content("~/Content/Login/solution/hm-solution.css")" rel="stylesheet">
+
+<div class="hm-solution-banner">
+    <div class="hm-slo-bnr__bd">
+        <h1 class="hm-slo-bnr__bd-title">艾客功能解决方案</h1>
+        <div class="hm-slo-bnr__bd-desc">艾客针对电商营销诸多痛点，从社群营销本质出发，以成功案例为载体，深入浅出的详解各类多元化营销工具使用方<br>法，给出针对性解决方案，让电商营销简单起来！
+        </div>
+    </div>
+</div>
+<div class="hm-slo-cns">
+    @{Html.RenderPartial("~/Views/Index/Solution/_PartialNav.cshtml", new { NavIndex = ViewBag.TopMenuSolutionNavIndex });}
+    
+    <div class="hm-slo-article">
+        <div class="hm-slo-article__ins">
+            <h1 class="hm-slo-art__tl">晒评价</h1>
+            <h2>提升店铺DSR不做晒评价?一位商家突然失去了成功……</h2>
+            <p>
+                信用评价和店铺评分，是个人和店铺的信誉度的表现，也是消费者购物非常看重的点之一，真实客观的评价不仅可以提升买家与卖家的信誉度，也可以供更多的人参考之用，从而促进更多的购买。<br>
+                小艾这里有个商家使用晒评价功能，一个月时间就获得了巨大成功。
+            </p>
+            <h3>数据亮点</h3>
+            <p>
+            <table>
+                <tr>
+                    <td>数据名称</td>
+                    <td>粉丝总数</td>
+                    <td>绑定会员总数</td>
+                    <td>注册会员总数</td>
+                    <td>销量</td>
+                </tr>
+                <tr>
+                    <td>活动前</td>
+                    <td>1029</td>
+                    <td>38</td>
+                    <td>0</td>
+                    <td>1299314</td>
+                </tr>
+                <tr>
+                    <td>活动后</td>
+                    <td>71777</td>
+                    <td>47541</td>
+                    <td>2</td>
+                    <td>1550523</td>
+                </tr>
+            </table>
+            </p>
+            <p>
+                此次活动最明显的增长就是粉丝总数和绑定的会员总数，对以后活动促销推送和新品上架积累了一批忠实客户。
+            </p>
+            <h3>活动详情</h3>
+            <p>
+                本次活动商家使用包裹卡推广，在包裹卡上印刷上公众号二维码，扫码关注后台回复评价活动即可领取晒评价红包。
+            </p>
+            <p><img src="@(imgPath)sol-1.jpg"></p>
+            <p>
+                虽然是通用的包裹卡方式，但是通过公众号扫码，消费者自主操作的模式，节省和客服沟通以及人工审核的时间，消费者参与度大大提高。<br>
+                活动前8月11日该店铺DSR如下：
+            </p>
+            <p><img src="@(imgPath)sol-2.jpg"></p>
+            <p>活动后，9月11日的店铺DSR如下：</p>
+            <p><img src="@(imgPath)sol-3.jpg"></p>
+            <p>做运营的都知道，在销量这么高的情况下，DSR能持平其实已经超级厉害了！</p>
+            <h3>操作图解</h3>
+            <p>艾客傻瓜式后台操作，找到评价有礼功能，新建活动，所有选项均可自定义，完美满足你的各种需求，有效控制成本。</p>
+            <p><img src="@(imgPath)sol-4.jpg"></p>
+            <h3>适用商家</h3>
+            <p>评价有礼的别名叫开水，万能，常用，经久不衰，效果卓绝！只要你是做电商的，不管你是卖女装还是彩妆，不论你是十年老店还想新锐血液，请不要大意的用起来，它绝对是你成功的第一步。</p>
+        </div>
+    </div>
+</div>

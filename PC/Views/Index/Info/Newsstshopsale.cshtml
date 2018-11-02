@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "在提升搜索权重和销量上，没有平台比我们更专业-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/info/home_st_shopsale/");
+}
+<!--快速提升店铺销量-->
+<div class="wrapper content-wrap">
+    <div class="inner-body">
+        <div class="table">
+            <div class="cell">
+                <div class="info-container">
+                    <h1 class="title">在提升搜索权重和销量上，没有平台比我们更专业！</h1>
+                    <div class="cn-panel">
+                        <p><strong>淘卡位横空出世，真实提高搜索权重</strong></p>
+                        <p>淘口令关键词卡首屏指定宝贝URL和标题关键词，用淘口令轻松跳转商品搜索页卡屏第二位，点击进入宝贝详情页，大大增加宝贝关键词的权重。</p>
+                        <p><img src="@(imgPath)01.jpg" /></p>
+                        <p><strong>千人千面，精准推送，一击必中！</strong></p>
+                        <p>艾客强大的后台数据系统，一键掌握用户购物信息，智能分析用户人物画像！在微信上完成千人千面的推送！</p>
+                        <p>通过购物数据筛选消费者推送消息，一个月可发送多条信息，不再受公众号推送图文数限制！</p>
+                        <p>精准筛选人群，给出消费者最想要的信息，配合促销活动，吸粉同时大幅度提高销量！</p>
+                        <p><img src="@(imgPath)02.jpg" /></p>
+                        <p>艾客潜心深研电商运营多年，只想用简单的方法，快捷的操作，完成一个小白商家到大咖店铺的华丽转身！</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cell news-list">
+                @{Html.RenderPartial("Info/_RightPartial");}
+            </div>
+        </div>
+    </div>
+</div>

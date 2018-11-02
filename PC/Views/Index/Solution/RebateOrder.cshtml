@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "艾客功能解决方案-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/solution/");
+    ViewBag.TopMenuSolutionNavIndex = 5;
+}
+<link href="@Url.Content("~/Content/Login/solution/hm-solution.css")" rel="stylesheet">
+
+<div class="hm-solution-banner">
+    <div class="hm-slo-bnr__bd">
+        <h1 class="hm-slo-bnr__bd-title">艾客功能解决方案</h1>
+        <div class="hm-slo-bnr__bd-desc">艾客针对电商营销诸多痛点，从社群营销本质出发，以成功案例为载体，深入浅出的详解各类多元化营销工具使用方<br>法，给出针对性解决方案，让电商营销简单起来！
+        </div>
+    </div>
+</div>
+<div class="hm-slo-cns">
+    @{Html.RenderPartial("~/Views/Index/Solution/_PartialNav.cshtml", new { NavIndex = ViewBag.TopMenuSolutionNavIndex });}
+    <div class="hm-slo-article">
+        <div class="hm-slo-article__ins">
+            <h1 class="hm-slo-art__tl">新品上架后如何玩出火来，月销30000+，火遍全网，看看他是怎么做的！</h1>
+            <p>如何通过一个简单的活动迅速提高新品基础销量和曝光率，提升店铺动态评分？<br/>
+            小艾遍寻后台，找到了一个商家最近的活动，月销30000+！这个玩法有点厉害噢！
+            </p>
+            <h2>店铺背景</h2>
+            <p>
+            <table>
+                <tr>
+                    <td>类目</td>
+                    <td>客单价</td>
+                    <td>月均销量</td>
+                    <td>使用功能</td>
+                </tr>
+                <tr>
+                    <td>食品</td>
+                    <td>200-400</td>
+                    <td>5W-6W</td>
+                    <td>订单返利</td>
+                </tr>
+            </table>
+            </p>
+            <h2>活动详情</h2>
+            <p>订单返利功能，能够快速提高淘宝搜索权重，避免平台封杀误杀；大大降低人工操作成本，不影响产品售卖最低价，每一单都是真实销量。</p>
+            <h3>该商家必须先在艾客后台订单返利页面新建活动</h3>
+            <p><img src="@(imgPath)ddfl-01.jpg"></p>
+            <p><img src="@(imgPath)ddfl-02.jpg"></p>
+            <h3>然后在其公众号发送活动页面推文</h3>
+            <p><img src="@(imgPath)ddfl-03.jpg"></p>
+            <p>粉丝点击进入页面后抢返利名额，并绑定会员，绑定手机号要跟收货地址的手机号一样哦。<br/>
+            点击跳转至淘宝或天猫购买商品，实现微信与平台的无缝对接！
+            </p>
+            <p><img src="@(imgPath)ddfl-04.jpg"></p>
+            <p>七天无理由退换货后，艾客系统抓取订单金额用现金红包返现对应的微信号。</p>
+            <h2>活动效果</h2>
+            <p>每一单都是真实销量，宝贝搜索排名直线上升，淘宝权重不断加强。微信操作安全省心，平台自动化，避免了大量的成本投入，增大利润空间。</p>
+            <p>通过返利诱惑让粉丝主动为店铺增加真实订单，活动同时调动粉丝活跃度和粘性，无论是店铺还是公众号都达到双赢效果。</p>
+            <p>这只是艾客订单返利功能的某一玩法而已哦，更多玩法扫码关注你的专属社群营销顾问，二十四小时为你店铺的成功待命！</p>
+        </div>
+    </div>
+</div>

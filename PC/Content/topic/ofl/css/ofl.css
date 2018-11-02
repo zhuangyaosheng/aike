@@ -1,0 +1,250 @@
+html,body{
+  background-color: #ffc102;
+}
+.ofl-wrap{
+  max-width: 1920px;
+  min-width: 1200px;
+  margin: 0 auto;
+  padding-top: 71px;
+  color:#333333;
+}
+.ofl-wrap .red{
+  color: #ef1921;
+}
+.ofl-wrap h1,
+.ofl-wrap h2,
+.ofl-wrap h3{
+  padding: 0;
+  margin: 0;
+}
+.ofl-wrap h1{
+  font-size: 36px;
+  text-align: center;
+}
+.ofl-wrap h1.title{
+  color: #ffffff;
+  font-weight: normal;
+}
+.ofl-wrap .color-yl{
+  color: #ffe152;
+}
+.ofl-wrap .banner{
+  min-width: 1200px;
+  height: 563px;
+  position: relative;
+  background: url("../images/ofl-spm-banner.jpg") center center no-repeat;
+  margin-bottom: 39px;
+  overflow: hidden;
+}
+.ofl-spm{
+  width: 892px;
+  margin: 0 auto 19px auto;
+  position: relative;
+}
+
+.ofl-spm-1{
+  height: 807px;
+  background: url("../images/ofl-spm-1.jpg") no-repeat;
+}
+.ofl-spm-1 h1.title{
+  line-height: 97px;
+  height: 97px;
+}
+.ofl-spm-1 .tls{
+  padding-top: 47px;
+  width: 600px;
+  margin-left: 245px;
+  font-weight: bold;
+}
+.ofl-spm-1 .tls li{
+  margin-bottom: 16px;
+}
+.ofl-spm-1 .tls li p{
+  margin-bottom: 10px;
+}
+.ofl-spm-1 .tls h2{
+  font-size: 24px;
+  color: #d30304;
+  margin-bottom: 10px;
+}
+.ofl-spm-1 .tls .desc{
+  font-size: 16px;
+  line-height: 1.7;
+}
+.ofl-spm-1 .tx-1{
+  font-size: 36px;
+  text-align: center;
+  color: #d30304;
+  padding-top: 30px;
+  line-height: 1.6;
+}
+
+.ofl-spm-2{
+  height: 1116px;
+  background: url("../images/ofl-spm-2.jpg") no-repeat;
+}
+.ofl-spm-2 h1.title{
+  padding-top: 22px;
+  margin-bottom: 5px;
+}
+.ofl-spm-2 .th2{
+  font-size: 24px;
+  color: #ffe152;
+  text-align: center;
+}
+.ofl-spm-2 .tls{
+  margin:80px 0 0 305px;
+}
+.ofl-spm-2 .tls li{
+  margin-bottom: 40px;
+  padding-top: 1px;
+  height: 132px;
+}
+.ofl-spm-2 .tls h2{
+  font-size: 24px;
+  margin-bottom: 12px;
+  margin-top: 18px;
+}
+.ofl-spm-2 .tls .desc{
+  font-size: 16px;
+}
+
+.ofl-spm-3{
+  height: 1466px;
+  background: url("../images/ofl-spm-3.jpg") no-repeat;
+  margin-bottom: 0;
+}
+.ofl-spm-3 h1.title{
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.ofl-spm-3 h2{
+  font-size: 36px;
+  color: #ed1c46;
+  font-weight: bold;
+  padding-top: 30px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.ofl-spm-3 .desc{
+  font-size: 16px;
+  margin-left: 39px;
+}
+.ofl-spm-3 .desc .p1{
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #000000;
+  font-weight: bold;
+}
+.ofl-spm-3 .step2{
+  position: absolute;
+  top:726px;
+  width: 100%;
+}
+
+.ofl-spm-4{
+  height: 537px;
+  background: url("../images/ofl-spm-4.jpg") no-repeat;
+}
+.ofl-spm-4 h1.title{
+  padding-top: 12px;
+  font-size: 32px;
+}
+
+.ofl-spm-5{
+  height: 701px;
+  background: url("../images/ofl-spm-5.jpg") no-repeat;
+}
+.ofl-spm-5 h1.title{
+  height: 69px;
+  line-height: 69px;
+  font-weight: bold;
+  font-size: 32px;
+}
+.ofl-spm-5 .desc{
+  font-size: 24px;
+  text-align: center;
+  color: #000000;
+  padding-top: 34px;
+  line-height: 1.7;
+  margin-bottom: 45px;
+}
+.ofl-spm-5 .desc del{
+  color: #999999;
+}
+.ofl-spm-5 .spm-form li .title{
+  color: #999999;
+}
+.ofl-spm-5 .spm-form .btn-submit{
+  width: 254px;
+  height: 54px;
+  background-color: #d30304;
+  margin-left: 180px;
+  margin-top: 20px;
+}
+
+.spm-form{
+  width: 604px;
+  margin: 0 auto;
+}
+.spm-form .ls{
+  padding-bottom: 10px;
+}
+.spm-form li{
+  margin-bottom: 20px;
+  position: relative;
+}
+.spm-form li:after{
+  content: ' ';
+  display: table;
+  clear: both;
+}
+.spm-form li .title{
+  display: block;
+  width: 152px;
+  text-align: right;
+  float: left;
+  font-size: 18px;
+  color: #000000;
+  line-height: 50px;
+  margin-right: 33px;
+}
+.spm-form li .star{
+  color: #ff0000;
+}
+.spm-form li .input{
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  width: 418px;
+  border: 1px #cccccc solid;
+  outline: 0;
+  font-size:14px;
+}
+.spm-form .btn-submit{
+  width: 184px;
+  height: 40px;
+  line-height: 38px;
+  background-color: #ed1c46;
+  color: #ffffff;
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  font-size: 18px;
+  margin-left: 300px;
+  outline: 0;
+}
+.spm-form li input.error{
+  border-color: #ef1921;
+}
+.spm-form li p.error{
+  margin: 0;
+  padding: 0;
+  color: #ef1921;
+  font-size: 12px;
+  position: absolute;
+  top: 50px;
+  left: 190px;
+  display: none;
+}

@@ -1,0 +1,8 @@
+﻿@{
+    Layout = "~/Views/Index/_Layout.cshtml";
+    string basePath = Url.Content("~/Content/Login/v3/");    
+}
+@section style{
+  <link rel="stylesheet"href="@(basePath)css/info.css">
+}
+ @RenderBody()

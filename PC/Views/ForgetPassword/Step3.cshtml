@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "找回密码";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+}
+
+@section scripts{
+    <script>
+        var regpwd = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,20}$/;
+        $(function () {
+            $("form").submit(function () {
+
+                var newPwd = $("#newpassword").val();
+
+                //if (newPwd.length < 6) {
+                //    alert("密码必须是大于6位的字母、数字或英文符号");
+                //    return false;
+                //}
+                if (newPwd != $("#confirmpassword").val()) {
+                    alert("两次输入的密码不一致");
+                    return false;
+                }
+
+                if (!regpwd.test(newPwd)) {
+                    alert("密码必须是同时包含数字、大写和小写字母在内的8-20个字符"); 
+                    return false;
+                }  
+
+                return true;
+            });
+        });
+</script>
+
+}
+<div class="regWrapper">
+    <div class="step-panel">
+        <ul>
+            <li class="activity"><i>1</i>找回密码</li>
+            <li class="activity"><i>2</i>查收邮件</li>
+            <li class="activity"><i>3</i>重设密码</li>
+            <li><i>4</i>重设状态</li>
+        </ul>
+    </div>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid">
+                <form name="form1" method="post" id="form1" action="/ForgetPassword/Step3">
+                <div class="section">
+                    <label>登陆邮箱</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" id="findmail" name="findmail" value="@ViewData["findmail"]" readonly/> <font color="red">@ViewData["FindError"]</font>
+                        <p>用来登录公众平台，接收到激活邮件才能完成找回密码</p>
+                    </div>
+                </div>                
+                <div class="section">
+                    <label>新密码</label>
+                    <div class="input-panel">
+                        <input type="password" class="input" id="newpassword" name="newpassword"/> <font color="red">@ViewData["PasswordError"]</font>
+                        <p>用来登录公众平台，请填写新的密码</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <label>确认密码</label>
+                    <div class="input-panel">
+                        <input type="password" class="input" id="confirmpassword" name="confirmpassword"/> <font color="red">@ViewData["ConfirmPasswordError"]</font>
+                        <p>用来登录公众平台，请填写与新的密码一样的密码</p>
+                    </div>
+                </div>
+                <div class="section terms">
+                    <label>&nbsp;</label>
+                    <div class="input-panel">
+                        <input type="submit" class="btn" value="下一步" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

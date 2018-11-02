@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "找回密码";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+}
+@section scripts{
+<script>
+    function GoMailServer() {
+        var mailServerUrl = "";
+        var url = $("#findmail").val().split('@@')[1];
+        if (url == "gmail.com") {
+            mailServerUrl = "http://mail.google.com";
+        }
+        else {
+            mailServerUrl = "http://mail." + url;
+        }
+        window.location.href = mailServerUrl;
+    }
+</script>
+}
+<div class="regWrapper">
+    <div class="step-panel">
+        <ul>
+            <li class="activity"><i>1</i>找回密码</li>
+            <li class="activity"><i>2</i>查收邮件</li>
+            <li><i>3</i>重设密码</li>
+            <li><i>4</i>重设状态</li>
+        </ul>
+    </div>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid reg-step2 reg-step4"">
+                <form name="form1" method="post" id="form1" action="/ForgetPassword/Step1">           
+                <div class="result-msg clearfix">
+                    <label class="icon"></label>
+                    <div class="text">                        
+                        邮件已发送到邮箱 <em>@ViewData["findmail"]</em>
+                        <p>请在24小时内点击邮件中的链接继续完成注册。
+                            <br />
+                            <a class="btn" href="javascript:void(0);" onclick="GoMailServer();" style="text-align:center;margin-top:35px;">立即查收邮件</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="re-send">                    
+                    <input type="hidden" id="findmail" name="findmail" value="@ViewData["findmail"]" />  
+                    <input type="hidden" name="checkcode" value="@ViewData["checkcode"]" />  
+                    <p class="text1">没收到邮件?<a href="javascript:void(0);" class="btn-m1" onclick="$('form').submit();">重新发送</a></p>                                      
+                </div>
+                <div class="re-send">
+                    <p class="text1">邮箱不正确?<a href="/ForgetPassword/Step1" class="btn-m1">更换邮箱</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+﻿@using IMyBest.WeiXin.AgentServer.Manage.Helpers
+@using Webdiyer.WebControls.Mvc
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>@ViewBag.Title</title>
+    @RenderSection("stylePlus", false)
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link href="@Url.Content("~/Content/icons/font-awesome/css/font-awesome.min.css")" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="@WebUrlHelper.StylesWebPath/Themes/frame/skin_12/frame_skin.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="@WebUrlHelper.StylesWebPath/Themes/default/styles/common.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="@WebUrlHelper.StylesWebPath/Themes/default/styles/module.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="@WebUrlHelper.StylesWebPath/Content/themes/default/styles/main.css" media="all" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="@WebUrlHelper.ScriptWebPath/Scripts/jquery-1.7.1.js"></script>
+    @*<script type="text/javascript" src="@WebUrlHelper.ScriptWebPath/Scripts/require.js"></script>*@
+    @{Html.RegisterMvcPagerScriptResource();}
+    <script type="text/javascript" src="@WebUrlHelper.StylesWebPath/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <link  rel="stylesheet" href="@WebUrlHelper.ScriptWebPath/Scripts/artDialog/skins/default.css"  />
+    <script type="text/javascript" src="@WebUrlHelper.ScriptWebPath/Scripts/common.js"></script>
+    <script type="text/javascript" src="@WebUrlHelper.ScriptWebPath/Scripts/artDialog/jquery.artDialog.source.js"></script>
+    <script type="text/javascript" src="@WebUrlHelper.ScriptWebPath/Scripts/artDialog/plugins/iframeTools.source.js"></script>
+    <script type="text/javascript" src="@WebUrlHelper.ScriptWebPath/Scripts/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" charset="utf-8" src="@WebUrlHelper.ScriptWebPath/Scripts/ueditor-net/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="@WebUrlHelper.ScriptWebPath/Scripts/ueditor-net/ueditor.all.min.js"></script>
+
+
+<script type="text/javascript">
+    $.ajaxSetup({ cache: false });
+
+    $(function () {
+        var host = window.location.host;
+        var url = window.top.location.href;
+        if (url.indexOf("Manage/HomeAgent") == -1) {
+            window.location.href = "http://" + host + "/Manage/HomeAgent";
+        }
+
+        $("textarea.content_edit_textarea").each(function () {
+            var _id = $(this).attr("id");
+            if (_id) {
+                if ($("#voitStatus").val() == "1") {
+                    UE.getEditor(_id, { readonly: true, enableAutoSave: false });
+
+                }
+                else {
+                    UE.getEditor(_id, { enableAutoSave: false })
+                }
+            }
+        });
+    })
+
+</script>
+    @RenderSection("header", false)
+</head>
+<body>
+    @RenderBody()
+    @RenderSection("scripts",false)
+</body>
+</html>

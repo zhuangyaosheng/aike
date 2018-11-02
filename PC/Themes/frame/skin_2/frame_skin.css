@@ -1,0 +1,40 @@
+#header,
+.main_nav li,
+.main_nav .current a,
+.main_nav .weaken,
+.side_nav_level_1 .sub_hd_title,
+.side_nav_level_1 .sub_hd_title:visited, 
+.side_nav_level_1 .sub_hd_title:hover,
+.side_nav_level_2 a,
+.quick_link_bar strong,
+.pending_list li,
+.top_notice strong { background-image: url(frame_bg.png); background-repeat:no-repeat; background-color:transparent;}
+
+#header{ background-repeat:repeat-x;}
+
+.main_nav .current a, .main_nav .current a:visited,.main_nav .current a { color:#fff; background-color:transparent;}
+.side_nav_level_1 a, .side_nav_level_1 a:visited, .side_nav_level_1 a:hover { background-color:transparent;}
+
+.side_nav_level_1 .sub_hd_title {color:#333;}
+.side_nav_level_1 .current .sub_hd_title, 
+.side_nav_level_1 .current .sub_hd_title:visited, 
+.side_nav_level_1 .current .sub_hd_title:hover { color:#fff; background-color:transparent;}
+.side_nav_level_2 .current a,
+.side_nav_level_2 .current a:visited,
+.side_nav_level_2 .current a:hover {color:#fff; background-color:transparent;}
+
+#left_frame { background-color:#ede7e1;}
+.online_service .sub_list {border-color:#f19432;}
+.user_info .current p{  border-color:#f19432; border-bottom-color:#fff; }
+
+.pending_list a, .pending_list a:visited{/*color:#733200;*/}
+.pending_list a:hover{/*color:#733200;*/}
+
+.user_info .current p{  border-color:#f19432; border-bottom-color:#fff; }
+.online_service .sub_list {border-color:#f19432;}
+
+.top_notice strong { background-position:0 -50px;}
+
+.common_operating_a, .common_operating_a:visited, .aids_a, .aids_a:visited {background-image:url(function_btn.gif);}
+
+.top_func_bar .sub_list {border:2px solid #ff7f0d;}

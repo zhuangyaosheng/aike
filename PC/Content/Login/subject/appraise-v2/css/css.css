@@ -1,0 +1,109 @@
+.scroll-menu{
+    top:20%;
+}
+.pjyl-wraper,
+.pjyl-wraper input,
+.pjyl-wraper button,
+.pjyl-wraper textarea,
+.pjyl-wraper select{
+    font-family: \5FAE\8F6F\96C5\9ED1, \5B8B\4F53;
+}
+.pjyl-wraper{
+    min-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.pjyl-wraper a,
+.pjyl-wraper area{
+    outline: 0;
+}
+.pjyl-wraper img{
+    margin: 0;
+    vertical-align: top;
+}
+.pjyl-wraper .top{
+    background-color: #ed1c43;
+    height: 563px;
+    background: url("../images/p1.jpg") center center;
+}
+.pjyl-wraper .panel{
+    width: 890px;
+    margin: 0 auto;
+}
+.pjyl-wraper .form .cns{
+    border-left: 7px #3391e8 solid;
+    border-right: 7px #3391e8 solid;
+    border-bottom: 7px #3391e8 solid;
+    padding-top: 25px;
+}
+.pjyl-wraper .form table{
+    width:80%;
+    margin:0 auto;
+}
+.pjyl-wraper .form table tr td:first-child{
+    text-align: right;
+}
+.pjyl-wraper .form table tr td{
+    padding-bottom: 20px;
+}
+.pjyl-wraper .form table label{
+    font-size: 18px;
+    color: #999999;
+    padding-right: 30px;
+}
+.pjyl-wraper .form table label i{
+    font-style: normal;
+    color: #ff0000;
+}
+.pjyl-wraper .form table input{
+    border: 1px #cccccc solid;
+    padding: 0 10px;
+    width: 398px;
+    height: 46px;
+    background-color: #ffffff;
+    outline: 0;
+    font-size: 18px;
+}
+.pjyl-wraper .form .submit{
+    width: 253px;
+    height: 54px;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    background: url("../images/p-btn-01.jpg") no-repeat;
+}
+.pjyl-wraper .link{
+    display: block;
+    width: 256px;
+    height: 56px;
+    margin: 0 auto;
+}
+.pjyl-scroll-form{
+    width: 196px;
+    height: 169px;
+    background: url("../images/rt-sc.png") no-repeat;
+    position: fixed;
+    right: 0;
+    top:25%;
+    margin-top:235px;
+}
+.pjyl-scroll-form .lk{
+    display: block;
+    width: 149px;
+    height: 35px;
+    position: absolute;
+    top:112px;
+    left: 26px;
+    
+}
+.pjyl-scroll-form .close{
+    display: block;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top:0;
+    right: 0;
+    cursor: pointer;
+}

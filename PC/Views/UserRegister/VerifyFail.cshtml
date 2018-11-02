@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "等待审核-注册";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+}
+<div class="regWrapper">
+    <div  style="padding-top: 40px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        *注册前你可以先了解<a href="/RegHelper/introduce" target="_blank" style="color:#0066d3">《艾客入驻流程》</a>
+    </div>
+    <div class="step-panel">
+        <ul>
+            <li><i>1</i>基本信息</li>
+            <li><i>2</i>邮箱激活</li>
+            <li><i>3</i>信息登记</li>
+            <li class="activity"><i>4</i>等待审核</li>
+        </ul>
+    </div>
+    <h1>会员注册</h1>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid reg-step2 reg-step4">
+            <div class="result-msg clearfix">
+                <label class="icon"></label>
+                <div class="text">
+                    <p>您好，经过审核我们发现您提交的信息<b>@Session["MerchantName"]</b>未能核实，请核对后重新提交！</p>
+                    <a class="btn" href="javascript:void(0);" onclick="window.location = '/UserRegister/Step3'">返回上一步</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

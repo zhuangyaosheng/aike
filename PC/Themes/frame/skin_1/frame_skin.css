@@ -1,0 +1,78 @@
+
+
+#header_frame{height:148px;}
+#header_iframe {width:100%;height:75px;overflow:hidden;}
+#left_side_bar_iframe {width:190px;/*height:100%;*/overflow:hidden;overflow-y:auto;}
+#content_frame {width:100%;/*height:100%;*/ }
+
+
+
+.main_nav_bar{height:40px; background-color:#666;  background-color:#6A8ABA; padding-left:0px; position: relative; top: 30px;  border-bottom:5px solid #365175; }
+
+
+
+#header,
+.main_nav li,
+.main_nav .current a,
+.main_nav .weaken,
+.side_nav_level_1 .sub_hd_title,
+.side_nav_level_1 .sub_hd_title:visited, 
+.side_nav_level_1 .sub_hd_title:hover,
+.side_nav_level_2 a,
+.quick_link_bar strong,
+.pending_list li,
+.top_notice strong { background-image: url(frame_bg.png); background-repeat:no-repeat; background-color:transparent;}
+
+/* del style */
+
+#header { background-image:none;}
+.main_nav li,.main_nav li.first ,.main_nav li.last ,.main_nav .current a { background-image:none;}
+.main_nav li a,.main_nav li a:visited{color:#fff;}
+.main_nav li a:hover{color:#fff; text-decoration:none;}
+
+/*overwrite */
+
+.main_nav {height: 40px; overflow: hidden; }
+.main_nav li { height:40px; line-height: 40px;}
+,.main_nav .current a { background:#365175; color:#fff; }
+
+
+.frame_table #left_switch_bar {background: transparent url(left_switch_bar.png) repeat-y right top; }
+.left_switch_bar .switch_bg{background-position:right top;}
+.left_switch{height:110px; width:13px; border:none;background:url(left_switch.png) no-repeat left top;}
+
+#right_top_frame { display: none; background:url(skin_1/breadcrumb.gif) repeat-x 0 0; height:38px;}
+
+
+
+.main_nav .current a, .main_nav .current a:visited,.main_nav .current a { background:#365175; color:#fff;}
+
+.side_nav_level_1 a, .side_nav_level_1 a:visited, .side_nav_level_1 a:hover { background-color:transparent;}
+.side_nav_level_1 a:hover { color:#000; background-color:transparent;}
+.side_nav_level_1 a:active {color:#333;}
+
+.side_nav_level_1 .sub_hd_title {color:#333;}
+.side_nav_level_1 .current .sub_hd_title, 
+.side_nav_level_1 .current .sub_hd_title:visited, 
+.side_nav_level_1 .current .sub_hd_title:hover { color:#fff; background-color:transparent;}
+.side_nav_level_2 .current a,
+.side_nav_level_2 .current a:visited,
+.side_nav_level_2 .current a:hover {color:#fff; background-color:transparent;}
+
+#left_frame { background-color:#e5e5e5;}
+.online_service .sub_list {border-color:#f19432;}
+.user_info .current p{  border-color:#f19432; border-bottom-color:#fff; }
+
+.pending_list a, .pending_list a:visited{/*color:#733200;*/}
+.pending_list a:hover{/*color:#733200;*/}
+
+.user_info .current p{  border-color:#f19432; border-bottom-color:#fff; }
+.online_service .sub_list {border-color:#f19432;}
+
+.top_notice strong { background-position:0 -50px;}
+
+.common_operating_a, .common_operating_a:visited, .aids_a, .aids_a:visited {background-image:url(function_btn.png);}
+
+.top_func_bar .sub_list {border:2px solid #4c91d1;}
+
+

@@ -1,0 +1,71 @@
+﻿@using IMyBest.WeiXin.AgentServer.Services
+@{
+    Layout = null;
+    string basePath = Model;
+    bool isFUP = FUPlanBaseService.CheckIsFUP(ViewData["platform"]);
+}
+
+@if (isFUP)
+{
+    <div class="weixiao-footer">
+        <!-- footer -->
+        <div class="layout">
+            <div class="footer-layout" id="footerId">
+                <div class="copy-right" id="copyright">
+                    Copyright ©2013 - 2018 www.168weixiao.com 版权所有  <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备18044292号</a>
+                </div>
+            </div>
+        </div>
+        <!-- /footer -->
+    </div>
+}
+else
+{
+    <!-- footer -->
+    <div class="layout">
+        <!--如果把公司动态不隐藏起来的时候，把footer这一块的标签上的写有style的标签都把style（行内样式）全部删除-->
+        <div class="footer-layout" id="footerId">
+            <div class="layer-container footer-container clearfix">
+                <i class="icon icon-robot float-left"></i>
+                <div class="site float-left" style="width: 722px;">
+                    <p class="lable-title pt-0"><a style="color: #fff;" href="/Pages/contact.html">联系我们</a></p>
+                    <ul class="float-left advisory" style="padding-right: 58px;">
+                        <li class="lable-title">咨询热线：400-832-0166</li>
+                        <li class="workday">周一至周五（9:00-18:00）</li>
+                        <li><a target="_blank" class="advisory-qq" href="http://wpa.qq.com/msgrd?v=3&uin=3004592282&site=qq&menu=yes">在线QQ咨询</a></li>
+                    </ul>
+                    <ul class="float-left" style="padding-right: 40px;">
+                        <li class="lable-title">地址：广州市天河区华夏路28号富力盈信大厦1205-1212室</li>
+                        <li class="lable-title lable-title--top">邮箱：info@aiagain.com</li>
+                    </ul>
+                </div>
+                <div class="float-left attention" style="padding: 9px 0 9px 118px;">
+                    <img class="sy-code" src="/Content/new/images/sy-code.png" style="width: 116px; height: 116px;">
+                    <p>扫码关注公众号</p>
+                </div>
+            </div>
+            <div class="copyright" id="copyright">Copyright ©2013 - 2018 www.aiagain.com 版权所有 <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP15027667号</a></div>
+
+        </div>
+    </div>
+    <!-- /footer -->
+    <script>
+        (function (b, a, e, h, f, c, g, s) {
+            b[h] = b[h] || function () { (b[h].c = b[h].c || []).push(arguments) };
+            b[h].s = !!c; g = a.getElementsByTagName(e)[0]; s = a.createElement(e);
+            s.src = "//s.union.360.cn/" + f + ".js"; s.defer = !0; s.async = !0; g.parentNode.insertBefore(s, g)
+        })(window, document, "script", "_qha", 168240, false);
+    </script>
+}
+
+<script>
+
+     @if (!isFUP)
+     {
+        <text>
+    //替换域名
+    var host = window.location.host;
+    $("#copyright").html("Copyright ©2013 - 2017 " + host + " 版权所有  <a href='http://www.miitbeian.gov.cn' target='_blank'>粤ICP15027667号</a>");
+    </text>
+     }
+</script>

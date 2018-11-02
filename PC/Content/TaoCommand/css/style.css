@@ -1,0 +1,152 @@
+.ka1st-banner {
+  position: relative;
+  height: 330px;
+  overflow: hidden;
+  color:#ffffff;
+}
+.ka1st-banner .ins{
+    min-width: 1200px;
+    height: 100%;
+    text-align:center;
+    background:url(../images/ka1st-banner.jpg) top center no-repeat;
+}
+.ka1st-banner .ins .title {
+    padding-top: 80px;
+    font-size: 30px;
+    line-height: 2.5;
+}
+.ka1st-banner .ins .desc {
+    font-size: 16px;
+}
+
+.ka1st-tkl {
+    width: 1000px;
+    height: 480px;
+    margin: -80px auto 60px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+}
+.ka1st-tkl-main {
+    float: left;
+    width: 620px;
+}
+.ka1st-tkl-main h3{
+    font-size: 26px;
+    color: #333333;
+    line-height: 3;
+}
+.tkl-control {
+    border:1px solid #dee0e2;
+    width: 100%;
+    padding: 10px 5px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+.tkl-control::placeholder{
+color:#d3d3d3;
+}
+.ka1st-tkl-main button {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: #2881e5;
+    border:none;
+    border-radius: 3px;
+    padding:15px 60px;
+    color: #ffffff;
+}
+.ka1st-tkl-main .summary{
+    color: #afafaf;
+}
+.ka1st-tkl-sidebar {
+    display: inline-block;
+    text-align: center;
+    width: 320px;
+}
+.ka1st-tkl-sidebar img {
+    margin-top: -20px;
+}
+
+.ka1st-tklPop {
+    background-color: #ffffff;
+    color: #666666;
+    text-align: center;
+    padding:10px 40px 30px;
+}
+.ka1st-tklPop h3{
+    font-size: 24px;
+    line-height: 3;
+}
+.ka1st-tklPop .summary {color: #959595;text-align: left;}
+.ka1st-tklPop .tkl-info {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+    line-height: 2;
+    font-size: 16px;
+    color: #16000f;
+    text-align: left;
+    border: 2px dotted #ff0000;
+    border-radius: 5px;
+}
+.ka1st-tklPop .tkl-info .tkl {color: #ff5723;font-weight: bold;}
+.ka1st-tklPop button {
+    background-color: #2881e5;
+    border:none;
+    border-radius: 3px;
+    padding:15px 65px;
+    color: #ffffff;
+}
+
+.ka1st-shopFormPop {
+    background-color: #ffffff;
+    color: #333333;
+    padding:10px 45px;
+}
+.ka1st-shopFormPop h3 {
+    font-size: 20px;
+    line-height: 2;
+}
+.ka1st-shopFormPop .verify-code {
+    border: 1px solid #ccc;
+    text-align: center;
+    height: 34px;
+    line-height: 1.42857143;
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 3px;
+}
+.ka1st-shopFormPop .submi {
+    margin-top: 20px;
+    text-align: center;
+}
+.ka1st-shopFormPop .submi button {
+    background-color: #2881e5;
+    color: #ffffff;
+    border: none;
+    width: 180px;
+    padding:10px 15px;
+    border-radius: 3px;
+}
+.btnAdd {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: #2881e5;
+    border:none;
+    border-radius: 3px;
+    padding:15px 60px;
+    color: #ffffff;
+}
+.btnAdd2 {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #2881e5;
+    color: #ffffff;
+    border: none;
+    width: 180px;
+    padding:10px 15px;
+    border-radius: 3px;
+}

@@ -1,0 +1,40 @@
+﻿@using IMyBest.WeiXin.AgentServer.Services
+@{
+    ViewBag.Title = "等待审核-注册";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+
+    bool isFUP = FUPlanBaseService.CheckIsFUP(ViewData["platform"]);
+}
+<div class="regWrapper">
+    <div style="padding-top: 40px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @if (!isFUP)
+        {
+            @: *注册前你可以先了解<a href="/RegHelper/introduce" target="_blank" style="color:#0066d3">《艾客入驻流程》</a>
+        }
+    </div>
+    <div class="step-panel">
+        <ul>
+            <li><i>1</i>基本信息</li>
+            <li><i>2</i>邮箱激活</li>
+            <li><i>3</i>信息登记</li>
+            <li class="activity"><i>4</i>等待审核</li>
+        </ul>
+    </div>
+    <h1>会员注册</h1>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid reg-step2 reg-step4">
+            <div class="result-msg clearfix">
+                <label class="icon"></label>
+                <div class="text">
+                    <p>信息正在审核，3个工作日内会有专人跟你联系沟通哦~如需紧急处理，请咨询130 7670 3796 @(!isFUP ? "（小艾）" : string.Empty)</p>
+                    <a href="@Url.Action("Main","Index")">返回首页</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

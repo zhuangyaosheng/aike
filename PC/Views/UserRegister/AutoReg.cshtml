@@ -1,0 +1,357 @@
+﻿@using IMyBest.WeiXin.AgentServer.Services
+@{
+    ViewBag.Title = "基本信息-注册";
+
+    ViewBag.webIsLogin = false;
+    int regError_Code = IMyBest.WeiXin.AgentServer.Common.TypeHelper.ToInt32(ViewData["RegError_Code"]);
+
+    int referrer = BaseService.GetInt("rt");
+    string platformDesc = "艾客";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+
+    bool isFUP = FUPlanBaseService.CheckIsFUP(ViewData["platform"]);
+
+    string backUrl = BaseService.GetString("backUrl");
+    string fromActionParam = referrer > 0 ? "?rt=" + referrer.ToString() : string.Empty;
+
+    string txtMobileTips = string.Format("用来登录{0}平台，请填写真实有效的手机号码", platformDesc);
+    if (isFUP)
+    {
+        txtMobileTips = "请填写真实有效的手机号码";
+    }
+}
+<div class="regWrapper">
+    @*<div style="padding-top: 40px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        *注册前你可以先了解<a href="/RegHelper/introduce" target="_blank" style="color:#0066d3">《艾客入驻流程》</a>
+    </div>*@
+    <h1>会员注册</h1>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid">
+            <form name="form1" method="post" id="form1" action="/UserRegister/MerchantReg@(fromActionParam)">
+                @Html.Hidden("platform", ViewData["platform"])
+                <div class="section account-enterprise" style="font-size: 16px; color: green;">账号信息</div>
+                <div class="section">
+                    <label>手机号码</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" placeholder="@(txtMobileTips)" id="mobile" name="mobile" maxlength="200"/>
+                        @if (regError_Code == 1)
+                        {
+                            <font color="red">输入的手机号码已注册</font><a href="@Url.Action("Login", "Index")" class="lg" style="color:blue;">&nbsp;&nbsp;立即登录</a>
+                        }
+                        else
+                        {
+                            <font color="red">@ViewData["RegError"]</font>
+                        }
+                    </div>
+                    @Html.Hidden("referrer", referrer)
+                    @Html.Hidden("backUrl", backUrl)
+                </div>
+                <div class="section v-code">
+                    <label>短信验证码</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" id="checkcode" name="checkcode" maxlength="20" />&nbsp;&nbsp;<input type="button" id="btngetcode" class="btn" style="width: 100px; height: 30px; font-size: 12px; line-height: 0;" value="获取验证码" />
+                        <font color="red">@ViewData["CheckCodeError"]</font>
+                    </div>
+                </div>
+                <div class="section">
+                    <label>密码</label>
+                    <div class="input-panel">
+                        <input type="password" class="input" placeholder="同时包含数字、大写和小写字母的8-20个字符" id="regpassword" name="regPassword" maxlength="100" />
+                        <br />
+                        <font color="red">@ViewData["PasswordError"]</font>
+                    </div>
+                </div>
+                <div class="section">
+                    <label>确认密码</label>
+                    <div class="input-panel">
+                        <input type="password" class="input" placeholder="请再次输入密码确认" id="confirmpassword" name="confirmPassword" maxlength="100" />
+                        <font color="red">@ViewData["ConfirmPasswordError"]</font>
+                    </div>
+                </div>
+
+                <p>
+                    <hr class="p-hr" style="width: 750px; margin-left: 50px;"></hr>
+                </p>
+                <div class="section account-enterprise" style="font-size: 16px; color: green;">企业信息</div>
+                <div class="section">
+                    <label>公司名称</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" placeholder="填写真实信息，可快速通过审核" id="MerchantName" name="MerchantName" maxlength="128" value="@ViewData["MerchantName"]"/>
+                        <span style="color: red;">*</span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="section">
+                    <label>店铺名称</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" id="BusinessEntity" name="BusinessEntity" maxlength="50" value="@ViewData["BusinessEntity"]"/>
+                        <span style="color: red;">*</span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="section">
+                    <label>所属地区</label>
+                    <div class="input-panel">
+                        @Html.DropDownList("Provice", "-请选择省份-")
+                        <select id="City" name="City">
+                            <option value="">-请选择城市-</option>
+                        </select>
+                        <input id="hdProviceName" name="ProviceName" type="hidden" value="" />
+                        <input id="hdCityName" name="CityName" type="hidden" value="" />
+                        <span style="color: red;">*</span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="section">
+                    <label>运营者姓名</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" id="MemberName" name="MemberName" maxlength="64" value="@ViewData["MemberName"]"/>
+                        <span style="color: red;">*</span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="section">
+                    <label>QQ</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" placeholder="请填写您常用的QQ号码" id="QQ" name="QQ" maxlength="64" value="@ViewData["QQ"]"/>
+                        <span style="color: red;">*</span>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="section terms">
+                    <div class="input-panel">
+                        <input type="checkbox" id="agree" name="agree" value="1" checked="true" />
+                        我同意并遵循<a href="@(isFUP ? "/Agreement/FUP" : "/Agreement/Index")" target="_blank">《注册条款》</a>
+                    </div>
+                </div>
+                <div class="section terms">
+                    <label>&nbsp;</label>
+                    <div class="input-panel">
+                        <input type="submit" class="btn" id="frmbtn" value="下一步" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>
+<script>
+    var verificationCodeIntervalTime = @ViewData["WaitSeconds"];
+    var countdown = verificationCodeIntervalTime;
+    var constCountdown = verificationCodeIntervalTime;
+    var timer = null;
+    var timerMsg = null;
+   
+    function InitCity(ProviceID,city)
+    {
+        //验证
+        $.ajax({
+            type: "post",
+            url: "/UserRegister/GetCity",
+            data: {ProviceID:ProviceID},
+            dataType: "json",
+            async: false,
+            success: function (obj) {
+                $("#City").html("");
+                var strhtml='';
+                strhtml+='<option value="">-请选择城市-</option>';
+
+                for(var i=0;i<obj.length;i++)
+                {
+                    var cityModel=obj[i];
+                    strhtml+='<option value="'+cityModel.CityID+'">'+cityModel.CityName+'</option>';
+                }
+                $("#City").html(strhtml);
+               
+                $("#City").find("option:contains('"+city+"')").attr("selected", true)
+            }, error: function (response) { console.log(response); }
+        });
+    }
+
+    // $("#select1").find("option:contains('test')").attr("selected", true)
+
+  
+   
+    function InitAddress()
+    {        
+        //验证
+        $.ajax({
+            type: "post",
+            url: "/UserRegister/GetIPAddress",
+            data: {},
+            dataType: "json",
+            async: false,
+            success: function (obj) {
+                if(obj.code==1){ 
+                    $("#Provice").find("option:contains('"+obj.region+"')").attr("selected", true)
+                    if($("#Provice").val()){
+                        InitCity($("#Provice").val(),obj.city);  
+                    }                  
+                    
+                }
+                console.log(obj);
+               
+            }, error: function (response) { console.log(response); }
+        });
+    }
+
+    $(function(){
+        InitAddress();
+        $('#btngetcode').click(function () {
+            var mobile = $("#mobile").val();
+            var pattern =/^((1))[0-9]{10}$/;           // /^(?:13\d|15\d|18\d)\d{5}(\d{3}|\*{3})$/;
+            if (!pattern.test(mobile)) {
+                alert("请输入正确的手机号码");
+                return false;
+            }
+            
+            //发送验证码
+            $.ajax({
+                type: "post",
+                url: "/UserRegister/GetCode?m=" + mobile,
+                dataType: "json",
+                beforeSend: function myfunction() {
+                    //禁用
+                    $('#btngetcode').attr("disabled", true);
+                    $('#btngetcode').val("发送中");
+                },
+                async: true,
+                success: function (response) {
+                    var r = eval("(" + response + ")");
+                    if (r.success == "err") {
+                        //解禁发送按钮
+                        $('#btngetcode').attr("disabled", false);
+                        $('#btngetcode').val("获取验证码");
+
+                        alert(r.msg);
+                    }
+                    else {
+                        if (countdown == 0) {
+                            countdown = verificationCodeIntervalTime;
+                        }
+                        var $val = $('#btngetcode');                        
+                        clearInterval(timer);
+                        timer = setInterval(function () { settime($val) }, 1000);
+                        alert("验证码已发送，请注意查收");
+                    }
+                }, error: function (response) {
+                }
+            });
+        });
+
+        $("#Provice").change(function(){           
+            InitCity($("#Provice").val());           
+        });
+
+        $("form").submit(function () {
+            if ($("#mobile").val() == "") {
+                alert("请输入手机号码");
+                return false;
+            } else {
+                var pattern =/^((1))[0-9]{10}$/;          // /^(?:13\d|15\d|17\d|18\d)\d{5}(\d{3}|\*{3})$/;
+                if (!pattern.test($("#mobile").val())) {
+                    alert("请输入正确的手机号码");
+                    return false;
+                }
+            }
+            if ($("#checkcode").val() == "") {
+                alert("请输入收到的短信验证码");
+                return false;
+            }
+            var regpwd =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,20}$/;   // /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/;
+            var re = new RegExp(regpwd);
+            if (!re.test($("#regpassword").val())) {
+                alert("密码必须是同时包含数字、大写和小写字母在内的8-20个字符");
+                return false;
+            }
+            if ($("#regpassword").val() != $("#confirmpassword").val()) {
+                alert("两次输入的密码不一致");
+                return false;
+            }
+
+            if ($("#MerchantName").val() == "") {
+                alert("请输入公司名称1");
+                return false;
+            }
+            if ($("#BusinessEntity").val() == "") {
+                alert("请输入店铺名称");
+                return false;
+            }
+            if ($("#Provice").val() == "") {
+                alert("请选择省份");
+                return false;
+            }
+            if ($("#City").val() == "") {
+                alert("请选择城市");
+                return false;
+            }
+
+            $("#hdProviceName").val($("#Provice").find("option:selected").text());
+            $("#hdCityName").val($("#City").find("option:selected").text());
+            if ($("#MemberName").val() == "") {
+                alert("请输入帐号运营者姓名");
+                return false;
+            }
+            if ($("#QQ").val() == "") {
+                alert("请输入QQ号码");
+                return false;
+            }
+            if (!$("input[name=agree]").is(':checked')) {
+                alert("请先阅读并同意遵循协议");
+                return false;
+            }
+
+            var isExists = true;
+            var msg = "";
+            var jsonObj = {
+                merchantName: $("#MerchantName").val()
+            };
+
+            //验证
+            $.ajax({
+                type: "post",
+                url: "/UserRegister/ValidateMerchantName",
+                data: jsonObj,
+                dataType: "json",
+                async: false,
+                success: function (response) {
+                    if (response.isExists) {
+                        isExists = true;
+                    }
+                    else {
+                        isExists = false;
+                    }
+                    msg = response.msg;
+                }, error: function (response) { msg = "error"; }
+            });
+
+            if (msg != "") {
+                alert(msg);
+                return false;
+            }
+
+            if (isExists) {
+                alert("该公司已经注册了，不能重复注册");
+                return false;
+            }
+            return true;
+        });
+    });
+
+    //倒计时
+    function settime(val) {
+        if (countdown == 0) {
+            val.attr("disabled", false);
+            val.val("获取验证码");
+
+        }
+        else {
+            val.attr("disabled", true);
+            val.val(countdown + 's');
+            countdown--;
+        }
+    }
+</script>

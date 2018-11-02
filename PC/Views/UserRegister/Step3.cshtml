@@ -1,0 +1,397 @@
+﻿@{
+    ViewBag.Title = "信息登记-注册";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+}
+@section scripts{
+    <link type="text/css" href="/Scripts/Uploadify/uploadify.css" rel="stylesheet" />
+    <script type="text/javascript" src="/Scripts/Uploadify/jquery.uploadify.js?@DateTime.Now.ToString("yyyyMMddhhmmssfff")"></script>
+  
+    <script>
+        @*$(function () {
+            $("#btnUploadifyMemberIDCardFrontPhoto").uploadify({
+                'swf': '/Scripts/Uploadify/uploadify.swf',
+                'uploader': '/UserRegister/Upload?uploadtype=IDCardFrontPhoto&RegMemberID=@Model.MemberId',
+                'cancelImg': '/Scripts/Uploadify/cancel.png',
+                'auto': true,
+                'fileTypeExts': '*.png;*.jpg;*.bmp;*.jpeg',//允许上传的文件类型，限制弹出文件选择框里能选择的文件 
+                'fileSizeLimit': 5 * 1024,
+                'width': 157,
+                'height': 35,
+                'buttonText': ' 上 传 ',
+                'buttonImage': '/Content/themes/default/images/btn-upload.png',
+                'onUploadSuccess': function (file, data, response) {
+                    var imgUrl = data;
+                    $("#MemberIDCardFrontPhoto").val(imgUrl);
+                    $("#MemberIDCardFrontPhoto_show").attr("src", imgUrl);
+                }
+            });
+            $("#btnUploadifyMemberIDCardBackPhoto").uploadify({
+                'swf': '/Scripts/Uploadify/uploadify.swf',
+                'uploader': '/UserRegister/Upload?uploadtype=IDCardBackPhoto&RegMemberID=@Model.MemberId',
+                'cancelImg': '/Scripts/Uploadify/cancel.png',
+                'auto': true,
+                'fileTypeExts': '*.png;*.jpg;*.bmp;*.jpeg',//允许上传的文件类型，限制弹出文件选择框里能选择的文件 
+                'fileSizeLimit': 5 * 1024,
+                'width': 157,
+                'height': 35,
+                'buttonText': ' 上 传 ',
+                'buttonImage': '/Content/themes/default/images/btn-upload.png',
+                'onUploadSuccess': function (file, data, response) {
+                    var imgUrl = data;
+                    $("#MemberIDCardBackPhoto").val(imgUrl);
+                    $("#MemberIDCardBackPhoto_show").attr("src", imgUrl);
+                }
+            });
+            $("#btnUploadifyOrganizationPhoto").uploadify({
+                'swf': '/Scripts/Uploadify/uploadify.swf',
+                'uploader': '/UserRegister/Upload?uploadtype=OrganizationPhoto&RegMemberID=@Model.MemberId',
+                'cancelImg': '/Scripts/Uploadify/cancel.png',
+                'auto': true,
+                'fileTypeExts': '*.png;*.jpg;*.bmp;*.jpeg',//允许上传的文件类型，限制弹出文件选择框里能选择的文件 
+                'fileSizeLimit': 5 * 1024,
+                'width': 157,
+                'height': 35,
+                'buttonText': ' 上 传 ',
+                'buttonImage': '/Content/themes/default/images/btn-upload.png',
+                'onUploadSuccess': function (file, data, response) {
+                    var imgUrl = data;
+                    $("#OrganizationPhoto").val(imgUrl);
+                    $("#OrganizationPhoto_show").attr("src", imgUrl);
+                }
+            });
+            $("#btnUploadifyBusinessLicensePhoto").uploadify({
+                'swf': '/Scripts/Uploadify/uploadify.swf',
+                'uploader': '/UserRegister/Upload?uploadtype=BusinessLicensePhoto&RegMemberID=@Model.MemberId',
+                'cancelImg': '/Scripts/Uploadify/cancel.png',
+                'auto': true,
+                'fileTypeExts': '*.png;*.jpg;*.bmp;*.jpeg',//允许上传的文件类型，限制弹出文件选择框里能选择的文件 
+                'fileSizeLimit': 5 * 1024,
+                'width': 157,
+                'height': 35,
+                'buttonText': ' 上 传 ',
+                'buttonImage': '/Content/themes/default/images/btn-upload.png',
+                'onUploadSuccess': function (file, data, response) {
+                    var imgUrl = data;
+                    $("#BusinessLicensePhoto").val(imgUrl);
+                    $("#BusinessLicensePhoto_show").attr("src", imgUrl);
+                }
+            });
+        });*@
+
+        $(function () {
+
+            $("form").submit(function () {
+                if ($("#MerchantName").val() == "" || lTrim($("#MerchantName").val()) == "") {
+                    alert("请输入公司名称");
+                    return false;
+                }
+                if ($("#BusinessEntity").val() == "" || lTrim($("#BusinessEntity").val()) == "") {
+                    alert("请输入店铺名称");
+                    return false;
+                }
+                //if ($("#BusinessLicenseRegNo").val() == "" || lTrim($("#BusinessLicenseRegNo").val()) == "") {
+                //    alert("请输入注册号。");
+                //    return false;
+                //}
+                //if ($("#BusinessLicenseRange").val() == "" || lTrim($("#BusinessLicenseRange").val()) == "") {
+                //    alert("请输入经营范围。");
+                //    return false;
+                //}
+                if ($("#MemberName").val() == "" || lTrim($("#MemberName").val()) == "") {
+                    alert("请输入帐号运营者姓名");
+                    return false;
+                }
+                if ($("#LinkmanTel").val() == "" || lTrim($("#LinkmanTel").val()) == "") {
+                    alert("请输入手机号码");
+                    return false;
+                } else {
+                    var pattern = /^1[34578]\d{9}$/;  
+                    if (!pattern.test($("#LinkmanTel").val())) {
+                        alert("请输入正确的手机号码");
+                        return false;
+                    }
+                }
+                if ($("#QQ").val() == "" || lTrim($("#QQ").val()) == "") {
+                    alert("请输入QQ号码");
+                    return false;
+                }
+                //if ($("#OperationsNumber").val() == "" || lTrim($("#OperationsNumber").val()) == "") {
+                //    alert("请输入运营人数。");
+                //    return false;
+                //}
+                //if (!isPositiveInteger($("#OperationsNumber").val())) {
+                //    alert("运营人数必须是正整数。");
+                //    return false;
+                //}
+                //if ($("#OrganizationPhoto").val() == "" || lTrim($("#OrganizationPhoto").val()) == "") {
+                //    alert("请上传组织机构代码证照片。");
+                //    return false;
+                //}
+                //if ($("#BusinessLicensePhoto").val() == "" || lTrim($("#BusinessLicensePhoto").val()) == "") {
+                //    alert("请上传企业工商营业执照照片。");
+                //    return false;
+                //}
+
+                var isExists = true;
+                var msg = "";
+                var jsonObj = {
+                    merchantName:lTrim($("#MerchantName").val())
+                    };
+
+                //Validate MerchantName
+                //验证
+                $.ajax({
+                    type: "post",
+                    url: "/UserRegister/ValidateMerchantName",
+                    data: jsonObj,
+                    dataType: "json",
+                    async: false,
+                    success: function (response) {
+                        if (response.isExists) {
+                            isExists = true;
+                        }
+                        else {
+                            isExists = false;
+                        }
+                        msg = response.msg;
+                    }, error: function (response) { msg = "error";}
+                });
+
+                if (msg!="") {
+                    alert(msg);
+                    return false;
+                }
+
+                if (isExists) {
+                    alert("该公司已经注册了，不能重复注册");
+                    return false;
+                }
+
+                return true;
+            });
+        });
+
+        //去除左侧空格
+        function lTrim(str) {
+            return str.replace(/(^\s*)/g, "");
+        }
+        //正整数
+        var isPositiveInteger = function (number) {
+            var reg = /^\+?[1-9][0-9]*$/;　　//正整数  
+            if (!reg.test(number)) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+    </script>
+      }
+
+<div class="regWrapper">
+    <div  style="padding-top: 40px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        *注册前你可以先了解<a href="/RegHelper/introduce" target="_blank" style="color:#0066d3">《艾客入驻流程》</a>
+    </div>
+    <div class="step-panel">
+        <ul>
+            <li><i>1</i>基本信息</li>
+            <li><i>2</i>邮箱激活</li>
+            <li class="activity"><i>3</i>信息登记</li>
+            <li><i>4</i>等待审核</li>
+        </ul>
+    </div>
+    <h1>会员注册</h1>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid reg-step3 clearfix">
+            <form name="form1" method="post" id="form1" action="/UserRegister/Step3">
+
+            <div class="panel-lt">
+                    <input type="hidden" name="MemberMerchantId" value="@Model.MemberMerchantId" />
+                    <input type="hidden" name="MemberId" value="@Model.MemberId" />
+                    <div class="section">
+                        <label>公司名称</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="MerchantName" name="MerchantName" value="@Model.MerchantName" maxlength="128"/>
+                            <span style="color:red;">*</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <label>店铺名称</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="BusinessEntity" name="BusinessEntity" value="@Model.BusinessEntity" maxlength="50"/>
+                            <span style="color:red;">*</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    @*<div class="section">
+                        <label>注册号</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="BusinessLicenseRegNo" name="BusinessLicenseRegNo" value="@Model.BusinessLicenseRegNo" maxlength="100"/>
+                            <span style="color:red;">*</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <label>经营范围</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" placeholder="请填写企业的经营范围，如，服装类。" id="BusinessLicenseRange" name="BusinessLicenseRange" value="@Model.BusinessLicenseRange" maxlength="200"/>
+                            <span style="color:red;">*</span>
+                            <p></p>
+                        </div>
+                    </div>*@
+                    <div class="section">
+                        <label>运营者姓名</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="MemberName" name="MemberName" value="@Model.MemberName" maxlength="64"/>
+                            <span style="color:red;">*</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <label>手机号码</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" placeholder="请填写您的手机号码" id="LinkmanTel" name="LinkmanTel" value="@Model.LinkmanTel" maxlength="64"/>
+                            <span style="color:red;">*</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <label>QQ</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" placeholder="请填写您常用的QQ号码" id="QQ" name="QQ" value="@Model.Email" maxlength="64"/>
+                            <span style="color:red;">*</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    @*<div class="section">
+                        <label>运营人数</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" placeholder="计划投入在艾客系统的运营人员数量" id="OperationsNumber" name="OperationsNumber" value="@(Model.OperationsNumber==0?"":Model.OperationsNumber)"  maxlength="5"/>
+                            <span style="color:red;">*</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section" style="display:none;">
+                        <label>运营人员身份证号码</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="MemberIDCardNo" name="MemberIDCardNo" value="@Model.MemberIDCardNo" maxlength="50"/>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section" style="display:none;">
+                        <label>公司注册地址</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="RegAddress" name="RegAddress" value="@Model.RegAddress" maxlength="200"/>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section" style="display:none;">
+                        <label>公司联系地址</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="ContactAddress" name="ContactAddress" value="@Model.ContactAddress" maxlength="200"/>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section" style="display:none;">
+                        <label>邮政编码</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="PostCode" name="PostCode" value="@Model.PostCode" maxlength="10"/>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section" style="display:none;">
+                        <label>公司性质</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="Property" name="Property" value="@Model.Property" maxlength="100"/>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section" style="display:none;">
+                        <label>注册资金</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="RegFund" name="RegFund" value="@Model.RegFund"/>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section" style="display:none;">
+                        <label>年销售额</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="SaleAmount" name="SaleAmount" value="@Model.SaleAmount"/>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section" style="display:none;">
+                        <label>纳税人规模</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="TaxpayerScale" name="TaxpayerScale" value="@Model.TaxpayerScale"/>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="section" style="display:none;">
+                        <label>营业执照有效期</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="BusinessLicenseVailDate" name="BusinessLicenseVailDate" value="@Model.BusinessLicenseVailDate"/>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="section" style="display:none;">
+                        <label>主营渠道</label>
+                        <div class="input-panel">
+                            <input type="text" class="input" id="BusinessChannel" name="BusinessChannel" value="@Model.BusinessChannel"/>
+                            <p></p>
+                        </div>
+                    </div>*@
+                    <div class="section terms">
+                        <label>&nbsp;</label>
+                        <div class="input-panel">
+                            <button class="btn">下一步</button>
+                        </div>
+                    </div>
+
+            </div>
+ @*            <div class="panel-rt">
+               <div class="group">
+                    <div class="photo">
+                        <img alt="运营人员身份证正面照片" id="MemberIDCardFrontPhoto_show" src="@Model.MemberIDCardFrontPhoto" style="width: 176px; height: 139px;"/>
+                    </div>
+                    <p>上传文件不大于5M，文件格式：.jpg .png .bmp   </p>                    
+                    <input type="file" name="file_upload" id="btnUploadifyMemberIDCardFrontPhoto" />
+                    <input type="hidden" id="MemberIDCardFrontPhoto" name="MemberIDCardFrontPhoto" value="@Model.MemberIDCardFrontPhoto"/>
+                </div>
+                <div class="group">
+                    <div class="photo">
+                        <img alt="运营人员身份证背面照片" id="MemberIDCardBackPhoto_show" src="@Model.MemberIDCardBackPhoto" style="width: 176px; height: 139px;"/>
+                    </div>
+                    <p>上传文件不大于5M，文件格式：.jpg .png .bmp</p>
+                    <input type="file" name="file_upload" id="btnUploadifyMemberIDCardBackPhoto" />
+                     <input type="hidden" id="MemberIDCardBackPhoto" name="MemberIDCardBackPhoto"  value="@Model.MemberIDCardBackPhoto"/>
+                </div>*@
+                @*<div class="group">
+                    <div class="photo">
+                        <img alt="组织机构代码证照片" id="OrganizationPhoto_show" src="@Model.OrganizationPhoto" style="width: 176px; height: 139px;"/>
+                    </div>
+                    <p>上传文件不大于5M，文件格式：.jpg .png .bmp</p>
+                    <input type="file" name="file_upload" id="btnUploadifyOrganizationPhoto" />
+                    <input type="hidden" id="OrganizationPhoto" name="OrganizationPhoto"  value="@Model.OrganizationPhoto"/>
+                </div>*@
+                @* <div class="group">
+                   <div class="photo">
+                        <img alt="企业工商营业执照照片" id="BusinessLicensePhoto_show" src="@Model.BusinessLicensePhoto" style="width: 176px; height: 139px;"/>
+                    </div>
+                    <p>上传文件不大于5M，文件格式：.jpg .png .bmp</p>
+                    <input type="file" name="file_upload" id="btnUploadifyBusinessLicensePhoto" />
+                    <input type="hidden" id="BusinessLicensePhoto" name="BusinessLicensePhoto"  value="@Model.BusinessLicensePhoto"/>
+                </div>
+            </div>*@
+            
+            </form>
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

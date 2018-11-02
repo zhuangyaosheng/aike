@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>艾客SCRM-国内领先社交电商工具平台，助力商家构建私域流量</title>
+  <meta name="keywords" content="艾客微信生态平台，微信电商，流量平台，淘宝好评返现，淘宝权重，淘宝微信分享，微信打开淘宝，提升动态评分，打造宝贝爆款，提升店铺DSR" />
+  <meta name="description" content="艾客打造微信生态优选的电商工具和流量平台，商家通过微信引流淘宝购物；返利提高销量；好评返现提升店铺好率；精准推送提升客人的再次购买；抽奖活动提高粉丝活跃度等等的功能实现低成本、系统化社群营销和会员管理，提高平台店铺的销售额和复购率。操作简单易上手，同时还有大量的顶级商家分享的营销干货，手把手教你怎么做好电商。" />   
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="./styles/swiper.min.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <!-- <script src="./scripts/zepto.min.js"></script> -->
+  <script src="./scripts/jquery-1.7.1.js"></script>
+  <script src="./scripts/swiper.min.js"></script>
+  <script src="./scripts/flexible.js"></script>
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body class="aiagain-layout register-layout">
+  <header class="aiagain-header register-header">
+      <a href="javascript: history.back()" class="back-btn">
+        <i class="icon-back"></i>
+      </a>
+      <h1 class="register-header__title">免费注册</h1>
+  </header>
+  <div class="aiagain-layout__content" id="weiContent">
+    <div class="register-wrap">
+      <form id="formInfo" >
+        <input id="port" name="port" type="hidden" readonly="readonly" value="webapp">
+        <div class="account">
+          <div class=" form-content">
+            <p class="account-name">账号信息</p>
+            <div class="form-item">
+                <label class="label-name" for="mobile">手机号码</label>
+                <input id="mobile" name="mobile" type="number" placeholder="请输入手机号码" maxlength="200">
+            </div>
+            <div class="form-item">
+                <label class="label-name" for="checkcode">验证码</label>
+                <div class="checkcode_box">
+                    <input id="checkcode" name="checkcode" type="text" placeholder="请输入验证码" maxlength="20">
+                    <input id="btngetcode" class="btngetcode" type="button" value="获取验证码">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="label-name" for="regPassword">密码</label>
+                <input id="regPassword" name="regPassword" type="password" placeholder="请输入你的密码" maxlength="100">
+            </div>
+            <div class="form-item">
+                <label class="label-name" for="confirmPassword">确认密码</label>
+                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="请再次输入你的密码" maxlength="100">
+            </div>
+          </div>
+        </div>
+        <div class="account">
+            <div class=" form-content">
+            <p class="account-name">企业信息</p>
+            <div class="form-item">
+                <label class="label-name" for="MerchantName">公司名称</label>
+                <input id="MerchantName" name="MerchantName" type="text" placeholder="填写真实信息，可快速通过审核" maxlength="128">
+            </div>
+            <div class="form-item">
+                <label class="label-name" for="BusinessEntity">店铺名称</label>
+                <input id="BusinessEntity" name="BusinessEntity" type="text" placeholder="请输入店铺名称" maxlength="50">
+            </div>
+            <div class="form-item">
+                <label class="label-name">所属地区</label>
+                <div class="area_box">
+                  <select id="Provice" name="Provice">
+                    <option value="">省份</option>
+                  </select>
+                  <select id="City" name="City">
+                    <option value="">城市</option>
+                  </select>
+                  <input id="ProviceName" name="ProviceName" type="hidden" />
+                  <input id="CityName" name="CityName" type="hidden" />
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="label-name" for="MemberName">运营者姓名</label>
+                <input id="MemberName" name="MemberName" type="text" placeholder="请输入运营者姓名" maxlength="64">
+            </div>
+            <div class="form-item">
+                <label class="label-name" for="QQ">常用QQ</label>
+                <input id="QQ" name="QQ" type="number" placeholder="请输入您的常用QQ" maxlength="64">
+            </div>
+          </div>
+        </div> 
+        <div class="consent" style="display: none;"><input id="agree" class="agree" name="agree" type="checkbox" checked=true value="1"><span>我同意并遵循<a class="clause" href="">《注册条款》</a></span></div>
+        <div class="submit-btn" id="submitBtn">提交</div>
+      </form>
+    </div>
+        <!-- <footer class="aiagain-footer" id="aiagainFooter">
+            <div class="advisory-tell">咨询电话：400-832-0166</div>
+            <div>© 2013 - 2018 Aiagain.com</div>
+        </footer> -->
+        <footer class="aiagain-footer--container aiagain--block" id="aiagainFooter">
+            <div class="aiagain-footer--top">
+                <div class="aiagain-footer--icon">
+                    <img src="./images/customer.png" alt="客服">
+                </div>
+                <div class="aiagain-footer--info">
+                    <ul class="info-list">
+                        <li class="info-item"><span class="info-item__title">联系我们</span><span class="info-item__content aiagain-footer--gray">周一至周五（9:00-18:00）</span></li>
+                        <li class="info-item"><span class="info-item__title">咨询热线</span><span class="info-item__content">400-832-0166</span></li>
+                        <li class="info-item"><span class="info-item__title">电子邮箱</span><span class="info-item__content">info@aiagain.com</span></li>
+                        <li class="info-item"><span class="info-item__title">公司地址</span><span class="info-item__content">广州市天河区华夏路28号富力盈信大厦1205-1212室</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="aiagain-footer--bottom aiagain-footer--gray">
+                <p>©2013 - 2018 www.aiagain.com</p>
+            </div>
+        </footer>
+        <div id="consult-btn" class="consult-btn aiagain--block">立即咨询</div>
+        <div id="top" class="top aiagain--block">
+            <img src="./images/icon-top.png" alt="返回顶部">
+        </div>
+        <div id="consult-modal" class="consult-modal">
+            <div id="consult-bg" class="consult-bg"></div>
+            <div id="consult-panel" class="consult-panel">
+                <div class="consult-panel__header">
+                    <p class="consult-panel__title">免费咨询</p>
+                    <a id="close-consult-btn" class="close-consult-btn">
+                        <i class="icon-close"></i>
+                    </a>
+                </div>
+                <div class="consult-panel__body">
+                    <ul class="consult-list">
+                        <li class="consult-item">
+                            <p class="consult-item__title">请拨打咨询热线</p>
+                            <a href="tel:400-832-0166" class="consult-btn--sm consult-call">
+                                <i class="icon-call"></i>
+                                <span>400-832-0166</span>
+                            </a>
+                        </li>
+                        <li class="consult-item">
+                            <p class="consult-item__title">QQ在线咨询</p>
+                            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3004592282&amp;site=qq&amp;menu=yes" class="consult-btn--sm consult-qq">
+                                <i class="icon-qq"></i>
+                                <span>QQ在线咨询</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+  </div>
+  <div class="succeed-mork">
+    <div class="succeed-mork__header">
+        <div class="aiagain-header register-header">
+            <p class="register-header__title">免费注册</p>
+            <a href="javascript:;" class="close-btn">
+              <i class="icon-close"></i>
+            </a>
+        </div>
+        <i class="icon-succeed"></i>
+        <p class="succeed-message">恭喜你注册成功</p>
+        <p class="succeed-tips">请通过以下网址在PC端登录使用<span id="company">艾客</span></p>
+        <p class="aiagain-dns" id="aiagainDns">www.aiagain.com</p>
+        <a href="javascript: history.back()" class="back-btn" id="backBtn">返回首页</a>
+    </div>
+  </div>
+  <div class="tips-err" id="tipsErr">请求返回错误信息提示</div>
+</body>
+</html>
+<script>
+    var city = "";
+    var region = "";
+    var InitCity = function (ProviceID) {
+        //验证
+        $.ajax({
+            type: "post",
+            url: "/UserRegister/GetCity",
+            data: { ProviceID: ProviceID },
+            dataType: "json",
+            async: false,
+            success: function (obj) {
+                $("#City").html("");
+                var strhtml = '';
+                strhtml += '<option value="">城市</option>';
+
+                for (var i = 0; i < obj.length; i++) {
+                    var cityModel = obj[i];
+                    strhtml += '<option value="' + cityModel.CityID + '">' + cityModel.CityName + '</option>';
+                }
+                $("#City").html(strhtml);
+                $("#City").find("option:contains('" + city + "')").attr("selected", true)
+            }, error: function (response) { 
+              console.log(response); 
+            }
+        });
+    }
+    var getQueryString = function(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null){
+        return unescape(r[2]);
+      }else{
+        return null;
+      };  
+    };
+    var setCookie =function(name,value){
+      var Days = 1;
+      var exp = new Date();
+      exp.setTime(exp.getTime() + Days*60*60*1000);
+      document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+    };
+    var getCookie = function (name) {
+      var arr;
+      var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+      if (arr = document.cookie.match(reg))
+        return unescape(arr[2]);
+      else
+        return null;
+    };
+    if(getQueryString('rt')){
+      $("#referrer").attr("value",getQueryString('rt'));
+    };
+    if(getQueryString('source')){
+      $("#channelcode").attr("value",getQueryString('source'));
+    };
+    var InitAddress = function () {
+        //验证
+        $.ajax({
+            type: "post",
+            url: "/UserRegister/GetIPAddress",
+            data: {},
+            dataType: "json",
+            async: false,
+            success: function (obj) {
+                if (obj.code == 1) {                   
+                    
+                    region = obj.region;
+                    city = obj.city;
+                }
+                initProvice();
+
+            }, error: function (response) { 
+              console.log(response);
+            }
+        });
+    }
+    var initProvice = function () {
+        $.ajax({
+            type: "post",
+            url: "/UserRegister/GetProvice",
+            data: {},
+            dataType: "json",
+            async: false,
+            success: function (obj) {
+                $("#Provice").html("");
+                var strhtml = '';
+                strhtml += '<option value="">省份</option>';
+
+                for (var i = 0; i < obj.length; i++) {
+                    var provinceModel = obj[i];
+                    strhtml += '<option value="' + provinceModel.ProviceID + '">' + provinceModel.ProviceName + '</option>';
+                }
+                $("#Provice").html(strhtml);
+                $("#Provice").find("option:contains('" + region + "')").attr("selected", true)
+                
+                if ($("#Provice").val()) {
+                    InitCity($("#Provice").val());
+                }
+            }, error: function (response) {
+                console.log(response);
+            }
+        });
+    }
+$(function(){
+    //阻止冒泡
+  var mo=function(e){e.preventDefault()};
+  /***禁止滑动***/
+  var stop = function(){
+      document.body.style.overflow='hidden';
+      document.addEventListener("touchmove",mo,false);//禁止页面滑动
+  }
+  /***取消滑动限制***/
+  var move =function(){
+      document.body.style.overflow='';
+      document.removeEventListener("touchmove",mo,false);
+  }
+
+  var errTips = function (t) {
+      $("#tipsErr").text(t);
+      $("#tipsErr").css({"display":"block"});
+      setTimeout(function () {
+          $("#tipsErr").css({"display":"none"});
+      },3000);
+  };
+  $(".close-btn").on("touchend",function(event){
+    event.preventDefault();
+    $(".succeed-mork").css({"display":"none"});
+    move();
+  });
+  var isClicked = false; //是否已经点击发送验证码
+  $("#agree").click(function(){
+    if($(this).attr("checked")){
+      $(this).attr("checked",false);
+      $(this).val(0);
+    }else{
+      $(this).attr("checked",true);
+      $(this).val(1);
+    }
+  })
+  $("#btngetcode").click(function(event){
+    if(isClicked == true){
+      return false;
+    }
+    event.preventDefault();
+    var mobile = $("#mobile").val();
+    var pattern = /^((1))[0-9]{10}$/;
+    if (!pattern.test(mobile)) {
+        $("#mobile").addClass("err");
+        return false;
+    }else{
+      $("#mobile").removeClass("err");
+    };
+    $.ajax({
+      type:"POST",
+      url:"/UserRegister/GetCode?m=" + mobile,
+      dataType: "json",
+      async: true,
+      beforeSend: function myfunction() {
+        isClicked = true; //禁用点击
+        $('#btngetcode').val("发送中");
+      },
+      success: function (response) {
+        var r = eval("(" + response + ")");
+        if (r.success == "err") {
+            $('#btngetcode').val("获取验证码");
+            $("#mobile").addClass("err");
+            isClicked = false;//解禁按钮；
+            errTips(r.msg);
+            return false;
+        } else {
+            $("#mobile").removeClass("err");
+            var setSpace = setInterval(function () { settime($('#btngetcode')) }, 1000);
+            //倒计时
+            var countdown = 60;//倒计时总秒数
+            var settime = function (val) {
+                if (countdown == 0) {
+                    isClicked = false;//解禁按钮；
+                    val.val("重新获取验证码");
+                    clearInterval(setSpace);
+                } else {
+                    val.val(countdown + '秒');
+                    countdown--;
+                }
+            }
+        }
+      },
+      error:function(err){console.log(err);}
+    });
+  });
+
+  var submitForm = function (o) {
+      var _obj = o;
+    $.ajax({
+      type: "POST",
+      url: "/UserRegister/MerchantReg",
+      data: _obj,
+      dataType: "json",
+      async: true,
+      success: function (response) {
+        var res = eval("(" + response + ")");
+        if(res.status==1){
+          $(".succeed-mork").css("display","block");
+          stop();
+        }else{
+          errTips(res.msg);
+        }
+      }, 
+      error: function (response) { console.log(response);}
+    });
+  }
+
+  InitAddress();
+ 
+  
+  $("#Provice").change(function(e){
+      var val = $(this).val();
+    InitCity(val);
+  });
+  $(".submit-btn").click(function () {
+    $("#ProviceName").val($("#Provice").find("option:selected").text());
+    $("#CityName").val($("#City").find("option:selected").text());
+    var obj={};
+    $("#formInfo input,#formInfo select").each(function(){
+      if($(this).attr("type")!=="button"){
+        var _name = $(this).attr("name");
+        if(!$(this).val()){
+          $("#"+_name).addClass("err");
+        }
+        obj[_name] = $(this).val();
+      };
+    });
+    var flag = false;
+    for(var key in obj){
+      if(obj[key]==""){
+       flag = true;
+       continue;
+      }else{
+        $("#"+key).removeClass("err");
+      }
+    };
+    if (flag) {
+      return false;
+    }
+    var pattern = /^((1))[0-9]{10}$/;
+    if(!pattern.test(obj.mobile)){
+      $("#mobile").addClass("err");
+      errTips("请输入正确的手机号码。");
+      return false;
+    }else{
+      $("#mobile").removeClass("err");
+    };
+    var regpwd =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,20}$/;
+    var re = new RegExp(regpwd);
+    if(!re.test(obj.regPassword)){
+      $("#regPassword").addClass("err");
+      errTips("请输入的密码必须是同时包含数字、大写和小写字母在内的8-20个字符。");
+      return false;
+    }else{
+      $("#regPassword").removeClass("err");
+    };
+    if(obj.regPassword!=obj.confirmPassword){
+      errTips("请输入两次密码保持一致。");
+      $("#confirmPassword").addClass("err");
+      return false;
+    };
+    var _qq =/^[1-9][0-9]{4,15}$/;
+    if(!_qq.test(obj.QQ)){
+      $("#QQ").addClass("err");
+      errTips("请输入正确的QQ。");
+      return false;
+    }else{
+      $("#QQ").removeClass("err");
+    };
+    obj.referrer=getCookie("rt") || "";
+    obj.channelcode=getQueryString('source')||getCookie("source") || "";
+    $.ajax({
+      type: "POST",
+      url: "/UserRegister/ValidateMerchantName",
+      data: {merchantName:obj.MerchantName},
+      dataType: "json",
+      async: true,
+      success: function (response) {
+        if(response.isExists){
+          errTips("该公司已经注册了，不能重复注册");
+          $("#MerchantName").addClass("err");
+        }else{
+          $("#MerchantName").removeClass("err");
+          submitForm(obj);
+        }
+      }, error: function (err) { console.log(err); }
+    });
+  });
+});
+ // 微管家
+    if (getQueryString("come")) {
+        $("#weiContent").addClass("wei-reg-bg");
+        $(".aiagain--block").remove();
+        $(".aiagain-layout__content").css("padding-bottom","0");
+        $("#submitBtn").addClass("wei-submit-bg");
+        $("#aiagainDns").text(getQueryString("txt"));
+        $("#backBtn").addClass("wei-submit-bg");
+        $("#company").text("微管家");
+    } else {
+        $(".wechatone--block").remove();
+        $(".aiagain--block").show();
+    }
+
+(function() {  
+  var qs = location.search.substr(1),   
+    args = {}, 
+    items = qs.length ? qs.split("&") : [], 
+    item = null,
+    len = items.length;
+ 
+  for(var i = 0; i < len; i++) {
+    item = items[i].split("=");
+    var name = decodeURIComponent(item[0]),
+      value = decodeURIComponent(item[1]);
+    if(name) {
+      args[name] = value;
+      setCookie(name,value);
+    }
+  }
+  return args;
+})();
+  var $top = $("#top"),
+        $body = $("#weiContent");
+    $body.on("scroll", function() {
+        if ($body.scrollTop() > 100) {
+            $top.show();
+        } else {
+            $top.hide();
+        }
+    });
+    $top.on("click", function() {
+        $body.scrollTop(0);
+    });
+    var $consultBtn = $("#consult-btn"),
+        $consultModal = $("#consult-modal"),
+        $consultPanel = $("#consult-panel"),
+        $close = $("#consult-bg,#close-consult-btn");
+    $consultBtn.on("click", function() {
+        $consultModal.removeClass("animate-hide").addClass("animate-show");
+        $consultPanel.removeClass("animate-glide").addClass("animate-upglide");
+    });
+    $close.on("click", function() {
+        $consultModal.addClass("animate-hide").removeClass("animate-show");
+        $consultPanel.addClass("animate-glide").removeClass("animate-upglide");
+    });
+</script>

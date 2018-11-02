@@ -1,0 +1,90 @@
+#side_nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 11;
+    overflow: hidden;
+}
+#side_nav .inner{
+    margin-top: 60px;
+}
+#side_nav ul,#side_nav ul li{
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#side_nav ul li .sub_panel{
+    left: 100px;
+    display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#side_nav ul li {
+    display: block;
+    border-bottom: 1px #445056 solid;
+    box-shadow: inset 0 0 1px #414b50;
+
+}
+#side_nav ul li a {
+    color: #ffffff;
+    display: block;
+    outline: none;
+    padding: 5px 0;
+    position: relative;
+    text-align: left;
+    text-decoration: none !important;
+}
+#main_wrapper{
+    height: 100%;
+    overflow-y: auto;
+}
+
+#side_nav .mCSB_inside  .mCSB_container{
+    margin-right: 0;
+}
+/*
+
+ js no-flexbox no-flexboxlegacy no-canvas no-canvastext no-webgl no-touch no-geolocation postmessage no-websqldatabase no-indexeddb no-hashchange no-history draganddrop no-websockets no-rgba no-hsla no-multiplebgs no-backgroundsize no-borderimage no-borderradius no-boxshadow no-textshadow no-opacity no-cssanimations no-csscolumns no-cssgradients no-cssreflections no-csstransforms no-csstransforms3d no-csstransitions fontface no-generatedcontent no-video no-audio localstorage sessionstorage no-webworkers no-applicationcache no-svg no-inlinesvg no-smil no-svgclippaths
+#side_nav ul,#side_nav ul li{
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#side_nav,#side_nav ul {
+    left: 0;
+    width: 100px;
+}
+#side_nav ul {
+    bottom: 0;
+    position: absolute;
+    top: 0;
+}
+#side_nav ul li {
+    display: block;
+    border-bottom: 1px #445056 solid;
+    box-shadow:inset 0 0 1px #414b50;
+}
+#side_nav ul li a {
+    color: #ffffff;
+    display: block;
+    outline: none;
+    padding: 5px 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+}
+#side_nav ul li a i{
+    font-size: 21px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#side_nav .nav_title {
+    font-size: 14px;
+    text-align: center;
+    display: block;
+}
+*/

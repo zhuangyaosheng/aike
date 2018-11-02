@@ -1,0 +1,484 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" class="login-html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>168haoping-社群电商，就用168好评，为传统电商定制的微信社群营销实效解决方案，168haoping您的微信营销管家</title>
+    <meta name="description" content="168haoping平台是帮助电商商家借助微信与电商平台提升销量的平台，通过微信与淘宝切互通；返利提高销量；好评返现提升店铺好率；精准推送提升客人的再次购买。操作简单易上手，全力助您做好电商">
+    <meta name="keywords" content="返利商城，微信电商，淘宝好评返现，淘宝权重，淘宝微信分享，微信打开淘宝，提升动态评分，打造宝贝爆款，提升店铺DSR，淘宝购物微信返现">
+    <link rel="shortcut icon" href="/favicon-hp.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Content/168/comm/css/comm.css" />
+    <link rel="stylesheet"href="/Content/topic/wgj/css/wgj.css" />
+    <script src="/Scripts/jquery-1.11.min.js"></script>
+    <script src="/Scripts/jquery.scrollTo.js"></script>
+    <script>var verificationCodeIntervalTime = 60;</script> 
+    <script src="/Scripts/Generalize.js"></script>
+</head>
+<body>
+  <div class="clearfix hm-hd hm-header">
+    <div class="hm-min hm-max content">
+        <div class="hm-fl"><a href="/"><img src="/Content/168/home/image/logo2.png"></a></div>
+        <ul class="hm-fl nav">
+            <li class="nav-link"><a class="active" href="/#spm0">首页 </a></li>
+            <li class="nav-link"><a href="/#spm1">亮点功能</a></li>
+            <li class="nav-link"><a href="/#spm5">客户案例</a></li>
+            <li class="nav-link"><a href="/#spm6">常见问题</a></li>
+        </ul>
+        <div class="hm-fr">
+            <a href="/HP/Index/Login?platform=haoping168" target="_blank" class="btn btn-login">登录</a>
+            <a href="/HP/UserRegister/Index" target="_blank" class="btn btn-reg">注册</a>
+        </div>
+    </div>
+  </div>
+  <div class="hp-wgj-layer">
+    <div class="hp-wgj-banner">
+      <div class="hp-wgj-wrap">
+        <h3 class="hp-wgj-banner__title">集购物数据、客服、社群营销为一体<br/>的个人号解决方案</h3>
+        <p class="hp-wgj-banner__des">加粉、粉丝裂变、个人号营销、客服、绩效管理</p>
+        
+      </div>
+    </div>
+  </div>
+  <div class="hp-wgj-layer hp-wgj-feature">
+    <h3 class="hp-wgj-feature__title">微管家特色功能</h3>
+    <div class="hp-wgj-wrap">
+      <ul class="feature-category clearfix">
+        <li class="category-item">
+          <div class="category-item__icon">
+            <i class="hp-wgj-sprite icon-hp-wgj-service hp-wgj-sprite--bottom"></i>
+          </div>
+          <h5 class="category-item__title">客服管家</h5>
+          <p class="category-item__des">多个子账户设置，上限级权限管理，微信销售数据跟踪等功能协助考核管理客服KPI</p>
+        </li>
+        <li class="category-item">
+          <div class="category-item__icon">
+            <i class="hp-wgj-sprite icon-hp-wgj-fans hp-wgj-sprite--bottom"></i>
+          </div>
+          <h5 class="category-item__title">粉丝精准管理</h5>
+          <p class="category-item__des">标签同步，备注同步，聊天记录同步，让客服随时可以辨明客户信息</p>
+        </li>
+        <li class="category-item">
+          <div class="category-item__icon">
+            <i class="hp-wgj-sprite icon-hp-wgj-shield hp-wgj-sprite--bottom"></i>
+          </div>
+          <h5 class="category-item__title">安全风控</h5>
+          <p class="category-item__des">全程操作的监控，微信号的任何删除信息好友，发红包等记录永久保存</p>
+        </li>
+        <li class="category-item">
+          <div class="category-item__icon">
+            <i class="hp-wgj-sprite icon-hp-wgj-aptitude hp-wgj-sprite--bottom"></i>
+          </div>
+          <h5 class="category-item__title">朋友圈智能营销</h5>
+          <p class="category-item__des">一键朋友圈推送，提高朋友圈运营效率</p>
+        </li>
+        <li class="category-item">
+          <div class="category-item__icon">
+            <i class="hp-wgj-sprite icon-hp-wgj-network hp-wgj-sprite--bottom"></i>
+          </div>
+          <h5 class="category-item__title">网页登陆</h5>
+          <p class="category-item__des">新号网页版登录，解决商家粉丝过多无微信号的尴尬</p>
+        </li>
+        <li class="category-item">
+          <div class="category-item__icon">
+            <i class="hp-wgj-sprite icon-hp-wgj-packet hp-wgj-sprite--bottom"></i>
+          </div>
+          <h5 class="category-item__title">个人号返现</h5>
+          <p class="category-item__des">个人号自动好评返现，节约成本</p>
+        </li>
+        <li class="category-item">
+          <div class="category-item__icon">
+            <i class="hp-wgj-sprite icon-hp-wgj-message hp-wgj-sprite--bottom"></i>
+          </div>
+          <h5 class="category-item__title">千牛式客服管理</h5>
+          <p class="category-item__des">多功能聊天窗口，自动回复关键词自动设置，客服间互动信息保存提高客服工作效率</p>
+        </li>
+        <li class="category-item">
+          <div class="category-item__icon">
+            <i class="hp-wgj-sprite icon-hp-wgj-sync hp-wgj-sprite--bottom"></i>
+          </div>
+          <h5 class="category-item__title">订单数据同步</h5>
+          <p class="category-item__des">同步淘宝订单数据，方便客服聊天时信息查询</p>
+        </li>
+        <li class="category-item">
+          <div class="category-item__icon">
+            <i class="hp-wgj-sprite icon-hp-wgj-code hp-wgj-sprite--bottom"></i>
+          </div>
+          <h5 class="category-item__title">二维码活码</h5>
+          <p class="category-item__des">多个微信号集合一个二维码活码，节约个人号卡片成本，按需求分配粉丝流量</p>
+        </li>
+        <li class="category-item">
+            <div class="category-item__icon">
+              <i class="hp-wgj-sprite icon-hp-wgj-appraise hp-wgj-sprite--bottom"></i>
+            </div>
+            <h5 class="category-item__title">晒评价</h5>
+            <p class="category-item__des">微管家有一个全新的评价加粉模式来帮助商家解决评价和加粉方面的问题</p>
+          </li>
+      </ul>
+    </div>
+  </div>
+  <div class="hp-wgj-layer hp-wgj-trait">
+    <div class="hp-wgj-wrap">
+      <div class="hp-wgj-padding-lr hp-wgj-trait__item  hp-wgj-trait__item--1 clearfix">
+        <div class="item__img--1"></div>
+        <div class="item__info info-container">
+          <h5 class="info-container__title">吸粉神器</h5>
+          <ul class="info-container__list">
+            <li>全新评价加粉模式来帮助商家解决评价和加粉方面问题；</li>
+            <li>二维码活码节约个人号卡片成本，按需求分配粉丝流量；</li>
+            <li>个人号自动好评返现，快速提升粉丝聚集。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hp-wgj-padding-lr hp-wgj-trait__item  hp-wgj-trait__item--2 clearfix">
+        <div class="item__info info-container">
+          <h5 class="info-container__title">客服系统</h5>
+          <ul class="info-container__list">
+            <li>多个子账户设置，上限级权限管理，智能分配后台汇总的微信好友，无阻碍实现跨微信沟通；</li>
+            <li>千牛功能管理多功能聊天窗口，自动回复关键词自动设置，客服间互动信息保存提高客服工作效率，销售数据跟踪功能协助考核管理客服KPI；</li>
+            <li>即时同步多平台订单数据，方便客服聊天时信息查询。</li>
+          </ul>
+        </div>
+        <div class="item__img--2"></div>
+      </div>
+      <div class="hp-wgj-padding-lr hp-wgj-trait__item  hp-wgj-trait__item--3 clearfix">
+        <div class="item__img--3"></div>
+        <div class="item__info info-container">
+          <h5 class="info-container__title">朋友圈智能营销               </h5>
+          <ul class="info-container__list">
+            <li>群互动，群发朋友圈，标签群发信息，群点赞（定时群发点赞在即将上）等和粉丝互动功能应有尽有</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hp-wgj-padding-lr hp-wgj-trait__item  hp-wgj-trait__item--4 clearfix">
+        <div class="item__info info-container">
+          <h5 class="info-container__title">安全风控</h5>
+          <p class="info-container__sub--menu">微信</p>
+          <ul class="info-container__list">
+            <li>全程操作的监控，随时查看客户信息及聊天转账等记录，过度营销被封号，客户资料和记录依然保存；</li>
+            <li>屏蔽客户微信号显示，员工无法用私人小号添加客户，彻底解决离职员工带给客户困扰；</li>
+          </ul>
+          <p class="info-container__sub--menu">手机</p>
+          <ul class="info-container__list">
+            <li>通过设置禁止手机设备一些常用敏感功能，如开启摄像头，拍照和扫码操作，手机不被设置开机密码等；</li>
+            <li>更好地规避员工将公司手机作为，降低企业运营风险。</li>
+          </ul>
+        </div>
+        <div class="item__img--4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hp-wgj-layer hp-wgj-case">
+    <div class="hp-wgj-wrap">
+      <h1 class="hp-wgj-case__title">他们都在用微管家</h1>
+      <ul class="hp-wgj-case__list clearfix">
+        <li class="list-item">
+          <div class="list-item__image">
+            <img src="/Content/topic/wgj/images/case01.jpg">
+          </div>
+          <div class="list-item__info">
+            <div class="shop-logo">
+              <img src="/Content/topic/wgj/images/yzpz.png">
+            </div>
+            <p>经营类目：食品品类TOP商家 </p>
+            <p>日均销量：50W+单</p>
+            <p class="shop-des">与微管家的评价功能相结合，快速将店铺会员转粉到个人号，通过微管家对粉丝进行运营维护，告知粉丝针对老客户会定期做活动。</p>
+          </div>
+        </li>
+        <li>
+          <div class="list-item__image">
+            <img src="/Content/topic/wgj/images/case02.jpg">
+          </div>
+          <div class="list-item__info">
+            <div class="shop-logo">
+              <img src="/Content/topic/wgj/images/zmc.png">
+            </div>
+            <p>经营类目：护肤品类TOP商家</p>
+            <p>月均销量：10万+单</p>
+            <p class="shop-des">通过包裹卡、短信等方式吸粉到个人号，由新媒体部门专门20人管理2000台手机，对手机微信里面的粉丝进行运营维护，定期推出分享护肤日记，并与公众号相结合，推出拼团、试用等活动。</p>
+          </div>
+        </li>
+        <li>
+          <div class="list-item__image">
+            <img src="/Content/topic/wgj/images/case03.jpg">
+          </div>
+          <div class="list-item__info">
+            <div class="shop-logo">
+              <img src="/Content/topic/wgj/images/hsl.png">
+            </div>
+            <p>经营类目：家装饰品知名商家</p>
+            <p>月均销量：10000+单</p>
+            <p class="shop-des">将微信个人号里的粉丝集中运营管理，随时互动了解买家的需求和使用状态，定期推出使用心得并进行朋友圈文章推送营销等活动，大大提高客户黏度。</p>
+          </div>
+        </li>
+        <li>
+          <div class="list-item__image">
+            <img src="/Content/topic/wgj/images/case04.jpg">
+          </div>
+          <div class="list-item__info">
+            <div class="shop-logo">
+              <img src="/Content/topic/wgj/images/hh.png">
+            </div>
+            <p>经营类目：护肤品类TOP商家</p>
+            <p>月均销量：10万+单</p>
+            <p class="shop-des">通过客服、包裹卡、短信等多个方式将店铺会员集中到多个微信号，并利用微管家进行集中化自由管理，随时响应触及客户需求，拉近客户距离，并定期推出老会员活动！</p>
+          </div>
+        </li>
+        <li>
+          <div class="list-item__image">
+            <img src="/Content/topic/wgj/images/case05.jpg">
+          </div>
+          <div class="list-item__info">
+            <div class="shop-logo">
+              <img src="/Content/topic/wgj/images/qy.png">
+            </div>
+            <p>经营类目：母婴品类TOP商家</p>
+            <p>月均销量：10万+单</p>
+            <p class="shop-des">通过微信号的个性化沟通拉近妈妈的距离，给妈妈们更多的信任感和安全感！根据用户画像，根据不同客户的标签及需求，推送适合她们的产品，让营销更加精准！</p>
+          </div>
+        </li>
+        <li>
+          <div class="list-item__image">
+            <img src="/Content/topic/wgj/images/case06.jpg">
+          </div>
+          <div class="list-item__info">
+            <div class="shop-logo">
+              <img src="/Content/topic/wgj/images/ym.png">
+            </div>
+            <p>经营类目：女装品类TOP商家</p>
+            <p>月均销量：10万+单</p>
+            <p class="shop-des">多个微信号粉丝集合后分派给各客服进行营销互通，随时了解客户需求，提高客户对品牌的认可及归属感；同时在大促时，将这部分粉丝转化成流量，提高店铺销量！</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="hp-wgj-layer hp-wgj-contact">
+    <div class="hp-wgj-wrap">
+      <h3 class="hp-wgj-title">5000+商家的信赖选择,你还在等什么？</h3>
+      <p class="hp-wgj-des">覆盖3C数码、男装、母婴、美妆、鞋靴、箱包、男装等多个类目</p>
+      <div class="hp-wgj-contact-info">
+        <form>
+          <div id="fm" class="spm-form">
+            <ul class="ls">
+              <li>
+                <label class="title">店铺名称<span class="star">*</span></label>
+                <input  id="shopName" name="shopName" class="input required"autocomplete="new-password" data-error-required="请输入店铺名称" type="text" maxlength="64" placeholder="店铺名称">
+                <div class="input-error-message"></div>
+              </li>
+              <li>
+                <label class="title">手机号<span class="star">*</span></label>
+                <input id="mobile" name="mobile" class="input required" autocomplete="new-password" data-error-required="请输入手机号码" data-regexp="/^1[3|4|5|7|8][0-9]\d{4,8}$/" data-error-regexp="手机号码不正确" type="text" placeholder="手机号码">
+                <p data-for="mobile" class="error"></p>
+              </li>
+              <li>
+                <label class="title">验证码<span class="star">*</span></label>
+                <input id="checkcode" name="checkcode" class="input code-input required" autocomplete="new-password" data-error-required="请输入验证码" type="text" placeholder="验证码" style="width: 362px;">
+                <a href="javascript:void(0);" id="btngetcode">获取验证码</a>
+                <p data-for="checkcode" class="error"></p>
+              </li>
+              <li>
+                <label class="title">密码<span class="star">*</span></label>
+                <input id="regpassword" name="regPassword" class="input required" autocomplete="new-password" data-error-required="请输入密码" type="password" placeholder="同时包含数字、大写和小写字母在内的8-20个字符">
+                <p data-for="regpassword" class="error"></p>
+                <input name="generalize" type="hidden" value="yes" />
+              </li>
+            </ul>
+            <input id="BtnSubmit" type="button" class="btn-submit submit" value="提交" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="hp-wgj-layer hp-wgj-footer">
+    <p class="hp-wgj-footer__relation">联系方式：18520005142 黄小姐</p>
+    <p class="hp-wgj-footer__copyright">版权信息：copyright © 2018 168haoping.com All Rights Reserved <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备17074504号-1</a></p>
+  </div>
+<script type="text/javascript">
+    (function () {
+        var isLayerCodeSend = false;
+        var $checks = $('.layer-reg__from .layer-required,.layer-reg__from input[data-layer-regexp]');
+        function layerFormValid($this) {
+            var $els = $this || $('.layer-reg__from .layer-required,.layer-reg__from input[data-layer-regexp]'), isPass = true;
+            $els.each(function () {
+                var regexp = $(this).attr('data-layer-regexp'),
+                    isValid = true, error = null; regexp = regexp ? eval(regexp) : null;
+                //var equal = $(this).attr('data-equal');
+                var $err = $(this).parents('li').eq(0).find('.input-error-message');
+                var val = $(this).val();
+                isValid = $(this).hasClass('layer-required') ? val !== '' : true;
+
+                if (!isValid) {
+                    error = $(this).attr('data-error-required') || "不能为空";
+                }
+                else if (regexp !== null) {
+                    isValid = regexp.test(val);
+                    if (!isValid) { error = $(this).attr('data-error-regexp') || "数据格式不正确" }
+                }
+                //else if (equal) {
+                //    if ($(equal).val() !== val) {
+                //        isValid = false; error = $(this).attr('data-error-equal') || equal + "对比不正确";
+                //    }
+                //}
+                if (!isValid) {
+                    $err.text(error).show()
+                } else { $err.hide() }
+                if (!isValid) isPass = false
+            });
+            return isPass
+        }
+        $checks.blur(function () {
+            layerFormValid($(this));
+        });
+        $('#layerPhone').on('input propertychange', function () {
+            var val = $(this).val(), regexp = $(this).attr('data-layer-regexp');
+            regexp = regexp ? eval(regexp) : null;
+            if (val != '' && regexp.test(val)) {
+                $('#LayerBtnSendCode').removeClass('disable');
+            } else {
+                $('#LayerBtnSendCode').addClass('disable');
+            }
+        });
+        $checks.focus(function () {
+            $(this).parents('li').eq(0).find('.input-error-message').hide()
+        });
+        var timer2 = null;
+        var constCountdown = 0;
+        function cutDown() {
+            if (constCountdown == 0) {
+                constCountdown = typeof verificationCodeIntervalTime == "undefined" ? 60 * 3 : verificationCodeIntervalTime;
+            }
+            var $val = $('#LayerBtnSendCode');
+            clearInterval(timer2);
+            timer2 = setInterval(function () { settime2($val) }, 1000);
+            alert("验证码已发送，请注意查收");
+        }
+        //倒计时
+        function settime2(val) {
+            if (constCountdown == 0) {
+                val.removeClass('disable').text('发送验证码');
+            }
+            else {
+                val.addClass('disable').text(' ' + constCountdown + ' S ');
+                constCountdown--;
+            }
+        }
+        $('#LayerBtnSendCode').on('click', function () {
+
+            var val = $("#layerPhone").val();
+
+            if ($(this).hasClass('disable') || val == '') {
+                return false;
+            }
+            //发送验证码
+            $("#layerCode,#layerPhone").attr('readonly', true);
+            $.ajax({
+                type: "post",
+                url: "/HP/UserRegister/GetCode",
+                data: { m: val, rnd: Math.random() },
+                dataType: "json",
+                success: function (response) {
+                    var r = eval("(" + response + ")");
+                    if (r.success == "err") {
+                        alert(r.msg);
+                        $('#LayerBtnSendCode').removeClass('disable').text('发送验证码');
+                    } else {
+                        cutDown();
+                    }
+                },
+                error: function (response) {
+                    $('#layerCode').parents('li').find('.input-error-message').text('网络错误稍后尝试').show();
+                },
+                complete: function () {
+                    $("#layerCode,#layerPhone").attr('readonly', false);
+                }
+            });
+        });
+        //提交表单
+        $('#LayerBtnSubmit').on('click', function (e) {
+            e.preventDefault();
+            if (layerFormValid()) {
+                var options = {};
+                options.mobile = $('#layerPhone').val();
+                options.checkcode = $('#layerCode').val();
+                options.regPassword = $('#layerPassword').val();
+                options.shopName = $("#layerShopName").val();
+                options.rnd = Math.random();
+                options.generalize = "yes";
+
+                $('#LayerBtnSubmit').attr("disabled", true);
+
+                //这里写提交信息
+                $.ajax({
+                    type: "post",
+                    url: "/HP/UserRegister/MerchantReg",
+                    data: options,
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.Success == 1) {
+                            $('.layer-reg__from').data('isSend', true).hide();
+                            alert('提交成功');
+                            window.location.href = "/UserRegister/Welcome";
+                        }
+                        else {
+                            $('#LayerBtnSubmit').attr("disabled", false);
+                            alert('提交失败，原因：' + response.ErrorMessage);
+                        }
+
+                    },
+                    error: function (res) {
+                    },
+                    complete: function () {
+                    }
+                });
+            }
+        });
+
+        $(window).scroll(function () {
+            if ($('.layer-reg__from').data('isSend') == true) return;
+            var top = $(window).scrollTop();
+            var dh = $(document).height();
+            var wh = $(window).height();
+            var min = dh - wh * 2 + 100;
+            if (dh > wh * 2) {
+                if (top >= wh && top < min) {
+                    $('.layer-reg__from').show();
+                } else {
+                    $('.layer-reg__from').hide();
+                }
+            }
+
+
+        });
+
+    })();
+
+</script>
+
+<script>
+
+    var _hmt = _hmt || [];
+
+    (function () {
+
+        var hm = document.createElement("script");
+
+        hm.src = "https://hm.baidu.com/hm.js?4ade9ca9f3713735807343b8bdf77026";
+
+        var s = document.getElementsByTagName("script")[0];
+
+        s.parentNode.insertBefore(hm, s);
+
+    })();
+  $(".hp-wgj-case__list>li").mouseenter(function(){
+    $(this).siblings("li").children(".list-item__info").stop().animate({"top":"155px"});
+    $(this).children(".list-item__info").stop().animate({"top":0});
+  }).mouseleave(function(){
+    $(this).children(".list-item__info").stop().animate({"top":"155px"});
+  });
+</script>
+</body>
+</html>

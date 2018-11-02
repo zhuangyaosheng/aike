@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "登录——选择系统";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    bool checkFlag= (bool)ViewData["checkFlag"];
+}
+<div class="regWrapper">
+    <div  style="padding-top: 40px;">
+        
+    </div>
+    <h1>会员登录</h1>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid reg-step2 reg-step4">
+            <form method="post">
+            <div class="result-msg clearfix" style="padding-left:100px;">
+                <label class="icon"></label>
+                <div class="text">
+                    @{if(checkFlag)
+                      {
+                         <p><span style="font-size:20px;">登录成功</span>
+                             @Html.Hidden("user", ViewData["user"])
+                             @Html.Hidden("token", ViewData["token"])
+                             @Html.Hidden("mid", ViewData["mid"])
+                         </p>
+                         <p>请选择要进入的系统：@Html.DropDownList("platform") <input type="submit" value=" 确 定 "/><br/>
+                           <span style="color:red;">@ViewData["ErrMsg"]</span>
+                         </p>
+                    }
+                    else
+                    {
+                         <p><span style="font-size:20px;">验证登录失败</span></p>
+                      }
+                    }
+                    
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

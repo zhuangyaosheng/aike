@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "等待审核-注册";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+}
+<div class="regWrapper">
+    <div  style="padding-top: 40px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        *注册前你可以先了解<a href="/RegHelper/introduce" target="_blank" style="color:#0066d3">《艾客入驻流程》</a>
+    </div>
+    <h1>会员注册</h1>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid reg-step2 reg-step4">
+            <div class="result-msg clearfix" style="padding-left:100px;">
+                <label class="icon"></label>
+                <div class="text">
+                    <p><span style="font-size:20px;">注册成功</span></p>
+                    <p>自动登录中......</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var t1 = window.setTimeout(go, 3000);        
+
+        function go() {
+            window.clearTimeout(t1);//去掉定时器
+            window.location = "/UserRegister/WelCome";
+        }
+    });
+
+    
+</script>

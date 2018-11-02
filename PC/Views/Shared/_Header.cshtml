@@ -1,0 +1,59 @@
+﻿@using IMyBest.WeiXin.AgentServer.Services
+@{
+    Layout = null;
+    string basePath = "/Content/new/";
+    int TopMenuSolutionNavIndex = ViewBag.TopMenuSolutionNavIndex ?? -1;
+
+    string agentServer = ViewData["AgentServer"] != null ? ViewData["AgentServer"].ToString() : string.Empty;
+
+    string logoUrl = agentServer;
+    bool isFUP = FUPlanBaseService.CheckIsFUP(ViewData["platform"]);
+    if (isFUP)
+    {
+        logoUrl = FUPlanService.GetFUPDoamin();
+        basePath = Model;
+    }
+}
+
+@if (isFUP)
+{
+    <style type="text/css">
+        .des {
+            display: none;
+        }
+
+        .body-bg {
+            background-color: #fff;
+        }
+
+        .a-logo::after {
+            display: none;
+        }
+    </style>
+}
+<!-- header -->
+<div class="layout home-layout" id="home">
+    <div class="layer-header">
+        <div class="layer-container clearfix">
+            <div class="float-left"><a href="@(logoUrl)/" class="figure a-logo"><img src="@(basePath)images/logo.png"></a><span class="des">社群营销领军品牌</span></div>
+            <div class="float-right">
+                @if (!isFUP){
+                <nav class="float-left">
+                    <ul class="menus clearfix">
+                        <li><a href="@(agentServer)/#home" class="z-active">首页</a></li>
+                        <li><a href="@(agentServer)/#productId">产品</a></li>
+                        <li><a href="@(agentServer)/Pages/advantage.html">优势</a></li>
+                        <li><a href="@(agentServer)/Pages/case.html">成功案例</a></li>
+                        <li><a href="@(agentServer)/Pages/about.html">关于我们</a></li>
+                        <!-- <li><a href="@(agentServer)/#footerId">新闻动态</a></li> -->
+                        <li><a href="@(agentServer)/Pages/join.html">合作加盟</a></li>
+                    </ul>                   
+                </nav>
+                }
+                <a href="@(BaseService.AddUrlParam("/Index/Login", ViewData["platform"]))" class="login">登录</a>
+                <a href="@(BaseService.AddUrlParam(agentServer + "/UserRegister/Main", ViewData["platform"]))" class="signin">注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /header -->

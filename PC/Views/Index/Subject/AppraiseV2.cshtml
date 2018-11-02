@@ -1,0 +1,190 @@
+﻿@{
+    ViewBag.Title = "艾客-评价返现新模式，全网独家提高淘宝店铺DSR神器";
+    ViewBag.KeyWords = "好评返现，评价有礼，如何提高淘宝好评,高效提高DSR，降低成本，评价有礼";
+    ViewBag.Description = "提高好评率、打造爆款！高效提升DSR";
+    Layout = "~/Views/Index/_Layout.cshtml";
+    string basePath = Url.Content("~/Content/Login/subject/appraise-v2/");
+}
+@section style{
+     <link rel="stylesheet"href="@(basePath)css/css.css">
+ }
+<div class="pjyl-wraper">
+  <div class="top"><div style="width:890px; position:relative; height:100%; margin:0 auto;"><a href="#merchantForm" style="display:block; position:absolute; top:425px; left:50%; width:205px; height:60px; margin-left:96px;"></a></div></div>
+  <div class="panel"><img src="@(basePath)images/p2.jpg"></div>
+  <div class="panel"><img src="@(basePath)images/p3.jpg"></div>
+  <div class="panel"><img src="@(basePath)images/p4.jpg"></div>
+  <div class="panel"><img src="@(basePath)images/p5.jpg"></div>
+  <div class="panel"><img src="@(basePath)images/p6.jpg"></div>
+  <div class="panel form" id="merchantForm">
+    <div class="tp"><img src="@(basePath)images/p7.jpg"></div>
+    <div class="cns">
+  <form action="" method="post">
+        <input id="RequestType" type="hidden" name="RequestType" value="1">
+        <input type="hidden" name="token" value="@ViewData["token"]">
+        <input type="hidden" name="reqSource" value="PraiseBack">
+        <input type="hidden" name="comeSource" value="@ViewData["source"]">
+      <table align="center">
+        <tbody>
+        <tr>
+          <td><label>公司名/店铺名<i>*</i></label></td>
+          <td><input type="text" id="txtCustomerName" name="CustomerName"></td>
+        </tr>
+        <tr>
+          <td><label>联系人<i>*</i></label></td>
+          <td><input type="text" id="txtContacts" name="Contacts"></td>
+        </tr>
+        <tr>
+          <td><label>职位<i>*</i></label></td>
+          <td><input type="text" id="txtPosition" name="Position"></td>
+        </tr>
+        <tr>
+          <td><label>手机号码<i>*</i></label></td>
+          <td><input type="text" id="txtPhoneNumber" name="PhoneNumber"></td>
+        </tr>
+        <tr>
+          <td><label>QQ号码<i>*</i></label></td>
+          <td><input type="text" id="txtQQNumber" name="QQNumber"></td>
+        </tr>
+        <tr style="display:none;">
+          <td><label for="txtEmail"><em>*</em>邮箱</label></td>
+          <td><input type="text" id="txtEmail" name="Email"></td>
+        </tr>
+        </tbody>
+      </table>
+      <input class="submit" type="button" value="" id="btnSubmit">
+      </form>
+    </div>
+  </div>
+  <div class="panel" style="padding-top: 60px;"><img usemap="#testmap" src="@(basePath)images/p-8.jpg">
+    <map name="testmap" id="testmap">
+      <area shape="rect" coords="0,92,184,264" href ="http://www.aiagain.com/Index/News/1" target="_blank" />
+      <area shape="rect" coords="198,92,970,264" href ="http://www.aiagain.com/Index/News/1" target="_blank" />
+    </map>
+  </div>
+  <div class="panel" style="padding:41px 0;"><a href="http://www.aiagain.com/" target="_blank" class="link"><img src="@(basePath)images/p-btn-02.jpg"></a></div>
+ @* <div class="pjyl-scroll-form">
+    <a href="#merchantForm" class="lk"></a>
+    <a class="close"></a>
+  </div>*@
+</div>
+@section scripts{
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?579314a1703b14c2e0d838a79e8cf71c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+<script>
+    $(document).ready(function () {
+        $('#btnSubmit').click(function () {
+            if (checkInput() == true) {
+                pageAjax();
+            }
+            else {
+                return false;
+            }
+        });
+
+        $(".pjyl-scroll-form .close").click(function () {
+            $('.pjyl-scroll-form').hide();
+        });
+    });
+    function pageAjax() {
+        $.ajax({
+            type: "post",
+            url: "/CustomerRequestManage/CustomerRequest/CustomerRequestEdit",
+            data: $('form').serialize(),
+            dataType: "json",
+            async: false,
+            success: function (response) {
+                if (response.Status == 1) {
+                    alert("提交成功！我们会在3个工作日内与您联系哦~");
+                }
+                else {
+                    alert('申请失败');
+                }
+            },
+            error: function (response) { }
+        });
+
+    }
+
+    function checkInput() {
+        var customerName = $('#txtCustomerName').val();
+        var contacts = $('#txtContacts').val();
+        var position = $('#txtPosition').val();
+        var phoneNumber = $('#txtPhoneNumber').val();
+        var qqNumber = $('#txtQQNumber').val();
+
+        if (customerName == '' || lTrim(customerName) == '') {
+            alert('请输入公司/店铺名称');
+            return false;
+        }
+        if (customerName.length > 25) {
+            alert('公司/店铺名称不能超过 25字');
+            return false;
+        }
+
+        if (contacts == '' || lTrim(contacts) == '') {
+            alert('请输入联系人');
+            return false;
+        }
+        if (contacts.length > 25) {
+            alert('联系人不能超过 25字');
+            return false;
+        }
+
+        if (position == '' || lTrim(position) == '') {
+            alert('请输入职位');
+            return false;
+        }
+        if (position.length > 10) {
+            alert('职位不能超过 10字');
+            return false;
+        }
+
+        if (phoneNumber == '' || lTrim(phoneNumber) == '') {
+            alert('请输入手机号码');
+            return false;
+        }
+        if (isPhoneNumber(phoneNumber) == false) {
+            alert('手机号码输入不正确');
+            return false;
+        }
+
+        if (qqNumber == '' || lTrim(qqNumber) == '') {
+            alert('请输入QQ号码');
+            return false;
+        }
+        if (isQQNumber(qqNumber) == false) {
+            alert('QQ号码输入不正确（非零开头的四位以上的数字）');
+            return false;
+        }
+        if (qqNumber.length > 20) {
+            alert('QQ号码不能超过 20位');
+            return false;
+        }
+        return true;
+    }
+
+    //去除左侧空格
+    function lTrim(str) {
+        return str.replace(/(^\s*)/g, "");
+    }
+    //是否为手机号码
+    function isPhoneNumber(number) {
+        var reg = /^[1]{1}\d{10}$/;
+        return reg.test(number);
+    }
+
+    function isQQNumber(number) {
+        var reg = /^[1-9][0-9]{4,}$/;
+        return reg.test(number);
+    }
+
+</script>
+    <script type="text/javascript" src="https://ryak66.kuaishang.cn/bs/ks.j?cI=601997&fI=69397" charset="utf-8"></script>
+}

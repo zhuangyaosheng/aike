@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+    string basePath = Url.Content("~/Content/Login/info/"); 
+}
+<div class="news-list-wrap">
+                    <h1>更多文章</h1>
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("News", "Index", new { id=4})" class="clearfix">
+                                <div class="img"><img src="@(basePath)content/rt03.jpg" /></div>
+                                <div class="text">
+                                    <div class="title">微信精准推送，助力老会员复购破百万！</div>
+                                    <div class="date">作者：Young</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("News", "Index", new { id=3})" class="clearfix">
+                                <div class="img"><img src="@(basePath)content/rt01.png" /></div>
+                                <div class="text">
+                                    <div class="title">揭秘：微信一个月快速提升天猫店铺DSR？</div>
+                                    <div class="date">作者：Summer </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("News", "Index", new { id=2})" class="clearfix">
+                                <div class="img"><img src="@(basePath)content/rt02.png" /></div>
+                                <div class="text">
+                                    <div class="title">微信营销，助力女王节成交3万单</div>
+                                    <div class="date">作者：李想</div>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>

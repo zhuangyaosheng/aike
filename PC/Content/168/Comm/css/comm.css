@@ -1,0 +1,148 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+}
+body{
+  font-family: \5FAE\8F6F\96C5\9ED1;
+  color: #333333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+.hm-max{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hm-min{
+  min-width: 1200px;
+}
+.hm-fl{float: left;}
+.hm-fr{float: right;}
+ul,ul li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}img{
+   vertical-align: top;
+   border: 0;
+ }
+p{
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+.hm-header{
+  min-width: 1200px;
+  height: 72px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+}
+.hm-header{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #ffffff;
+}
+.hm-header .nav li{
+  float: left;
+  line-height: 72px;
+  padding: 0 33px;
+}
+.hm-header .nav li .active{
+  color: #ff0d00;
+}
+.hm-header .btn{
+  display: inline-block;
+  vertical-align: middle;
+  width: 78px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.hm-header .hm-fr{
+  line-height: 72px;
+}
+.hm-header .btn-login{
+  border-color: #2c90ed;
+  color: #2c90ed;
+  margin-right: 10px;
+}
+.hm-header .btn-reg{
+  border-color: #2c90ed;
+  background-color: #2c90ed;
+  color: #ffffff;
+}
+.hm-footer{
+  min-width: 1200px;
+  text-align:center;
+  background-color: #23272b;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 14px 0;
+}
+.hm-footer p{
+  margin: 10px 0;
+}
+.fast-contact{
+  position: fixed;
+  right: 0;
+  top:20%;
+  width: 162px;
+  height: 349px;
+  background: url("../images/fast-contact.png") no-repeat;
+}
+.fast-contact .qq{
+  display: block;
+  width: 102px;
+  height: 30px;
+  position: absolute;
+  top:140px;
+  left: 39px;
+}
+.fast-contact-adv{
+  position: fixed;
+  right: 0;
+  top:20%;
+  width: 163px;
+  height: 413px;
+  background: url("../images/fast-contact-adv.png") no-repeat;
+}
+.fast-contact-adv .link-form,
+.fast-contact-adv .qq{
+  display: block;
+  position: absolute;
+  width: 101px;
+  height: 30px;
+  left: 39px;
+}
+.fast-contact-adv .link-form{
+  top:114px;
+}
+.fast-contact-adv .qq{
+  top:140px;
+}
+.submit {
+  cursor:pointer;
+}

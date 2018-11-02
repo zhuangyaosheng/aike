@@ -1,0 +1,352 @@
+﻿@using IMyBest.WeiXin.AgentServer.Manage.Helpers
+@using IMyBest.WeiXin.AgentServer.Models
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="@WebUrlHelper.StylesWebPath/Themes/frame/frame.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="@WebUrlHelper.StylesWebPath/Themes/frame/skin_12/frame_skin.css" media="all" />
+
+    <script type="text/javascript" src="@WebUrlHelper.ScriptWebPath/Scripts/require.js"></script>
+
+    <script type="text/javascript">
+        require.config({
+            baseUrl: '@WebUrlHelper.ScriptWebPath/scripts/',
+            urlArgs: 'version=xxxx',
+            shim: {
+                'jquery.switch.theme': {
+                    deps: ['jquery']
+                },
+                'jquery.artDialog': {
+                    deps: ['jquery', 'iframeTools.source']
+                },
+                'jquery.show.tip': {
+                    deps: ['jquery']
+                },
+                'iframeTools.source': {
+                    deps: ['jquery']
+                },
+                'scroll_module': {
+                    deps: ['jquery']
+                },
+                'jquery.side.nav': {
+                    deps: ['jquery']
+                },
+                'jquery.switch.frame': {
+                    deps: ['jquery']
+                },
+                'common': {
+                    deps: ['jquery']
+                }
+            }
+        });
+    </script>
+
+    @RenderSection("header", false)
+    @{
+        string user_finance = "Aiagain_Finance,";
+        string user_admin = "admin";
+        string user_pm = "";
+        
+    }
+</head>
+
+<body id="frame">
+    <table class="frame_table" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+        <tr>
+            <td colspan="5" id="header_frame" class="header_frame" nowrap="nowrap">
+                <div id="header" class="header">
+                    @{
+                        Html.RenderAction("TopBanner", "CommonShowAgent");
+                    }
+                    <div class="header_bd_bar">
+                        <div class="main_nav_bar">
+                            <div class="main_nav">
+                                <ul class="main_nav_tabs">
+                                    <li class="current first"><a href="#side_nav_1">首页</a></li>
+                                    @*   @if (Session["loginAccount"] != null && Session["loginAccount"].ToString().Contains("Aiagain_Deploy"))
+                                    {
+                                        <li><a href="#side_nav_4">发布工单</a></li>
+                                    }
+                                    else
+                                    {
+                                        if (Session["loginAccount"] != null && !user_finance.Contains(Session["loginAccount"].ToString()))
+                                        {
+                                        <li class="current first"><a href="#side_nav_1">首页</a></li>
+                                        <li><a href="#side_nav_2">采集管理</a></li>
+                                        <li><a href="#side_nav_3">日志管理</a></li>
+                                        }
+                                        <li><a href="#side_nav_5">返利联盟</a></li>
+                                    }*@
+
+                                </ul>
+                            </div>
+                        </div>
+                        @{ 
+                            Html.RenderAction("FunctionBanner", "CommonShowAgent");
+                        }
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td height="100%" id="main_body">
+                <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+                    <tr>
+                        <td nowrap="nowrap" class="left_frame" id="left_frame">
+                            <div class="left_frame_bar" id="left_frame_bar">
+                                <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+                                    <tr>
+                                        <td id="left_top_frame" valign="top">
+                                            <div class="side_nav">
+                                                <div id="side_nav_1" class="side_nav_content">
+                                                    <ul class="side_nav_level_1">
+                                                        @{
+                                                            List<LoginUserEntity.Menu> menuList = LoginUserHelper.CurrentLoginUser.Permissions;
+                                                            if (menuList != null)
+                                                            {
+                                                                foreach (var item in menuList)
+                                                                {
+                                                            <li class="current">
+                                                                <div class="sub_hd"><a class="sub_hd_title" href="javascript:void(0)">@item.MenuName</a> </div>
+                                                                <div class="sub_bd">
+                                                                    <ul class="side_nav_level_2">
+                                                                        @if (item.Children != null)
+                                                                        {
+                                                                            foreach (var childItem in item.Children)
+                                                                            {
+                                                                            <li><a class="J_menuItem" href="@childItem.Path" target="content_frame">@childItem.MenuName</a></li>
+                                                                            }
+                                                                        }
+
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                                }
+                                                            }
+                                                        }
+                                                    </ul>
+                                                </div>
+                                                @*  @if (Session["loginAccount"] != null && Session["loginAccount"].ToString().Contains("Aiagain_Deploy"))
+                                                { 
+                                                    <div id="side_nav_4" class="side_nav_content">
+                                                        <ul class="side_nav_level_1">
+                                                            <li class="current">
+                                                                <div class="sub_hd"><a class="sub_hd_title" href="javascript:void(0)">发布工单</a> </div>
+                                                                <div class="sub_bd">
+                                                                    <ul class="side_nav_level_2">
+                                                                        <li>@Html.ActionLink("发布工单", "DeployList", "../DeploySystem/DeployManage", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("申请发布", "DeployEdit", "../DeploySystem/DeployManage", new { }, new { target = "content_frame" })</li>
+
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    if (Session["loginAccount"] != null && !user_finance.Contains(Session["loginAccount"].ToString()))
+                                                    {
+                                                    <div id="side_nav_1" class="side_nav_content">
+                                                        <ul class="side_nav_level_1">
+                                                            <li class="current">
+                                                                <div class="sub_hd"><a class="sub_hd_title" href="javascript:void(0)">商户管理</a> </div>
+                                                                <div class="sub_bd">
+                                                                    <ul class="side_nav_level_2">
+                                                                        <li>@Html.ActionLink("商户管理", "MerchantList", "../MerchantManage/Merchant", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("商户匹配店铺管理", "MerchantMatchList", "../MerchantManage/MerchantMatch", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("商户版本管理", "MerchantVersionList", "../Version/MerchantVersionManage", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("营销短信费用管理", "SmsFeeList", "../MerchantManage/SmsFee", new { }, new { target = "content_frame" })</li>
+                                                                      
+                                                                        <li>@Html.ActionLink("营销短信签名管理", "SmsSignList", "../MerchantManage/SmsSign", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("淘宝存储管理", "ServerAppList", "../ServerAppManage/ServerApp", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("一键清除", "MerchantInfoInitList", "../MerchantManage/MerchantInfoInit", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("商户申请管理", "CustomerRequestList", "../CustomerRequestManage/CustomerRequest", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("活动报名管理", "ActivityRegistrationList", "../CustomerRequestManage/ActivityRegistration", new { }, new { target = "content_frame" })</li>
+                                                                                                                                      
+                                                                        <li>@Html.ActionLink("卡首屏账号管理", "MemberList", "../TaoKouLing/Member", new { }, new { target = "content_frame" })</li>
+                                                                         <li>@Html.ActionLink("卡首屏数据统计", "StatisticsList", "../TaoKouLing/Statistics", new { }, new { target = "content_frame" })</li>
+                                                                         <li>@Html.ActionLink("用户管理", "UserList", "../UserManage/User", new { }, new { target = "content_frame" })</li>
+                                                                         <li>@Html.ActionLink("角色管理", "RoleList", "../UserManage/Role", new { }, new { target = "content_frame" })</li>
+                                                                         <li>@Html.ActionLink("菜单管理", "MenuList", "../UserManage/Menu", new { }, new { target = "content_frame" })</li>
+                                                                        @if (Session["loginAccount"] != null && (Session["loginAccount"].ToString() == "admin" || Session["loginAccount"].ToString() == "Aiagain_PM"))
+                                                                        {
+                                                                            <li>@Html.ActionLink("商户管理账号", "AdminUserList", "../ApplicationServerManage/AdminUser", new { }, new { target = "content_frame" })</li>
+                                                                        }
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="current">
+                                                                <div class="sub_hd"><a class="sub_hd_title" href="javascript:void(0)">内容发布管理</a> </div>
+                                                                <div class="sub_bd">
+                                                                    <ul class="side_nav_level_2">
+                                                                        <li>@Html.ActionLink("后台轮换图", "RotationPicList", "../ContentPublish/RotationPic", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("紧急通知", "UrgentNotifyList", "../ContentPublish/UrgentNotify", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("公告", "NoticeInfoList", "../ContentPublish/Notice", new { }, new { target = "content_frame" })</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            @{
+                                                                        if (Session["loginAccount"] != null && (Session["loginAccount"].ToString() == "admin" || Session["loginAccount"].ToString() == "Aiagain_PM"))
+                                                                        {
+                                                                <li class="current">
+                                                                    <div class="sub_hd"><a class="sub_hd_title" href="javascript:void(0)">版本菜单管理</a></div>
+                                                                    <div class="sub_bd">
+                                                                        <ul class="side_nav_level_2">
+                                                                            <li>@Html.ActionLink("版本管理", "VersionList", "../Version/VersionManage", new { }, new { target = "content_frame" })</li>
+                                                                            <li>@Html.ActionLink("分组管理", "FunctionGroupList", "../FunctionGroup/FunctionGroupManage", new { }, new { target = "content_frame" })</li>
+                                                                            <li>@Html.ActionLink("功能菜单管理", "MenusList", "../Version/SysMenu", new { }, new { target = "content_frame" })</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                                        }
+                                                            }
+                                                          
+                                                        </ul>
+                                                    </div>
+
+                                                    <div id="side_nav_2" class="side_nav_content" style="display: none;">
+                                                        <ul class="side_nav_level_1">
+                                                            <li class="current">
+                                                                <div class="sub_hd"><a class="sub_hd_title" href="javascript:void(0)">采集管理</a> </div>
+                                                                <div class="sub_bd">
+                                                                    <ul class="side_nav_level_2">
+                                                                        <li>@Html.ActionLink("采集情况", "CollectSituationList", "../DataCollectManage/CollectManage", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("漏单队列", "CheckQueueList", "../DataCollectManage/CollectManage", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("接口超时列表", "CallErrorLogList", "../DataCollectManage/CollectManage", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("店铺列表", "ShopList", "../DataCollectManage/DataCollect", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("任务进程管理", "TaskClientsList", "../DataCollectManage/DataCollect", new { }, new { target = "content_frame" })</li>
+                                                                        <li>@Html.ActionLink("任务统计", "TaskResult", "../DataCollectManage/Report", new { }, new { target = "content_frame" })</li>
+                                                                     
+
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                    <div id="side_nav_3" class="side_nav_content" style="display: none;">
+                                                        <ul class="side_nav_level_1">
+                                                            <li class="current">
+                                                                <div class="sub_hd"><a class="sub_hd_title" href="javascript:void(0)">日志列表</a> </div>
+                                                                <div class="sub_bd">
+                                                                    <ul class="side_nav_level_2">
+                                                                        <li>@Html.ActionLink("日志列表", "SystemLogList", "../SystemManage/SystemLog", new { }, new { target = "content_frame" })</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                   
+                                                    }
+                                                    <div id="side_nav_5" class="side_nav_content" style="display: none;">
+                                                        <ul class="side_nav_level_1">
+                                                            @if (Session["loginAccount"] != null && !user_finance.Contains(Session["loginAccount"].ToString()))
+                                                            {
+                                                                <li class="current">
+                                                                    <div class="sub_hd"><a class="sub_hd_title" href="javascript:void(0)">返利联盟</a> </div>
+                                                                    <div class="sub_bd">
+                                                                        <ul class="side_nav_level_2">
+                                                                            <li>@Html.ActionLink("商品库管理", "AgencyGoodsList", "../FUPlan/FUPlan", new { }, new { target = "content_frame" })</li>
+                                                                            <li>@Html.ActionLink("订单管理", "FupOrderList", "../FUPlan/FUPlan", new { }, new { target = "content_frame" })</li>
+                                                                            <li>@Html.ActionLink("异常用户管理", "FupAbnormalMemberList", "../FUPlan/FUPlan", new { }, new { target = "content_frame" })</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            }
+                                                            @if (Session["loginAccount"] != null && (user_admin.Contains(Session["loginAccount"].ToString()) || user_finance.Contains(Session["loginAccount"].ToString())))
+                                                            {
+                                                                <li class="current">
+                                                                    <div class="sub_hd"><a class="sub_hd_title" href="javascript:void(0)">提现审核</a> </div>
+                                                                    <div class="sub_bd">
+                                                                        <ul class="side_nav_level_2">
+                                                                            <li>@Html.ActionLink("商家提现审核", "FupMerchantValidsExtracted", "../FUPlan/FUPlan", new { }, new { target = "content_frame" })</li>
+                                                                            <li>@Html.ActionLink("推广商提现审核", "FupMerchantRebatesExtracted", "../FUPlan/FUPlan", new { }, new { target = "content_frame" })</li>
+                                                                            <li>@Html.ActionLink("代理提现审核", "FupMemberExtracted", "../FUPlan/FUPlan", new { }, new { target = "content_frame" })</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="sub_hd"><a class="sub_hd_title" href="javascript:void(0)">财务报表</a> </div>
+                                                                    <div class="sub_bd">
+                                                                        <ul class="side_nav_level_2">
+                                                                            <li>@Html.ActionLink("财务报表", "FupFinancialReport", "../FUPlan/FUPlan", new { }, new { target = "content_frame" })</li>
+                                                                           
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            }
+                                                        </ul>
+                                                    </div>
+                                                }*@
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="left_bottom_frame">
+                                            @{
+                                                //Html.RenderAction("LeftBanner", "CommonShow");
+                                                Html.RenderAction("LeftBanner", "CommonShowAgent");
+                                            }
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="left_switch_bar" id="left_switch_bar">
+                            <span class="switch_bar left_switch" target="left_frame">&nbsp;</span>
+                        </td>
+                        <td id="content_bar">
+                            <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+                                <tr>
+                                    <td id="right_top_frame">
+                                        <div class="breadcrumb_bar" style="display: none;"><a href="#">首页</a><span>&gt;</span><strong>机票预订</strong></div>
+                                        @{
+                                            //Html.RenderAction("ThemeBanner", "CommonShow");
+                                            Html.RenderAction("ThemeBanner", "CommonShowAgent");
+                                        }
+
+                                        @{
+                                            //Html.RenderAction("ScrollNotice", "CommonShow");
+                                            Html.RenderAction("ScrollNotice", "CommonShowAgent");
+                                        }
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="100%">
+                                        @RenderBody()
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div id="online_service">
+        @{
+            //Html.RenderAction("OnlineService", "CommonShow");
+            Html.RenderAction("OnlineService", "CommonShowAgent");
+        }
+    </div>
+</body>
+
+<script type="text/javascript">
+    require(['common.switchtabs', 'common.switchframe', 'common.switchtheme', 'common.switchsidenav', 'common.showhover'],
+        function (switchtabs, switchframe, switchtheme, switchsidenav, showhover) {
+            showhover.init("show_sub");
+            switchtabs.init();
+            switchframe.init();
+            switchtheme.init();
+            switchsidenav.init();
+        });
+</script>
+
+</html>
+

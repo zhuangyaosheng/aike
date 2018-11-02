@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "快速用户活跃度，一击必中，转化不再看天意!-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/info/home_hot_jzts/");
+}
+<!--精准推送-->
+<div class="wrapper content-wrap">
+    <div class="inner-body">
+        <div class="table">
+            <div class="cell">
+                <div class="info-container">
+                    <h1 class="title"> 快速用户活跃度，一击必中，转化不再看天意!</h1>
+                    <div class="cn-panel">
+                        <p><strong>精准推送是什么？</strong></p>
+                        <p>电商的精准营销可以根据客户在浏览不用产品所花费的时间分析客户的购买欲望，及时的反馈给商家，商家可及时与客户推销该类产品，实现精准的营销模式。减少双方的时间。</p>
+                        <p>艾客的精准推送功能立足于大数据精准营销的基础之上，依靠对用户大数据的采集和整合分析来精准的判断用户最关心和喜爱的事物是什么，从而实现精准推送，让用户接收自己最关注的第一手信息。在不打扰用户的前提下，给用户推送有用或有趣的信息，以达到提高用户活跃和留存，或者提高转化率的目的。</p>
+                        <p><strong>精准推送可以为我们带来什么</strong></p>
+                        <p>去年双十一某保健品商家使用精准推送，详情推送层层递进，高潮迭起，并且借助人群精准分组可发多次详情！将平台的会员引导到微信做精细化运营和精准营销，无论是触达率，会员粘性，互动性以及最重要的复购率将大大的提升把平台会员的主动权掌握回自己手里！</p>
+                         <p><img src="@(imgPath)01.jpg" /></p>
+                        <p><strong>艾客能做什么</strong></p>
+                        <p>基于艾客平台我们已经可以实现基于微信的社群营销平台搭建，对用户进行多维度的进行分组（包括购买的宝贝，购买次数，金额，时间进行分组），并实施精准推送。也就是说，现在的模式是把传统的crm的数据分析搬到了微信上来，不仅利用微信推送取代了短信和邮件，还提高了n倍的触达率，而且是推送0成本，实现更低的成本更高效率的会员维护。</p>
+                        <p>精准营销模式将会取代传统广撒网模式，数据分析结合消费者心理的一击必中模式势必带来新一轮的营销革命！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell news-list">
+                @{Html.RenderPartial("Info/_RightPartial");}
+            </div>
+        </div>
+    </div>
+</div>

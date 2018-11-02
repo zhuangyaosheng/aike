@@ -1,0 +1,150 @@
+.input { border:1px solid #96AFE7; height:14px; padding:2px;}
+select{border:1px solid #96AFE7 ; padding:2px;}
+
+
+/* form table */
+.form_table{width:100%; margin:5px 0}
+.form_table thead th{font-weight:bold;}
+.form_table tbody th{text-align:right;}
+.form_table thead th, .form_table tbody th, .form_table tbody td{padding:5px 0 5px 5px;}
+
+.sub_form_table{width:100%; margin:-5px 0 -5px -5px; width:auto;}
+/* form table */
+
+/* data table */
+.data_table{ width:100%;}
+.data_table thead th{ font-weight: bold; color:#293850; padding: 8px 8px; border-right:1px solid #86A4D1; border-bottom:1px solid #96AFE7; text-align:left; background-color:#B9CCEB;}
+.data_table tbody tr td { background-color:#fff; padding: 8px 8px;  border-right:1px solid #CBD9F2; border-bottom:1px solid #CBD9F2;  table-layout:fixed; word-break: break-word; word-wrap: break-word; vertical-align:top; text-align:left;}
+
+.data_table, x:-moz-any-link { width:100%;}
+.data_table tbody tr td, x:-moz-any-link { overflow:hidden; }
+
+.data_table tbody tr.odd th, .data_table tbody tr.odd td{ background-color:#ffffff;}
+.data_table tbody tr.even th, .data_table tbody tr.even td{ background-color:#F2F7FE;}
+.data_table tbody tr.hover td { background-color:#fffad1;}
+.data_table tbody tr.selected td {background-color:#fffad1;}
+
+.data_table tbody tr td a, .data_table tbody tr td a:visited { text-decoration:underline; color:#3366cc;}
+.data_table tbody tr td a:hover { color:#1d57ca;}
+
+.data_table tbody tr td a.title_link:link,.data_table tbody tr td a.title_link:visited { text-decoration:none; color:#555;}
+.data_table tbody tr td a.title_link:hover { color:#3366CC;text-decoration:none;}
+
+.data_table thead th .order, .data_table thead th .reverseOrder { background:url(order_reverse_order_arrow.png) no-repeat right top; display:block; margin:-6px -4px; padding:6px 4px;}
+.data_table thead th .reverseOrder { background-position:right -30px;}
+.data_table thead th .order:hover, .data_table thead th .reverseOrder:hover { background-color:#ededed; color:#c00000}
+
+.data_table { width:100%; overflow: hidden;}
+.table_border{ border:1px solid #d8d8d8;}
+.operate_col a, .operate_col span { margin:0 3px;}
+
+.sub_data_table{width:100%;}
+
+.sort, .sort_asc, .sort_desc { background:url(sort_icon_bg.png) no-repeat right 0; padding-right:12px; cursor:pointer;}
+.sort_asc { background-position:right -30px;}
+.sort_desc { background-position:right -60px;}
+.sort:link, .sort:visited { color:#666}
+/*end sub data table*/
+
+/* end data table */
+
+/* func bar */
+.sub_func_bar { padding:10px; border-top:1px solid #D8D8D8; height:27px; overflow:hidden;}
+/* end func_bar */
+
+/* pagenation bar */
+.pagenation_bar{/* padding:6px 0;*/ overflow:hidden; zoom:1;}
+.page_num { /*float:right;*/ margin-right:-3px;}
+.page_num { color:#7E9BCC;}
+.page_num strong { border:1px solid #AAAAC7;  color: #FFF; float:left; padding: 1px 6px; margin:0 3px; font-weight:bold; background: #7E9BCC;}
+.page_num span { color:#0e3822; float:left; padding:2px 4px; margin:0 3px;}
+.page_num a{ border:1px solid #AAAAC7; color:#7E9BCC; font-weight:normal; background-color:#fff; font-size:12px; margin:0 3px; display:block; float:left; padding:1px 6px;}
+.page_num a:hover { border:1px solid #AAAAC7; background-color:#ededed; color:#7E9BCC;}
+.page_num input { width:30px; height:14px;}
+/* end pagenation bar */
+
+
+
+
+
+
+/* box_1 */
+.box_1 {background-color:#F5F9FF;margin-bottom:10px;overflow:hidden;border:1px solid #96AFE7;}
+.box_1{border-radius:2px;}
+.box_1 .hd{border-bottom: 1px solid #96AFE7;border-top:1px solid #f4f4f4;background: #B9CCEB;height:25px;line-height:25px;padding:0 10px;position:relative;}
+.box_1 .hd h3{color:#333;font-size:14px;font-weight:bold;}
+
+.box_1 .hd_func_bar{position:absolute;right:10px;top:-2px;*top:0px;_height:24px;}
+.box_1 .hd_func_bar .btn{margin:0 0 0 10px;}
+.box_1 .hd_func_bar .select{_margin-top:3px;}
+/* end box 1 */
+
+/* box 2 */
+.box_2 {background-color:#FFFFFF;margin-bottom:10px;overflow:hidden;}
+.box_2 {border-radius:2px;}
+.box_2 .hd{height:25px;line-height:25px;padding:0 10px;}
+.box_2 .hd h3{color:#333;font-size:14px;font-weight:bold;}
+/* end box 2 */
+
+
+
+
+
+/* btn */
+.btn, .btn:visited, .btn:hover { display:inline-block; *display:inline; zoom:1; text-decoration:none; white-space:nowrap;}
+.btn { background:url(default_btn_bg.png) repeat-x 0 0; border:1px solid #c4c4c4; color:#555; margin-right:10px;  overflow:hidden; overflow:visible !ie; padding:0 1em; width:auto; _width:0; height:25px; padding-top:3px\9; *padding-top:3px; -moz-border-radius:2px; -khtml-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;}
+.btn { font-size:14px; font-weight:bold; cursor:pointer;}
+.btn:hover { background-position:0 -30px; border:1px solid #9c9c9c; color:#333;}
+button.btn { *padding-top:0;}
+.sub_btn { font-size:12px; font-weight:normal; height:21px; padding-top:2px\9; *padding-top:3px; _line-height:12px;}
+button.sub_btn { _line-height:15px; *padding-top:0;}
+.disabled_btn, .disabled_btn:hover { background-position:0 -60px; cursor:default; border:1px solid #cacaca; color:#d3d3d3;} 
+.disabled_sub_btn, .disabled_sub_btn:hover { color:#d3d3d3; height:21px; font-size:12px; font-weight:normal;}
+
+/* a btn */
+a.btn { padding-top:0; padding-bottom:0; height:23px; line-height:23px; line-height:26px\9; *line-height:23px; _height:20px; _line-height:20px; _padding-top:3px;}
+a.sub_btn { height:19px; line-height:19px; line-height:21px\9; *line-height:18px; _height:17px; _line-height:17px; _padding-top:2px;}
+a.btn span { _display:block;}
+/* end a btn */
+
+.confirm_btn {background-position:0 -90px; border:1px solid #dc681a; color:#fff}
+.confirm_btn:hover {background-position:0 -120px; border:1px solid #dc681a; color:#fff; } 
+.disabled_confirm_btn, .disabled_confirm_btn:hover { background-position:0 -150px; cursor:default; border:1px solid #cacaca; color:#d3d3d3;} 
+
+.quick_link_btn {background-position:0 -180px; border:1px solid #c4b695; color:#7c654b}
+.quick_link_btn:hover {background-position:0 -210px; border:1px solid #ecc35f; color:#9a7347; } 
+
+.btn .add,.btn .delete, .btn .search,.btn .select_user, .btn .select_space, .btn .expansion ,.choose_staff, .add_staff, .btn .print{ background: url(btn_icon_bg.png) no-repeat 0 0; background-image:url(btn_icon_bg_ie.png)\9; margin-left:-5px;padding-left:20px;}
+.btn .add { background-position:0 0px; /*background-position:0 3px/9;*/}
+.btn .delete { background-position:0 -30px; }
+.btn .search { background-position:0 -60px;}
+.btn .select_user { background-position:0 -90px;}
+.btn .select_space { background-position:0 -120px;}
+.btn .expansion { background-position:0 -150px;}
+.btn .choose_staff{background-position:0 -300px; }
+.btn .add_staff { background-position:0 -330px; }
+.btn .print{background-position:0 -360px;}
+
+.search_btn { background-position:0 -270px; width:76px; height:26px; overflow:hidden; border:none}
+.search_btn:hover { background-position:0 -300px; border:none;}
+.search_btn span { display:none;}
+
+.add_staff_btn{background-position:0 -540px;width:91px;height:20px;}
+
+.booking_btn_1 { background-position:0 -360px; width:64px; height:26px; overflow:hidden; border:none}
+.booking_btn_1:hover { background-position:0 -390px; border:none;}
+.booking_btn_1 span { display:none;}
+
+.booking_btn_2 { background-position:0 -450px; width:88px; height:26px; overflow:hidden; border:none}
+.booking_btn_2:hover { background-position:0 -480px; border:none;}
+.booking_btn_2 span { display:none;}
+
+.close_btn { background:url(close_btn_bg.png) no-repeat 0 0; width:13px; height:13px; text-indent:-2000px; position:absolute; right:5px; top:5px; z-index:1; cursor:pointer; overflow:hidden;}
+/*.close_btn:hover { background-position:0 -20px;}*/
+
+.btn .move_right, .btn .move_left{ background: url(btn_icon_bg.png) no-repeat 0 0; _background-image:url(btn_icon_bg_ie.png); margin-left:-5px; padding-left:20px;}
+
+.btn .move_right { background-position:0 -180px; padding-left:7px; margin-right:-5px;}
+.btn .move_left { background-position:0 -240px; padding-left:7px; margin-right:-5px;}
+.btn:hover .move_right {background-position:0 -210px;}
+.btn:hover .move_left {background-position:0 -270px;}

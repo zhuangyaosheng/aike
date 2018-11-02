@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "等待审核-注册";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+}
+<div class="regWrapper">
+    <div  style="padding-top: 40px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <h1>会员注册</h1>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid reg-step2 reg-step4">
+            <div class="result-msg clearfix" style="padding-left:100px;">
+                <label class="icon"></label>
+                <div class="text">
+                    <p><span style="font-size:20px;">注册成功，请等待审核</span></p>
+                    <p>5秒后将跳转到首页（<span id="lblNum">5</span>）</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var i = 5;
+        var timer = setInterval(function () {
+            if (i == 1) {
+                clearInterval(timer)
+                window.location = "/UserRegister/WelCome";
+            } else {               
+                i--;
+                $("#lblNum").text(i);
+            };
+        }, 800);
+    });
+
+    
+</script>

@@ -1,0 +1,68 @@
+﻿@{
+    Layout = null;
+    int NavIndex = (Model == null || Model.NavIndex == null) ? -1 : Model.NavIndex;
+    
+}
+
+<div class="hm-slo-nav">
+        <div class="hm-slo-nav__bd">
+            <ul>
+                 <li class="pitem">
+                    <div class="hm-slo-nav__cate">解决方案</div>
+                    <ul class="children">
+                       
+                        <li class="pitem"><a class="it @(NavIndex == 1 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="MicroPartner"})">微合伙人</a></li>
+                        @*<li class="pitem">
+                            <a class="it @(NavIndex == 2 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="Poster"})">专属海报</a>
+                        </li>*@
+                        <li class="pitem">
+                            <a class="it @(NavIndex == 3 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="Vote"})">投票选款</a>
+                        </li>
+                        <li class="pitem">
+                            <a class="it @(NavIndex == 4 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="Lottery"})">抽奖活动</a>
+                        </li>
+                        <li class="pitem">
+                            <a class="it @(NavIndex == 6 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="ExchangeShop"})">兑换商城</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            @*<ul>
+                <li class="pitem">
+                    <div class="hm-slo-nav__cate">淘系特色功能</div>
+                    <ul class="children">
+                        <li class="pitem"><a class="it @(NavIndex == 0 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="Evaluation"})">晒评价</a></li>
+                        <li class="pitem"><a class="it @(NavIndex == 1 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="MicroPartner"})">微合伙人</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="hm-slo-nav__cate">营销工具</div>
+                    <ul class="children">
+                        <li class="pitem">
+                            <a class="it @(NavIndex == 2 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="Poster"})">专属海报</a>
+                        </li>
+                        <li class="pitem">
+                            <a class="it @(NavIndex == 3 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="Vote"})">投票选款</a>
+                        </li>
+                        <li class="pitem">
+                            <a class="it @(NavIndex == 4 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="Lottery"})">抽奖活动</a>
+                        </li>
+                        <li class="pitem">
+                            <a class="it @(NavIndex == 5 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="RebateOrder"})">订单返利</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="hm-slo-nav__cate">营销工具</div>
+                    <ul class="children">
+                        <li class="pitem">
+                            <a class="it @(NavIndex == 6 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="ExchangeShop"})">兑换商城</a>
+                        </li>
+                        <li class="pitem">
+                            <a class="it @(NavIndex == 7 ? "it-active" : string.Empty)" href="@Url.Action("Solution", "Index", new { id="RebateShop"})">返利商城</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>*@
+        </div>
+    </div>

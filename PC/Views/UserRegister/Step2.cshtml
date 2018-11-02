@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "邮箱激活-注册";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+}
+<div class="regWrapper">
+    <div  style="padding-top: 40px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        *注册前你可以先了解<a href="/RegHelper/introduce" target="_blank" style="color:#0066d3">《艾客入驻流程》</a>
+    </div>
+    <div class="step-panel">
+        <ul>
+            <li><i>1</i>基本信息</li>
+            <li class="activity"><i>2</i>邮箱激活</li>
+            <li><i>3</i>信息登记</li>
+            <li><i>4</i>等待审核</li>
+        </ul>
+    </div>
+    <h1>会员注册</h1>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid reg-step2">
+            <div class="result-msg clearfix">
+                <label class="icon"></label>
+                <div class="text">
+                    邮件已发送到邮箱 <em>29431025@qq.com</em>
+                    <p>请在24小时内点击邮件中的链接继续完成注册。</p>
+                    <a class="btn" href="#">立即查收邮件</a>
+                </div>
+            </div>
+            <div class="re-send">
+                <p class="text1">没收到邮件?</p>
+                <p>请先检查是否在垃圾邮件中，如果还未收到请<a href="#" class="btn-m1">重新发送邮件</a></p>
+            </div>
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

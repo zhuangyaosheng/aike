@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "找回密码";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+}
+@section scripts{
+    
+}
+<div class="regWrapper">
+    <div class="step-panel">
+        <ul>
+            <li class="activity"><i>1</i>找回密码</li>
+            <li class="activity"><i>2</i>查收邮件</li>
+            <li class="activity"><i>3</i>重设密码</li>
+            <li class="activity"><i>4</i>重设状态</li>
+        </ul>
+    </div>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid reg-step2 reg-step4">         
+                @{
+                    if(ViewData["findresult"] == "success")
+                    {                
+                <div class="result-msg clearfix">
+                    <label class="icon"></label>
+                    <div class="text">                        
+                        <p>恭喜，新的密码已经设置成功。</p>
+                    </div>
+                    <div class="input-panel">
+                        <input type="submit" class="btn" value="重新登陆" onclick="window.location = '/';"/>
+                    </div>
+                </div>
+                }
+                else{
+                <div class="result-msg clearfix">
+                    <label class="icon"></label>
+                    <div class="text">                        
+                        <p>您的重置密码链接已失效，请重新提交申请。</p>
+                    </div>
+                    <div class="input-panel">
+                        <input type="submit" class="btn" value="找回密码" onclick="window.location = '/ForgetPassword/Step1';"/>
+                    </div>
+                </div>
+                }
+               }
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

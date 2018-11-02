@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "艾客功能解决方案-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/solution/");
+    ViewBag.TopMenuSolutionNavIndex = 2;
+}
+<link href="@Url.Content("~/Content/Login/solution/hm-solution.css")" rel="stylesheet">
+
+<div class="hm-solution-banner">
+    <div class="hm-slo-bnr__bd">
+        <h1 class="hm-slo-bnr__bd-title">艾客功能解决方案</h1>
+        <div class="hm-slo-bnr__bd-desc">艾客针对电商营销诸多痛点，从社群营销本质出发，以成功案例为载体，深入浅出的详解各类多元化营销工具使用方<br>法，给出针对性解决方案，让电商营销简单起来！
+        </div>
+    </div>
+</div>
+<div class="hm-slo-cns">
+    @{Html.RenderPartial("~/Views/Index/Solution/_PartialNav.cshtml", new { NavIndex = ViewBag.TopMenuSolutionNavIndex });}
+    <div class="hm-slo-article">
+        <div class="hm-slo-article__ins">
+            <h1 class="hm-slo-art__tl">新增3W粉丝有多难？只要一个活动的时间！</h1>
+            <p>做电商难，做电商微信公众号更难；吸粉难，迅速吸粉更难，总而言之都是一把辛酸泪。不过最近某美妆商家的一个活动，让小艾看到了吸粉真的so easy，只是我们不懂玩……</p>
+            <h2>活动背景</h2>
+            <p>为达到公众号迅速增粉、产品促销和品牌宣传的效果，某美妆商家在3月7日 至 3月9日期间使用艾客的专属海报功能搞起了“女神节红包海报”活动。整场活动人力成本只需一人，宣传成本几乎为零，生成海报人数5193人，新增粉丝数3W多人！</p>
+            <h2>数据亮点</h2>
+            <p>三天内海报生成数和新增粉丝数的对比</p>
+            <p><img src="@(imgPath)zshb-11.jpg"></p>
+       @*     <p>活动全程的海报生成数:</p>
+            <p><img src="@(imgPath)zshb-02.jpg"></p>
+            <p>活动结束后的海报生成数和新增粉丝数:</p>
+            <p><img src="@(imgPath)zshb-03.jpg"></p>*@
+            <p>两分钟在艾客后台新建专属海报活动，然后活动结束后，恭喜你获得了3W+粉丝，有了粉丝基础，会员营销你想怎么玩就怎么玩。</p>
+            <h2>活动详情</h2>
+            <p>专属海报可以利用粉丝不断地裂变新粉丝关注，达成快速吸粉的效果，同时也低成本加强品牌推广跟宣传力度。<br/>
+             这次活动先在店铺公众号后台输入“女神红包”即可获得玩法。
+            </p>
+            <p>页面呈现：</p>
+            <p><img src="@(imgPath)zshb-12.jpg"></p>
+            <p><img src="@(imgPath)zshb-13.jpg"></p>       
+            <p><img src="@(imgPath)zshb-14.jpg"></p>          
+            <p>活动3天持续下来累计绑定且关注的人数达到了3W+！肉眼可见的效果啊！</p>
+            <p>这次女神红包活动可以说是非常成功了，这个玩法你学会了吗？有什么疑问或者建议，扫码关注下方戳艾客专业社群营销顾问，保证包教包会哦！</p>
+        </div>
+    </div>
+</div>

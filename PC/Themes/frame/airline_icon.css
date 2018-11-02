@@ -1,0 +1,195 @@
+/* flight name */
+
+.pubFlights_3u,.pubFlights_3U,.pubFlights_8c,.pubFlights_8C,.pubFlights_8l,.pubFlights_8L,.pubFlights_bk,.pubFlights_BK,.pubFlights_ca,.pubFlights_CA,.pubFlights_cn,.pubFlights_CN,.pubFlights_cz,.pubFlights_CZ,.pubFlights_eu,.pubFlights_EU,.pubFlights_fm,.pubFlights_FM,.pubFlights_g5,.pubFlights_G5,.pubFlights_gs,.pubFlights_GS,.pubFlights_ho,.pubFlights_HO,.pubFlights_hu,.pubFlights_HU,.pubFlights_kn,.pubFlights_KN,.pubFlights_mf,.pubFlights_MF,.pubFlights_mu,.pubFlights_MU,.pubFlights_ns,.pubFlights_NS,.pubFlights_pn,.pubFlights_PN,.pubFlights_sc,.pubFlights_SC,.pubFlights_zh,.pubFlights_ZH,.pubFlights_vd,.pubFlights_VD,.pubFlights_jr,.pubFlights_JR,.pubFlights_9w,.pubFlights_9W,.pubFlights_aa,.pubFlights_AA,.pubFlights_ab,.pubFlights_AB,.pubFlights_ac,.pubFlights_AC,.pubFlights_af,.pubFlights_AF,.pubFlights_ai,.pubFlights_AI,.pubFlights_ay,.pubFlights_AY,.pubFlights_az,.pubFlights_AZ,.pubFlights_ba,.pubFlights_BA,.pubFlights_bd,.pubFlights_BD,.pubFlights_bi,.pubFlights_BI,.pubFlights_br,.pubFlights_BR,.pubFlights_ci,.pubFlights_CI,.pubFlights_co,.pubFlights_CO,.pubFlights_cx,.pubFlights_CX,.pubFlights_dl,.pubFlights_DL,.pubFlights_ek,.pubFlights_EK,.pubFlights_et,.pubFlights_ET,.pubFlights_ft,.pubFlights_FT,.pubFlights_ga,.pubFlights_GA,.pubFlights_jk,.pubFlights_JK,.pubFlights_jl,.pubFlights_JL,.pubFlights_jp,.pubFlights_JP,.pubFlights_ka,.pubFlights_KA,.pubFlights_ke,.pubFlights_KE,.pubFlights_kl,.pubFlights_KL,.pubFlights_kq,.pubFlights_KQ,.pubFlights_la,.pubFlights_LA,.pubFlights_lh,.pubFlights_LH,.pubFlights_lo,.pubFlights_LO,.pubFlights_lx,.pubFlights_LX,.pubFlights_ly,.pubFlights_LY,.pubFlights_ma,.pubFlights_MA,.pubFlights_mh,.pubFlights_MH,.pubFlights_nh,.pubFlights_NH,.pubFlights_nw,.pubFlights_NW,.pubFlights_nx,.pubFlights_NX,.pubFlights_nz,.pubFlights_NZ,.pubFlights_ok,.pubFlights_OK,.pubFlights_os,.pubFlights_OS,.pubFlights_oz,.pubFlights_OZ,.pubFlights_pg,.pubFlights_PG,.pubFlights_pr,.pubFlights_PR,.pubFlights_qf,.pubFlights_QF,.pubFlights_qr,.pubFlights_QR,.pubFlights_sk,.pubFlights_SK,.pubFlights_sn,.pubFlights_SN,.pubFlights_sq,.pubFlights_SQ,.pubFlights_su,.pubFlights_SU,.pubFlights_tg,.pubFlights_TG,.pubFlights_tk,.pubFlights_TK,.pubFlights_ua,.pubFlights_UA,.pubFlights_ul,.pubFlights_UL,.pubFlights_un,.pubFlights_UN,.pubFlights_vn,.pubFlights_VN,.pubFlights_vs,.pubFlights_VS,.pubFlights_vv,.pubFlights_VV,.pubFlights_hx,.pubFlights_HX,.pubFlights_uo,.pubFlights_UO,.pubFlights_jd,.pubFlights_JD,.pubFlights_ey,.pubFlights_EY,.pubFlights_us,.pubFlights_US,.pubFlights_ky,.pubFlights_KY, .pubFlights_ae, .pubFlights_AE, .pubFlights_ge, .pubFlights_GE,.pubFlights_b7,.pubFlights_B7{
+
+	background-color:transparent;
+	background-image:url(../images/pic_flightslogo.gif);
+	background-repeat:no-repeat;
+	*zoom:1;
+	
+}
+/* domestic */
+.pubFlights_3u, .pubFlights_3U { background-position:0 0; }
+.pubFlights_8c, .pubFlights_8C { background-position:0 -48px; }
+.pubFlights_8l, .pubFlights_8L { background-position:0 -96px; }
+.pubFlights_bk, .pubFlights_BK { background-position:0 -144px; }
+.pubFlights_ca, .pubFlights_CA { background-position:0 -192px; }
+.pubFlights_cn, .pubFlights_CN { background-position:0 -240px; }
+.pubFlights_cz, .pubFlights_CZ { background-position:0 -288px; }
+.pubFlights_eu, .pubFlights_EU { background-position:0 -336px; }
+.pubFlights_fm, .pubFlights_FM { background-position:0 -384px; }
+.pubFlights_g5, .pubFlights_G5 { background-position:0 -432px; }
+.pubFlights_gs, .pubFlights_GS { background-position:0 -480px; }
+.pubFlights_ho, .pubFlights_HO { background-position:0 -528px; }
+.pubFlights_hu, .pubFlights_HU { background-position:0 -576px; }
+.pubFlights_kn, .pubFlights_KN { background-position:0 -624px; }
+.pubFlights_mf, .pubFlights_MF { background-position:0 -672px; }
+.pubFlights_mu, .pubFlights_MU { background-position:0 -720px; }
+.pubFlights_ns, .pubFlights_NS { background-position:0 -768px; }
+.pubFlights_pn, .pubFlights_PN { background-position:0 -816px; }
+.pubFlights_sc, .pubFlights_SC { background-position:0 -864px; }
+.pubFlights_zh, .pubFlights_ZH { background-position:0 -912px; }
+.pubFlights_vd, .pubFlights_VD { background-position:0 -960px; }
+.pubFlights_jr, .pubFlights_JR { background-position:0 -3008px; }
+.pubFlights_ky, .pubFlights_KY { background-position:0 -3040px; }
+
+/* international */
+.pubFlights_9w, .pubFlights_9W { background-position:0 -992px; }
+.pubFlights_aa, .pubFlights_AA { background-position:0 -1024px; }
+.pubFlights_ab, .pubFlights_AB { background-position:0 -1056px; }
+.pubFlights_ac, .pubFlights_AC { background-position:0 -1088px; }
+.pubFlights_af, .pubFlights_AF { background-position:0 -1120px; }
+.pubFlights_ai, .pubFlights_AI { background-position:0 -1152px; }
+.pubFlights_ay, .pubFlights_AY { background-position:0 -1184px; }
+.pubFlights_az, .pubFlights_AZ { background-position:0 -1216px; }
+.pubFlights_ba, .pubFlights_BA { background-position:0 -1248px; }
+.pubFlights_bd, .pubFlights_BD { background-position:0 -1280px; }
+.pubFlights_bi, .pubFlights_BI { background-position:0 -1312px; }
+.pubFlights_br, .pubFlights_BR { background-position:0 -1344px; }
+.pubFlights_ci, .pubFlights_CI { background-position:0 -1376px; }
+.pubFlights_co, .pubFlights_CO { background-position:0 -1408px; }
+.pubFlights_cx, .pubFlights_CX { background-position:0 -1440px; }
+.pubFlights_dl, .pubFlights_DL { background-position:0 -1472px; }
+.pubFlights_ek, .pubFlights_EK { background-position:0 -1504px; }
+.pubFlights_et, .pubFlights_ET { background-position:0 -1536px; }
+.pubFlights_ft, .pubFlights_FT { background-position:0 -1568px; }
+.pubFlights_ga, .pubFlights_GA { background-position:0 -1600px; }
+.pubFlights_jk, .pubFlights_JK { background-position:0 -1632px; }
+.pubFlights_jl, .pubFlights_JL { background-position:0 -1664px; }
+.pubFlights_jp, .pubFlights_JP { background-position:0 -1696px; }
+.pubFlights_ka, .pubFlights_KA { background-position:0 -1728px; }
+.pubFlights_ke, .pubFlights_KE { background-position:0 -1760px; }
+.pubFlights_kl, .pubFlights_KL { background-position:0 -1792px; }
+.pubFlights_kq, .pubFlights_KQ { background-position:0 -1824px; }
+.pubFlights_la, .pubFlights_LA { background-position:0 -1856px; }
+.pubFlights_lh, .pubFlights_LH { background-position:0 -1888px; }
+.pubFlights_lo, .pubFlights_LO { background-position:0 -1920px; }
+.pubFlights_lx, .pubFlights_LX { background-position:0 -1952px; }
+.pubFlights_ly, .pubFlights_LY { background-position:0 -1984px; }
+.pubFlights_ma, .pubFlights_MA { background-position:0 -2016px; }
+.pubFlights_mh, .pubFlights_MH { background-position:0 -2048px; }
+.pubFlights_nh, .pubFlights_NH { background-position:0 -2080px; }
+.pubFlights_nw, .pubFlights_NW { background-position:0 -2112px; }
+.pubFlights_nx, .pubFlights_NX { background-position:0 -2144px; }
+.pubFlights_nz, .pubFlights_NZ { background-position:0 -2176px; }
+.pubFlights_ok, .pubFlights_OK { background-position:0 -2208px; }
+.pubFlights_os, .pubFlights_OS { background-position:0 -2240px; }
+.pubFlights_oz, .pubFlights_OZ { background-position:0 -2272px; }
+.pubFlights_pg, .pubFlights_PG { background-position:0 -2304px; }
+.pubFlights_pr, .pubFlights_PR { background-position:0 -2336px; }
+.pubFlights_qf, .pubFlights_QF { background-position:0 -2368px; }
+.pubFlights_qr, .pubFlights_QR { background-position:0 -2400px; }
+.pubFlights_sk, .pubFlights_SK { background-position:0 -2432px; }
+.pubFlights_sn, .pubFlights_SN { background-position:0 -2464px; }
+.pubFlights_sq, .pubFlights_SQ { background-position:0 -2496px; }
+.pubFlights_su, .pubFlights_SU { background-position:0 -2528px; }
+.pubFlights_tg, .pubFlights_TG { background-position:0 -2560px; }
+.pubFlights_tk, .pubFlights_TK { background-position:0 -2592px; }
+.pubFlights_ua, .pubFlights_UA { background-position:0 -2624px; }
+.pubFlights_ul, .pubFlights_UL { background-position:0 -2656px; }
+.pubFlights_un, .pubFlights_UN { background-position:0 -2688px; }
+.pubFlights_vn, .pubFlights_VN { background-position:0 -2720px; }
+.pubFlights_vs, .pubFlights_VS { background-position:0 -2752px; }
+.pubFlights_vv, .pubFlights_VV { background-position:0 -2784px; }
+.pubFlights_hx, .pubFlights_HX { background-position:0 -2832px; }
+.pubFlights_uo, .pubFlights_UO { background-position:0 -2880px; }
+.pubFlights_jd, .pubFlights_JD { background-position:0 -2913px; }
+.pubFlights_ey, .pubFlights_EY { background-position:0 -2944px; }
+.pubFlights_us, .pubFlights_US { background-position:0 -2976px; }
+.pubFlights_ae, .pubFlights_AE { background-position:0 -3072px; }
+.pubFlights_ge, .pubFlights_GE { background-position:0 -3104px; }
+.pubFlights_b7, .pubFlights_B7 { background-position:0 -3136px; }
+/* end fight name */
+
+/* domestic */
+.iflight_info_list .pubFlights_3u, .iflight_info_list .pubFlights_3U { background-position:center 0; }
+.iflight_info_list .pubFlights_8c, .iflight_info_list .pubFlights_8C { background-position:center -48px; }
+.iflight_info_list .pubFlights_8l, .iflight_info_list .pubFlights_8L { background-position:center -96px; }
+.iflight_info_list .pubFlights_bk, .iflight_info_list .pubFlights_BK { background-position:center -144px; }
+.iflight_info_list .pubFlights_ca, .iflight_info_list .pubFlights_CA { background-position:center -192px; }
+.iflight_info_list .pubFlights_cn, .iflight_info_list .pubFlights_CN { background-position:center -240px; }
+.iflight_info_list .pubFlights_cz, .iflight_info_list .pubFlights_CZ { background-position:center -288px; }
+.iflight_info_list .pubFlights_eu, .iflight_info_list .pubFlights_EU { background-position:center -336px; }
+.iflight_info_list .pubFlights_fm, .iflight_info_list .pubFlights_FM { background-position:center -384px; }
+.iflight_info_list .pubFlights_g5, .iflight_info_list .pubFlights_G5 { background-position:center -432px; }
+.iflight_info_list .pubFlights_gs, .iflight_info_list .pubFlights_GS { background-position:center -480px; }
+.iflight_info_list .pubFlights_ho, .iflight_info_list .pubFlights_HO { background-position:center -528px; }
+.iflight_info_list .pubFlights_hu, .iflight_info_list .pubFlights_HU { background-position:center -576px; }
+.iflight_info_list .pubFlights_kn, .iflight_info_list .pubFlights_KN { background-position:center -624px; }
+.iflight_info_list .pubFlights_mf, .iflight_info_list .pubFlights_MF { background-position:center -672px; }
+.iflight_info_list .pubFlights_mu, .iflight_info_list .pubFlights_MU { background-position:center -720px; }
+.iflight_info_list .pubFlights_ns, .iflight_info_list .pubFlights_NS { background-position:center -768px; }
+.iflight_info_list .pubFlights_pn, .iflight_info_list .pubFlights_PN { background-position:center -816px; }
+.iflight_info_list .pubFlights_sc, .iflight_info_list .pubFlights_SC { background-position:center -864px; }
+.iflight_info_list .pubFlights_zh, .iflight_info_list .pubFlights_ZH { background-position:center -912px; }
+.iflight_info_list .pubFlights_vd, .iflight_info_list .pubFlights_VD { background-position:center -960px; }
+.iflight_info_list .pubFlights_jr, .iflight_info_list .pubFlights_JR { background-position:center -3008px; }
+.iflight_info_list .pubFlights_ky, .iflight_info_list .pubFlights_KY { background-position:center -3040px; }
+
+/* international */
+.iflight_info_list .pubFlights_9w, .iflight_info_list .pubFlights_9W { background-position:center -992px; }
+.iflight_info_list .pubFlights_aa, .iflight_info_list .pubFlights_AA { background-position:center -1024px; }
+.iflight_info_list .pubFlights_ab, .iflight_info_list .pubFlights_AB { background-position:center -1056px; }
+.iflight_info_list .pubFlights_ac, .iflight_info_list .pubFlights_AC { background-position:center -1088px; }
+.iflight_info_list .pubFlights_af, .iflight_info_list .pubFlights_AF { background-position:center -1120px; }
+.iflight_info_list .pubFlights_ai, .iflight_info_list .pubFlights_AI { background-position:center -1152px; }
+.iflight_info_list .pubFlights_ay, .iflight_info_list .pubFlights_AY { background-position:center -1184px; }
+.iflight_info_list .pubFlights_az, .iflight_info_list .pubFlights_AZ { background-position:center -1216px; }
+.iflight_info_list .pubFlights_ba, .iflight_info_list .pubFlights_BA { background-position:center -1248px; }
+.iflight_info_list .pubFlights_bd, .iflight_info_list .pubFlights_BD { background-position:center -1280px; }
+.iflight_info_list .pubFlights_bi, .iflight_info_list .pubFlights_BI { background-position:center -1312px; }
+.iflight_info_list .pubFlights_br, .iflight_info_list .pubFlights_BR { background-position:center -1344px; }
+.iflight_info_list .pubFlights_ci, .iflight_info_list .pubFlights_CI { background-position:center -1376px; }
+.iflight_info_list .pubFlights_co, .iflight_info_list .pubFlights_CO { background-position:center -1408px; }
+.iflight_info_list .pubFlights_cx, .iflight_info_list .pubFlights_CX { background-position:center -1440px; }
+.iflight_info_list .pubFlights_dl, .iflight_info_list .pubFlights_DL { background-position:center -1472px; }
+.iflight_info_list .pubFlights_ek, .iflight_info_list .pubFlights_EK { background-position:center -1504px; }
+.iflight_info_list .pubFlights_et, .iflight_info_list .pubFlights_ET { background-position:center -1536px; }
+.iflight_info_list .pubFlights_ft, .iflight_info_list .pubFlights_FT { background-position:center -1568px; }
+.iflight_info_list .pubFlights_ga, .iflight_info_list .pubFlights_GA { background-position:center -1600px; }
+.iflight_info_list .pubFlights_jk, .iflight_info_list .pubFlights_JK { background-position:center -1632px; }
+.iflight_info_list .pubFlights_jl, .iflight_info_list .pubFlights_JL { background-position:center -1664px; }
+.iflight_info_list .pubFlights_jp, .iflight_info_list .pubFlights_JP { background-position:center -1696px; }
+.iflight_info_list .pubFlights_ka, .iflight_info_list .pubFlights_KA { background-position:center -1728px; }
+.iflight_info_list .pubFlights_ke, .iflight_info_list .pubFlights_KE { background-position:center -1760px; }
+.iflight_info_list .pubFlights_kl, .iflight_info_list .pubFlights_KL { background-position:center -1792px; }
+.iflight_info_list .pubFlights_kq, .iflight_info_list .pubFlights_KQ { background-position:center -1824px; }
+.iflight_info_list .pubFlights_la, .iflight_info_list .pubFlights_LA { background-position:center -1856px; }
+.iflight_info_list .pubFlights_lh, .iflight_info_list .pubFlights_LH { background-position:center -1888px; }
+.iflight_info_list .pubFlights_lo, .iflight_info_list .pubFlights_LO { background-position:center -1920px; }
+.iflight_info_list .pubFlights_lx, .iflight_info_list .pubFlights_LX { background-position:center -1952px; }
+.iflight_info_list .pubFlights_ly, .iflight_info_list .pubFlights_LY { background-position:center -1984px; }
+.iflight_info_list .pubFlights_ma, .iflight_info_list .pubFlights_MA { background-position:center -2016px; }
+.iflight_info_list .pubFlights_mh, .iflight_info_list .pubFlights_MH { background-position:center -2048px; }
+.iflight_info_list .pubFlights_nh, .iflight_info_list .pubFlights_NH { background-position:center -2080px; }
+.iflight_info_list .pubFlights_nw, .iflight_info_list .pubFlights_NW { background-position:center -2112px; }
+.iflight_info_list .pubFlights_nx, .iflight_info_list .pubFlights_NX { background-position:center -2144px; }
+.iflight_info_list .pubFlights_nz, .iflight_info_list .pubFlights_NZ { background-position:center -2176px; }
+
+.iflight_info_list .pubFlights_ok, .iflight_info_list .pubFlights_OK { background-position:center -2208px; }
+.iflight_info_list .pubFlights_os, .iflight_info_list .pubFlights_OS { background-position:center -2240px; }
+.iflight_info_list .pubFlights_oz, .iflight_info_list .pubFlights_OZ { background-position:center -2272px; }
+.iflight_info_list .pubFlights_pg, .iflight_info_list .pubFlights_PG { background-position:center -2304px; }
+.iflight_info_list .pubFlights_pr, .iflight_info_list .pubFlights_PR { background-position:center -2336px; }
+.iflight_info_list .pubFlights_qf, .iflight_info_list .pubFlights_QF { background-position:center -2368px; }
+.iflight_info_list .pubFlights_qr, .iflight_info_list .pubFlights_QR { background-position:center -2400px; }
+.iflight_info_list .pubFlights_sk, .iflight_info_list .pubFlights_SK { background-position:center -2432px; }
+.iflight_info_list .pubFlights_sn, .iflight_info_list .pubFlights_SN { background-position:center -2464px; }
+.iflight_info_list .pubFlights_sq, .iflight_info_list .pubFlights_SQ { background-position:center -2496px; }
+.iflight_info_list .pubFlights_su, .iflight_info_list .pubFlights_SU { background-position:center -2528px; }
+.iflight_info_list .pubFlights_tg, .iflight_info_list .pubFlights_TG { background-position:center -2560px; }
+.iflight_info_list .pubFlights_tk, .iflight_info_list .pubFlights_TK { background-position:center -2592px; }
+.iflight_info_list .pubFlights_ua, .iflight_info_list .pubFlights_UA { background-position:center -2624px; }
+.iflight_info_list .pubFlights_ul, .iflight_info_list .pubFlights_UL { background-position:center -2656px; }
+.iflight_info_list .pubFlights_un, .iflight_info_list .pubFlights_UN { background-position:center -2688px; }
+.iflight_info_list .pubFlights_vn, .iflight_info_list .pubFlights_VN { background-position:center -2720px; }
+.iflight_info_list .pubFlights_vs, .iflight_info_list .pubFlights_VS { background-position:center -2752px; }
+.iflight_info_list .pubFlights_vv, .iflight_info_list .pubFlights_VV { background-position:center -2784px; }
+.iflight_info_list .pubFlights_hx, .iflight_info_list .pubFlights_HX { background-position:center -2832px; }
+.iflight_info_list .pubFlights_uo, .iflight_info_list .pubFlights_UO { background-position:center -2880px; }
+.iflight_info_list .pubFlights_jd, .iflight_info_list .pubFlights_JD { background-position:center -2913px; }
+.iflight_info_list .pubFlights_ey, .iflight_info_list .pubFlights_EY { background-position:center -2944px; }
+.iflight_info_list .pubFlights_us, .iflight_info_list .pubFlights_US { background-position:center -2976px; }
+.iflight_info_list .pubFlights_ae, .iflight_info_list .pubFlights_AE { background-position:center -3072px; }
+.iflight_info_list .pubFlights_ge, .iflight_info_list .pubFlights_GE { background-position:center -3104px; }
+.iflight_info_list .pubFlights_b7, .iflight_info_list .pubFlights_B7 { background-position:center -3136px; }

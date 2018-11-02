@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "在提升搜索权重和销量上，没有平台比我们更专业-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/info/home_mk_tool/");
+}
+<!--快速提升店铺销量-->
+<div class="wrapper content-wrap">
+    <div class="inner-body">
+        <div class="table">
+            <div class="cell">
+                <div class="info-container">
+                    <h1 class="title">全网电商整合营销战略！多元化工具立体化运营！</h1>
+                    <div class="cn-panel">
+                        <p>新经济常态下，电商作为崛起最强势的一股劲风，网络化了每个人的方方面面。这种渗透力以春风化雨的形式，步步紧逼的节奏，将传统电商颠覆，形成新的社群电商生态链。归根究底，一切都要得益于电商行业对多元化营销工具的深耕。</p>
+                        <p><strong>全渠道覆盖电商，多元化营销工具不容抗拒！</strong></p>
+                        <p>晒评价、晒图有礼、返利、微跳转、微合伙人、专属海报、投票选款、物流查询……<br/>
+                        万千种营销工具可供选择！电商平台可以做到的，我们可以，平台做不到的，我们依旧可以做到！打破一切限制，为电商运营而生！</p>
+                        <p><img src="@(imgPath)01.jpg" /></p>
+                        <p><strong>全网独家优势</strong></p>
+                        <p>艾客营销工具借助微信提高电商平台互动和销售，并从平台规则出发，每一项都完美避开平台封杀和限制，突破规则才能打破平凡！操作简单方便，全流程透明化，消费者自主操作，大大降低人工和返利成本！智能后台审核系统，精准画出每一个用户素描，对症下药，高效提升复购率！在快速提高淘宝搜索权重和店铺DSR方面，没有人比我们更专业！</p>
+                        <p><img src="@(imgPath)02.jpg" /></p>
+                        <p>艾客以商家自身的营销诉求作为出发点，把商家需求核心提炼，并开发出各类营销工具快速方便的解决商家难题，提供全网全网电商整合营销战略解决方案，让运营简单起来！更多营销工具不断开发中……</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell news-list">
+                @{Html.RenderPartial("Info/_RightPartial");}
+            </div>
+        </div>
+    </div>
+</div>

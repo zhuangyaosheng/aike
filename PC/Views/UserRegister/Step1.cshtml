@@ -1,0 +1,110 @@
+﻿@{
+    ViewBag.Title = "基本信息-注册";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+    int regError_Code = IMyBest.WeiXin.AgentServer.Common.TypeHelper.ToInt32(ViewData["RegError_Code"]);
+    
+}
+@section scripts{
+    <script>
+        $(function () {
+            $("form").submit(function () {
+                var mailrgx = /^\w+([-+.]\w+)*@@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                if (!mailrgx.test($("#regmail").val())) {
+                    alert("输入的邮箱格式不正确");
+                    return false;
+                }
+                if ($("#regpassword").val().length < 6) {
+                    alert("密码必须是大于6位的字母、数字或英文符号");
+                    return false;
+                }
+                if ($("#regpassword").val() != $("#confirmpassword").val()) {
+                    alert("两次输入的密码不一致");
+                    return false;
+                }
+                if ($("#checkcode").val() == "") {
+                    alert("请输入验证码");
+                    return false;
+                }
+                if (!$("input[name=agree]").is(':checked')) {
+                    alert("请先阅读并同意遵循协议");
+                    return false;
+                }
+                return true;
+            });
+        });
+</script>
+
+}
+<div class="regWrapper">
+    <div style="padding-top: 40px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        *注册前你可以先了解<a href="/RegHelper/introduce" target="_blank" style="color:#0066d3">《艾客入驻流程》</a>
+    </div>
+    <div class="step-panel">
+        <ul>
+            <li class="activity"><i>1</i>基本信息</li>
+            <li><i>2</i>邮箱激活</li>
+            <li><i>3</i>信息登记</li>
+            <li><i>4</i>等待审核</li>
+        </ul>
+    </div>
+    <h1>会员注册</h1>
+    <div class="reg-form">
+        <div class="tp"></div>
+        <div class="mid">
+                <form name="form1" method="post" id="form1" action="/UserRegister/Step1">
+                <div class="section">
+                    <label>邮箱</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" id="regmail" name="regmail" value="@ViewData["regmail"]" maxlength="200"/>
+                         @if (regError_Code==1)
+                         {
+                             <font color="red">输入的邮箱已注册</font><a href="@Url.Action("Main","Index")" class="lg">&nbsp;&nbsp;立即登录</a>
+                         }
+                         else
+                         {
+                             <font color="red">@ViewData["RegError"]</font>
+                         }
+                        <p>用来登录公众平台，接收到激活邮件才能完成注册</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <label>密码</label>
+                    <div class="input-panel">
+                        <input type="password" class="input" id="regpassword" name="regpassword" maxlength="100"/> <font color="red">@ViewData["PasswordError"]</font>
+                        <p>字母、数字或者英文符号，最短6位，区分大小写</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <label>确认密码</label>
+                    <div class="input-panel">
+                        <input type="password" class="input" id="confirmpassword" name="confirmpassword" maxlength="100"/> <font color="red">@ViewData["ConfirmPasswordError"]</font>
+                        <p>请再次输入密码确认</p>
+                    </div>
+                </div>
+                <div class="section v-code">
+                    <label>验证码</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" id="checkcode" name="checkcode" maxlength="20"/> 
+                        <img title="如果您无法识别验证码，请点图片更换" onclick="this.src='/UserRegister/keycode?t='+Math.random()"
+                         src="/UserRegister/keycode/" style="cursor: pointer;" align="absmiddle" /> 点击图片更换 <font color="red">@ViewData["CheckCodeError"]</font>
+                    </div>
+                </div>
+                <div class="section terms">
+                    <div class="input-panel">
+                        <input type="checkbox" id="agree" name="agree" value="1" />
+                        我同意并遵循<a href="@Url.Action("Index","Agreement")" target="_blank">《注册条款》</a>
+                    </div>
+                </div>
+                <div class="section terms">
+                    <label>&nbsp;</label>
+                    <div class="input-panel">
+                        <input type="submit" class="btn" value="下一步" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

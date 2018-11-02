@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/info/"); 
+}
+<div class="wrapper content-wrap">
+    <div class="inner-body">
+        <div class="table">
+            <div class="cell">
+                <div class="info-container">
+                    <h1 class="title">艾客正在招聘</h1>
+                    <div class="cn-panel">
+                        <p><strong>架构系统师</strong></p>
+                        <p>岗位职责： <br />
+1、负责公司产品技术基础架构的设计、规划和实施； <br />
+2、对开发人员提供技术和架构知识培训和指导，领导研发小组进行技术攻关，突破关键技术瓶颈； <br />
+3、对系统的高可靠性、高可扩展性、高安全性负责。</p>
+                        <p>
+                            任职要求： <br />
+1、计算机相关专业全日制本科以上学历，7年以上.NET软件开发经验， 4年以上系统架构设计经验；  <br />
+2、精通.NET框架，.NET开发平台，熟悉JavaScript、CSS、DOM 及 AJAX 开发技术；  <br />
+3、深刻理解软件系统架构，精通面向对象分析设计方法，逻辑能力佳，具有丰富的OOA、OOD、OOP、UML及SOA经验；  <br />
+4、精通各种常用框架和技术，如：Lucene、MongoDB、Memcached、Redis、Ngix等；  <br />
+5、熟悉网站、数据库负载均衡等服务器体系架构，有大型web网站架构经验者优先考虑； <br />
+6、有移动网络平台开发经验。
+                        </p>
+                        <p><strong>电话销售</strong></p>
+                        <p>
+                            岗位职责： <br />
+1、通过电话与客户进行有效沟通了解客户需求, 寻找销售机会并完成销售业绩； <br />
+2、定期给客户做产品的培训和指导； <br />
+3、做好客户关系维护，提高客户的续费率；
+                        </p>
+                        <p>任职要求： <br />
+1、有1年以上电话销售工作经验，有亲和力，良好的电话礼仪和沟通技巧； <br />
+2、普通话流利，具备较强的语言表达能力； <br />
+3、对电商和微信营销的结合有独到的见解和看法； <br />
+4、快速的学习能力及反应能力，良好的抗压能力。</p>
+                        <div style="text-align:center; padding-top:60px;">我们的工作地点 <br />
+
+广州 <br />
+
+简历发送至 <br />
+<a href="mailto:fly_liu@aiagain.com">huangym@aiagain.com</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell news-list">
+                @{Html.RenderPartial("Info/_RightPartial");}
+            </div>
+        </div>
+    </div>
+</div>

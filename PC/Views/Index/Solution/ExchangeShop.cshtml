@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "艾客功能解决方案-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/solution/");
+    ViewBag.TopMenuSolutionNavIndex = 6;
+}
+<link href="@Url.Content("~/Content/Login/solution/hm-solution.css")" rel="stylesheet">
+
+<div class="hm-solution-banner">
+    <div class="hm-slo-bnr__bd">
+        <h1 class="hm-slo-bnr__bd-title">艾客功能解决方案</h1>
+        <div class="hm-slo-bnr__bd-desc">艾客针对电商营销诸多痛点，从社群营销本质出发，以成功案例为载体，深入浅出的详解各类多元化营销工具使用方<br>法，给出针对性解决方案，让电商营销简单起来！
+        </div>
+    </div>
+</div>
+<div class="hm-slo-cns">
+    @{Html.RenderPartial("~/Views/Index/Solution/_PartialNav.cshtml", new { NavIndex = ViewBag.TopMenuSolutionNavIndex });}
+    <div class="hm-slo-article">
+         <div class="hm-slo-article__ins">
+            <h1 class="hm-slo-art__tl">既要留住你的人，也要留住你的心！回头客、复购率、老客户维护一招拿下！</h1>
+            <p>费尽心机和金钱办了一场活动，吸引大批粉丝入驻公众号，下一秒就要销量破百万，接单接到手抽筋的时候，你会发现他们默默的取关了！！拿完福利就跑，人之常情……<br/>
+            疯狂收割完粉丝之后，如何不动声色的维护并将他们转化为你的忠实拥护者，才是社群营销的真谛所在。<br/>
+            以某保健品商家为例，我们来看看他是怎么留住老客户，提升复购率的吧！
+            </p>
+            <h2>活动背景</h2>
+            <p>该商家一直使用艾客的兑换商城功能，通过使用积分或者小汤圆（经验值）免费兑换礼品，增加粉丝粘度，让粉丝的积分或者小汤圆有地方花，体现其价值，也肯定粉丝获得积分或者小汤圆的动作。<br/>
+            商城页面是长这样子的……直接公众号进入即可兑换。
+            </p>
+            <p><img src="@(imgPath)dhsc-01.jpg"></p>
+            <h2>数据亮点</h2>
+            <p>下图数据仅是9月其中五天的数据统计，可以明显看到兑换订单达到近700人，粉丝量增加了一万多人，坐火箭都没那么快！</p>
+            <p>
+            <table>
+                <tr>
+                    <td></td>
+                    <td>兑换订单</td>
+                    <td>粉丝量</td>
+                </tr>
+                <tr>
+                    <td>活动前</td>
+                    <td>／</td>
+                    <td>289887</td>
+                </tr>
+                <tr>
+                    <td>活动后</td>
+                    <td>683</td>
+                    <td>297112</td>
+                </tr>
+            </table>
+            </p>
+            <h2>如何搭建商城</h2>
+            <p>艾客牌傻白甜后台，简单安全高效，无毒无副作用，配合下图使用更佳。兑换礼品和菜单栏两次设置，自定义更易控制成本。</p>
+            <h3>（1）兑换礼品设置</h3>
+            <p>【艾客后台】—【兑换商城】—【礼品设置】—【点击新建】</p>
+            <p><img src="@(imgPath)dhsc-02.jpg"></p>
+            <h3>（2）菜单栏设置</h3>
+            <p>【艾客后台】-【微信功能】-【公众号菜单栏】-【新建】</p>
+            <p><img src="@(imgPath)dhsc-03.jpg"></p>
+            <h2>活动效果</h2>
+            <p>该商家长期使用兑换商城功能，在激活老粉丝，增加粉丝粘度，提高原粉丝复购率的同时充分利用积分和小汤圆给粉丝福利，提高公众号价值。粉丝在通过其他活动来获得积分或小汤圆的时候，活跃性大大增加。<br/>
+            小艾建议可以通过礼品兑换减少库存积压哦，用福利来给自家打广告，效果不言而喻。
+            </p>
+        </div>
+    </div>
+</div>

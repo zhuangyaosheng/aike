@@ -1,0 +1,150 @@
+html,body{
+  background-color:#ffffff;
+}
+img{vertical-align: top;}
+map area{ outline: none; }
+.shop-banner{
+  background-color: #3388ff;
+  height: 470px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.shop-banner .im-was{
+  width: 1920px;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 50%;
+  margin-left: -960px;
+}
+
+.shop-section .ins{
+  width: 968px;
+  margin: 0 auto;
+}
+.shop-section-1{
+  background-color: #e3eff3;
+}
+.shop-section-2,
+.shop-section-5,
+.shop-section-7{
+  background-color: #ffffff;
+}
+.shop-section-3,
+.shop-section-6{
+  background-color: #f2f2f2;
+}
+.shop-section h3{
+  color: #33373a;
+  font-size: 24px;
+  text-align: center;
+  margin: 50px 0;
+  font-weight: normal;
+}
+.shop-section .bn-w{
+  text-align: center;
+  padding: 34px 0;
+}
+.shop-form{
+  background-color: #f8fafc;
+}
+.shop-form h3{
+  font-size: 36px;
+  margin: 0;
+  padding-top: 54px;
+}
+.shop-form .desc{
+  color: #666666;
+  font-size: 18px;
+  padding: 15px 0 35px 0;
+  text-align: center;
+}
+.shop-form .red{
+  color: #e80013;
+}
+.merchant-form{
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.merchant-form input{
+  outline: 0;
+}
+.merchant-form h4{
+  color: #333333;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 15px 0;
+}
+.merchant-form table {
+  text-align: center;
+  width: 80%;
+  margin:0 auto;
+}
+.merchant-form table  td{
+  padding: 10px 0;
+  font-size: 20px;
+}
+.merchant-form table  tr td:only-child{
+  text-align: center;
+}
+.merchant-form table  td:first-child{
+  width: 30%;
+  color: #000000;
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: right;
+}
+.merchant-form table  td i{
+  display: inline-block;
+  vertical-align: middle;
+  color: #ff0000;
+  font-style: normal;
+}
+.merchant-form table  td input{
+  border:1px solid #cccccc;
+  padding:10px;
+  width: 80%;
+}
+.merchant-form table  td .submit{
+  display: block;
+  margin: 20px auto;
+  background: url("../images/btn1.png") no-repeat;
+  width: 187px;
+  height: 46px;
+  border: 0;
+  cursor: pointer;
+}
+
+.scroll-menu{
+    display:block;
+}
+.mp-menu-rt{
+    display:none;
+    background:url(../images/menu.png) no-repeat;
+    width:202px;
+    height:399px;
+    position:fixed;
+    right:0;
+    top:35%;
+}
+.mp-menu-rt a{
+    display:block;
+    position:absolute;
+    width:102px;
+    height:30px;
+    left:53px;
+}
+.mp-menu-rt .a1{
+    top:168px;
+}
+.mp-menu-rt .a2{
+    top:219px;
+}
+.mp-menu-rt .a3{
+    top:254px;
+}

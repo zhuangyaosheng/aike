@@ -1,0 +1,73 @@
+﻿@using IMyBest.WeiXin.AgentServer.Services
+@{
+    ViewBag.Title = "手机找回密码";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+
+    string agentServer = ViewData["AgentServer"] != null ? ViewData["AgentServer"].ToString() : string.Empty;
+
+    bool isFUP = FUPlanBaseService.CheckIsFUP(ViewData["platform"]);
+}
+
+@section style{
+    <style type="text/css">
+        .tipImg {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        var verificationCodeIntervalTime = @ViewData["WaitSeconds"];
+    </script>
+    <script src="../../Scripts/ResetPassword.js?t=180719"></script>
+}
+<div class="regWrapper">
+    <div class="step-panel">
+        <ul>
+            <li class="activity">重设密码</li>
+        </ul>
+    </div>
+    <div class="reg-form">
+        <div class="tp" style="overflow: visible; margin-top: -5px"></div>
+        <div class="mid">
+            <form name="form1" method="post" autocomplete="off">
+                <div class="section">
+                    <label>手机号</label>
+                    <div class="input-panel" style="height: 57px;">
+                        <input type="text" class="input" id="mobile" style="width: 280px; margin-right: 10px;"   /><span id="tipImg1" style="width: 30px; display: inline-block;"></span>
+                        <a href="@(BaseService.AddUrlParam(agentServer + "/ForgetPassword/Step1", ViewData["platform"]))" style="color: blue; margin-left: 20px;">账号为邮箱地址</a>
+                        <br />
+                        <span style="color: red; display: none;" id="tip1"></span>
+                    </div>
+                </div>
+                <div class="section v-code">
+                    <label>验证码</label>
+                    <div class="input-panel" style="height: 57px;">
+                        <input type="text" class="input" id="checkcode" style="width: 170px;"  autocomplete="new-password" value=""/>
+                        <input type="button" class="btn" value="发送验证码" id="btngetcode" style="cursor: pointer; width: 80px; font-size: 12px; height: 36px; line-height: 36px; margin-left: 20px; margin-right: 15px;" /><span id="tipImg2" style="width: 30px; display: inline-block;"></span>
+                        <br />
+                        <span style="color: red; display: none;" id="tip2"></span>
+                    </div>
+                </div>
+                <div class="section v-code">
+                    <label>重设密码</label>
+                    <div class="input-panel" style="height: 56px;">
+                        <input type="password" class="input" id="newPwd" style="width: 280px; margin-right: 10px;"  autocomplete="new-password" value=""/><span id="tipImg3" style="width: 30px; display: inline-block;"></span>
+                        <br />
+                        <span style="color: red; display: none;" id="tip3"></span>
+                    </div>
+                </div>
+                <div class="section terms">
+                    <label>&nbsp;</label>
+                    <div class="input-panel">
+                        <input type="button" class="btn" value="确认" id="btnSure" style="cursor: pointer" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

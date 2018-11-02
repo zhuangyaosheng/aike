@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "艾客功能解决方案-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/solution/");
+    ViewBag.TopMenuSolutionNavIndex = 4;
+}
+<link href="@Url.Content("~/Content/Login/solution/hm-solution.css")" rel="stylesheet">
+
+<div class="hm-solution-banner">
+    <div class="hm-slo-bnr__bd">
+        <h1 class="hm-slo-bnr__bd-title">艾客功能解决方案</h1>
+        <div class="hm-slo-bnr__bd-desc">艾客针对电商营销诸多痛点，从社群营销本质出发，以成功案例为载体，深入浅出的详解各类多元化营销工具使用方<br>法，给出针对性解决方案，让电商营销简单起来！
+        </div>
+    </div>
+</div>
+<div class="hm-slo-cns">
+    @{Html.RenderPartial("~/Views/Index/Solution/_PartialNav.cshtml", new { NavIndex = ViewBag.TopMenuSolutionNavIndex });}
+    <div class="hm-slo-article">
+        <div class="hm-slo-article__ins">
+            <h1 class="hm-slo-art__tl">11W铁杆粉丝哪里来？和我签订魔法契约领取超值大奖吧！</h1>
+            <p>还有人记得朋友圈被微商支配的恐惧吗？彩妆、零食、服装……应有尽有，简直魔幻！能坚守在你的朋友圈就是因为他们时常会做很多活动，点赞有礼，抽奖等等。虽然古老但是却非常有效果。<br/>
+            有位美妆商家在艾客做了个抽奖活动，收割了11万粉丝！再次见证了抽奖的魔力！
+            </p>
+            <h2>抽奖的形式和作用</h2>
+            <p>抽奖活动是指通过免费抽奖/关注即可抽奖/绑定即可抽奖/购物即可抽奖等方式，营造出良好的促销氛围，吸引新顾客，留住老顾客的营销形式。除此之外对增加公众号互动，提升粉丝粘性，提高公众号价值也有不可忽视的作用。</p>
+            <h2>数据亮点</h2>
+            <p>粉丝量增加近11万人,调动6万多人参与，中奖人数4万多</p>
+            <p>
+            <table>
+                <tr>
+                    <td></td>
+                    <td>活动参与人数</td>
+                    <td>中奖人数</td>
+                    <td>粉丝量</td>
+                </tr>
+                <tr>
+                    <td>活动前</td>
+                    <td>／</td>
+                    <td>／</td>
+                    <td>162357</td>
+                </tr>
+                <tr>
+                    <td>活动后</td>
+                    <td>65980人</td>
+                    <td>43987人</td>
+                    <td>280484</td>
+                </tr>
+            </table>
+            </p>
+            <h2>流程详解</h2>
+            <p>1、在艾客后台找到【抽奖活动】，新建一个活动页。</p>
+            <p><img src="@(imgPath)qjhd-01.jpg"></p>
+            <p>2、注意奖品的设置哦。</p>
+            <p><img src="@(imgPath)qjhd-02.jpg"></p>
+            <p>3、活动页自定义设置</p>
+            <p><img src="@(imgPath)qjhd-03.jpg"></p>
+            <p>4、活动页面最后呈现效果！</p>
+            <p><img src="@(imgPath)qjhd-04.jpg"></p>
+            <p>5、最后推送，该商家本次使用了微信公众号推文的方式，配合店铺内文字推广和个人号推广效果更赞噢！</p>
+            <p><img src="@(imgPath)qjhd-05.jpg"></p>
+            <h2>活动效果</h2>
+            <p>本次活动商家经过方便快捷的低成本操作模式，通过活动预热，提高了公众号价值，为店铺营销活动打下基础、储备流量；激活了老客户，增加了粉丝粘度，从而提高原粉丝的复购率。<br/>
+              同时吸引新粉丝关注，引进了更多流量！小艾强力推荐大家使用这个功能噢！</p>
+        </div>
+    </div>
+</div>

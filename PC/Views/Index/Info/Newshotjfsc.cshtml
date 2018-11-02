@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "既要留住你的人，也要留住你的心！回头客、复购率、老客户维护一招拿下-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/info/home_hot_jfsc/");
+}
+<!--积分商城-->
+<div class="wrapper content-wrap">
+    <div class="inner-body">
+        <div class="table">
+            <div class="cell">
+                <div class="info-container">
+                    <h1 class="title">既要留住你的人，也要留住你的心！回头客、复购率、老客户维护一招拿下！</h1>
+                    <div class="cn-panel">
+                        <p>积分商城的“积分”概念，指的是用户在消费后获得的一种奖励，从而实现客户关怀、客户忠诚度提升的目的。</p>
+                        <p>艾客积分商城秉承活跃粉丝，维系老客，每一个新粉都是未来的死忠粉原则，努力做到回头客如过江之鲫，复购率涨得比房价快，和老客户做知心好友！</p>
+                        <p><strong>成功案例</strong></p>
+                        <p>该商家一直使用艾客的兑换商城功能，通过使用积分或者小汤圆（经验值）免费兑换礼品，增加粉丝粘度，让粉丝的积分或者小汤圆有地方花，体现其价值，也肯定粉丝获得积分或者小汤圆的动作。</p>
+                        <p>直接公众号进入即可兑换,商城页面如下：</p>
+                        <p><img src="@(imgPath)01.jpg" /></p>
+                        <p>9月份随机抽取5天数据显示兑换订单达到近700人，粉丝量增加了一万多人。</p>
+                        <p><img src="@(imgPath)02.jpg" /></p>
+                        <p>该商家长期使用兑换商城功能，在激活老粉丝，增加粉丝粘度，提高原粉丝复购率的同时充分利用积分和小汤圆给粉丝福利，提高公众号价值。粉丝在通过其他活动来获得积分或小汤圆的时候，活跃性大大增加。</p>
+                        <p><strong>如何成功使用积分兑换商城</strong></p>
+                        <p>艾客后台，简单安全高效，无毒无副作用，配合下图使用更佳。兑换礼品和菜单栏两次设置，自定义更易控制成本。</p>
+                        <p>（1）兑换礼品设置</p>
+                        <p>【艾客后台】—【兑换商城】—【礼品设置】—【点击新建】</p>
+                        <p><img src="@(imgPath)03.jpg" /></p>
+                        <p>（2）菜单栏设置</p>
+                        <p>【艾客后台】-【微信功能】-【公众号菜单栏】-【新建】</p>
+                        <p><img src="@(imgPath)04.jpg" /></p>
+                        <p>完成！就是这么简单，礼品兑换减少库存积压，福利疯狂赢口碑，一次购买，百次复购，尽在艾客积分兑换商城！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell news-list">
+                @{Html.RenderPartial("Info/_RightPartial");}
+            </div>
+        </div>
+    </div>
+</div>

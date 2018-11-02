@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "艾客打破平台限制，全新运营模式带你玩转粉丝-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/info/home_st_fans/");
+}
+<!--玩转粉丝-->
+<div class="wrapper content-wrap">
+    <div class="inner-body">
+        <div class="table">
+            <div class="cell">
+                <div class="info-container">
+                    <h1 class="title">艾客打破平台限制，全新运营模式带你玩转粉丝</h1>
+                    <div class="cn-panel">
+                        <p><strong>多元化营销工具疯狂收割粉丝</strong></p>
+                        <p>微信服务号直发现金红包，解决拉粉，抽奖，返现，分销四大瓶颈！<br/>
+                        宝贝试用：拉粉即拿试用资格或者淘宝下单微信返现，增加销量吸粉两不误！<br/>
+                        专属的H5：完美实现市面H5软华丽效果！<br/>
+                        宝贝选款：抛开钻展，忘记开车，直接微信实现测款！<br/>
+                        投票功能：引发朋友圈投票热潮，疯狂裂变粉丝！
+                        </p>
+                        <p>DIY海报，自定义设计，用户自主生成个性化海报，配合有奖投票，海报评比，促销活动等使用，低成本拉大基数粉丝，多到离谱！</p>
+                        <p><img src="@(imgPath)01.jpg" /></p>
+                        <p><strong>会员统一管理系统</strong></p>
+                        <p>全网会员管理服务体系，将全网的会员集中到微信进行管理，并采用被公认最有效的会员管理方式！</p>
+                        <p>所谓双轨的积分体系通俗来说，就是消费者在我们店铺购买产品，获得积分，粉丝每天微信签到，并拉友关注我们的微信号，参加和转发活动都只能获得经验值。积分和经验值都可在兑换商城兑换礼物！</p>
+                        <p>活用所有粉丝行为，最后培养成忠实粉丝，为你每一次上新买单！</p>
+                        <p><img src="@(imgPath)02.jpg" /></p>
+                        <p>艾客带你玩转粉丝，吸粉，活化，裂变，忠实粉丝一步到位！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell news-list">
+                @{Html.RenderPartial("Info/_RightPartial");}
+            </div>
+        </div>
+    </div>
+</div>

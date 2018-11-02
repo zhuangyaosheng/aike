@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "艾客功能解决方案-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/solution/");
+    ViewBag.TopMenuSolutionNavIndex = 7;
+}
+<link href="@Url.Content("~/Content/Login/solution/hm-solution.css")" rel="stylesheet">
+
+<div class="hm-solution-banner">
+    <div class="hm-slo-bnr__bd">
+        <h1 class="hm-slo-bnr__bd-title">艾客功能解决方案</h1>
+        <div class="hm-slo-bnr__bd-desc">艾客针对电商营销诸多痛点，从社群营销本质出发，以成功案例为载体，深入浅出的详解各类多元化营销工具使用方<br>法，给出针对性解决方案，让电商营销简单起来！
+        </div>
+    </div>
+</div>
+<div class="hm-slo-cns">
+    @{Html.RenderPartial("~/Views/Index/Solution/_PartialNav.cshtml", new { NavIndex = ViewBag.TopMenuSolutionNavIndex });}
+    <div class="hm-slo-article">
+        <div class="hm-slo-article__ins">
+            <h1 class="hm-slo-art__tl">秒升淘宝权重，安全高效不惧封杀!</h1>
+            <p>想做活动快速提高销量，平台规则却一次次封杀，低价销售又会影响产品售卖最低价。如何安全快速提高淘宝权重，艾客有大招--返利商城！</p>
+            <p>6天参与人数高达3069人，轻松提高店铺真实销量，避开淘宝封杀，淘宝权重急速上升。</p>
+            <h3>商家背景</h3>
+            <p>某商家上新三款水杯，作为七夕主打，但上架后一周销量差强人意。艾客运营客服与其运营沟通分析后发现详情页，客服，产品服务都是没有问题的，只是缺乏流量。在艾客运营的建议下，该品牌决定使用返利商城功能，快速提升销量，提高淘宝权重。</p>
+            <p><img src="@(imgPath)poster01.jpg" /></p>
+            <h3>数据对比</h3>
+            <p>三款杯子上新后6天总销量只有489单，在返利商城活动后同时间达到了3069单，12天的销量，活动销量占了总销量的86％。</p>
+            <p><img src="@(imgPath)poster02.jpg" /></p>
+            <h3>活动思路</h3>
+            <p>活动前三天推送活动信息，利用公众号返利商城为店铺引流，商家获得一批真实销量，老客重复购买还可提高店铺权重，消费者低价拿到了优质产品，同时为商家公众号吸引了大批粉丝。</p>
+            <h3>时间</h3>
+            <p>
+                预热：8月6日--公众号推送返利商城链接<br />
+                活动时间：<br />
+                迪士尼杯--2017.08.09-2017.08.10<br />
+                弹跳杯--2017.08.10-2017.08.11<br />
+                水果杯--2017.08.11-2017.08.14<br />
+            </p>
+            <h3>流程</h3>
+            <p>
+                1.在艾客后台营销活动的返利商城中创建活动，在公众号进行返利商城的推送；<br />
+                <img src="@(imgPath)poster03.jpg" /><br />
+            </p>
+            <p>
+                2.消费者抢返利名额，并绑定手机号；<br />
+                <img src="@(imgPath)poster04.jpg" />
+            </p>
+            <p>
+                 3.进入淘宝购买；<br />
+                 4.确认收货后，艾客按商家设置的时间抓取订单金额返现对应微信号。<br />
+                 一人操作四步设置轻松解决所有问题！
+            </p>
+            <h3>活动总结</h3>
+            <p>该商家利用返利商城，提高产品真实销量，淘宝权重加速提升。整场活动人力和时间成本投入少，在销量，淘宝权重，公众号粉丝三方面都有明显效果，同时促进粉丝互动，增加粉丝粘性，培养了一定的品牌忠诚。</p>
+            <h3>小艾建议</h3>
+            <p>返利商城这个功能，对于各类商家都是非常适用的。打造爆款，回馈老客户，还可以公众号吸粉，给店铺带来新流量，尤其是对快速提高淘宝搜索权重有着举足轻重的作用。</p>
+        </div>
+    </div>
+</div>

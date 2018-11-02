@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "找回密码";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+    ViewBag.webIsLogin = false;
+}
+@section scripts{
+    <script>
+        $(function () {
+            $("form").submit(function () {
+                var mailrgx = /^\w+([-+.]\w+)*@@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                if (!mailrgx.test($("#findmail").val())) {
+                    alert("输入的邮箱格式不正确");
+                    return false;
+                }
+                if ($("#checkcode").val() == "") {
+                    alert("请输入验证码");
+                    return false;
+                }
+                return true;
+            });
+        });
+</script>
+
+}
+<div class="regWrapper">
+    <div class="step-panel">
+        <ul>
+            <li class="activity"><i>1</i>找回密码</li>
+            <li><i>2</i>查收邮件</li>
+            <li><i>3</i>重设密码</li>
+            <li><i>4</i>重设状态</li>
+        </ul>
+    </div>
+    <div class="reg-form">
+        <div class="tp" style="overflow:visible;margin-top:-5px"></div>
+        <div class="mid" style="height:280px;">
+                <form name="form1" method="post" id="form1" action="/ForgetPassword/Step1">
+                <div class="section" style="height: 86px;">
+                    <label>邮箱</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" id="findmail" name="findmail" value="@ViewData["findmail"]"/>  <a href="ResetByMobile" style="color:blue;margin-left:20px;">账号为手机号</a> 
+                        <p>用来登录公众平台，接收到激活邮件才能完成注册</p> 
+                        <p><font color="red">@ViewData["FindError"]</font></p>
+                    </div>
+                </div>                
+                <div class="section v-code" style="height: 66px;">
+                    <label>验证码</label>
+                    <div class="input-panel">
+                        <input type="text" class="input" id="checkcode" name="checkcode"/> 
+                        <img title="如果您无法识别验证码，请点图片更换" onclick="this.src='/UserRegister/keycode?'+Math.random()"
+                         src="/UserRegister/keycode/" style="cursor: pointer;margin-top:6px;margin-left:20px;" align="absmiddle" />  点击图片更换
+                        <p><font color="red">@ViewData["CheckCodeError"]</font></p>
+                    </div>
+                </div>                
+                <div class="section terms">
+                    <label>&nbsp;</label>
+                    <div class="input-panel">
+                        <input type="submit" class="btn" value="下一步" style="cursor:pointer;" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>

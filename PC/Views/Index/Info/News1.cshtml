@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/v3");
+}
+
+ <div class="about-banner"></div>
+    <div class="about-spm about-spm1">
+        <div class="about-spm1__hd">
+            <h3>为企业打造创新的移动社群生态体系</h3>
+            <div class="about-spm1_st">我们的定位</div>
+        </div>
+        <ul class="about-spm1__sn">
+           <li>
+               <div class="about-spm1__sn-li">
+                   <div class="title">艾客</div>
+                   <div class="en-title">Aiagain</div>
+                   <div class="cns">
+                       “艾客”，是一个创新地借助微信打通全渠道的全新移动电商平台，是解决电商运营的微信社群营销平台。
+                   </div>
+               </div>
+           </li>
+            <li>
+                <div class="about-spm1__sn-li">
+                    <div class="title">核心</div>
+                    <div class="en-title">Core</div>
+                    <div class="cns">
+                        借助微信与电商平台生意紧密结合，实现低成本、系统化社群管理，提高平台店铺的销售额和复购率。
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="about-spm1__sn-li">
+                    <div class="title">使命</div>
+                    <div class="en-title">Mission</div>
+                    <div class="cns">
+                        为企业打造创新的移动社群生态体系！
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="about-spm1__sn-li">
+                    <div class="title">目标</div>
+                    <div class="en-title">Target</div>
+                    <div class="cns">
+                        用我们的专业，为客户创造价值，为社会发展进步做出贡献！
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="about-spm1__model">
+            <div class="about-spm1__model--hd">
+                <span class="s1">运</span><span class="s2">作</span><span class="s3">模</span><span class="s4">式</span>
+            </div>
+            <div class="about-spm1__model--info">
+                <h3 class="title">为传统电商定制的微信社群营销实效解决方案</h3>
+                <p class="desc">通过将各电商平台会员打通，将平台的会员引入微信并转化成商家的会员，建立商家的微信粉丝<br>
+                    社群和粉丝系统化识别，实现大数据分析和精准营销。</p>
+            </div>
+        </div>
+    </div>
+    <div class="about-spm-core">
+        <div class="about-core">
+            <h1 class="about-core__title">核心功能</h1>
+            <div class="about-core__pm" style="left: 396px;top:160px;">
+                <h3 class="title">全渠道会员体系搭建</h3>
+                <p class="desc">全渠道会员集中管理，借助微信更有效地触达并管理<br>会员与粉丝。</p>
+                <p class="sum">解决痛点：<br>
+                    <span class="t">灵活掌控粉丝，聚集流量，平台流量不再浪费。</span></p>
+            </div>
+            <div class="about-core__pm" style="left: 28px;top:482px;">
+                <h3 class="title">精准推送</h3>
+                <p class="desc">借助数据的匹配，帮助商家自动识别会员与粉丝， 实<br>现精准化营销。</p>
+                <p class="sum">解决痛点：<br>
+                    <span class="t">大幅提升阅读率、复购率，有效降低掉粉率。</span></p>
+            </div>
+            <div class="about-core__pm" style="left: 412px;top:750px;">
+                <h3 class="title">淘系功能</h3>
+                <p class="desc">借助微信红包功能，系统优化店铺评价、提升加<br>购加收藏量、新，爆款打造、独立社群打造等。</p>
+                <p class="sum">解决痛点：<br>
+                    <span class="t">大大降低运营成本和操作成本，提升复购。</span></p>
+            </div>
+            <div class="about-core__pm" style="left: 32px;top:1056px;">
+                <h3 class="title">特色互动功能</h3>
+                <p class="desc">投票、问卷、幸运抽奖、海报等丰富多样的趣味营销<br>功能，调动粉丝参与活动积极性，培养忠实度，提升<br>公众号使用频次，快速吸粉。</p>
+                <p class="sum">解决痛点：<br>
+                    <span class="t">降低吸粉和培养粉丝的成本，省时省钱达到活跃粉丝人群效果。</span></p>
+            </div>
+            <div class="about-core__pm" style="left: 412px;top:1376px;">
+                <h3 class="title">定向营销功能</h3>
+                <p class="desc">优惠券指定群体发送，试用返利定向参与，优惠不落<br>空。</p>
+                <p class="sum">解决痛点：<br>
+                    <span class="t">改变复购率提升困难的局面，定向激活。</span></p>
+            </div>
+        </div>
+    </div>
+@{Html.RenderPartial("_PartialCus", Url.Content("~/Content/Login/v3/"));}

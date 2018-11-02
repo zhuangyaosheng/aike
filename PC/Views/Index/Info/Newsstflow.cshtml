@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "艾客模式，社群营销平台-艾客";
+    ViewBag.KeyWords = "精准推送、微信运营、复购率";
+    ViewBag.Description = "微信新媒体运营、电商老会员维护、微信里的精准推送";
+    Layout = "~/Views/Index/Info/_Layout.cshtml";
+    string imgPath = Url.Content("~/Content/Login/info/home_st_flow/");
+}
+<!--让你成为流量主人翁-->
+<div class="wrapper content-wrap">
+    <div class="inner-body">
+        <div class="table">
+            <div class="cell">
+                <div class="info-container">
+                <h1 class="title"> 艾客模式，社群营销平台！</h1>
+                <div class="cn-panel">
+                    <p><strong>连接微信与电商平台，做流量整合王者！</strong></p>
+                    <p>艾客通过将各电商平台会员打通，将平台的会员引入微信并转化成商家的会员，建立商家的微信粉丝。<br/>
+                    社群和粉丝系统化识别，实现大数据分析和精准营销。
+                    </p>
+                    <p><strong>黑科技强势加盟，微信粉丝变店铺销量！</strong></p>
+                    <p>艾客微跳转一键连接微信与淘宝，社交流量等于店铺销量！</p>
+                    <p><strong>四大步骤四大优势！</strong></p>
+                    <p>1、极速跳转，不给用户冷静思考的时间，冲动永远是消费强大的助攻！<br/>
+                       2、安全稳定，专业高精团队深研多时，千次测试无一失误才敢横空出世！<br/>
+                       3、顶级域名，方便查找容易记忆，保证独立性和可信度！<br/>
+                       4、不惧时效， 一次生成万次使用，永久有效！
+                    </p>
+                    <p><img src="@(imgPath)01.jpg" /></p>
+                    <p>艾客作为国内首家将全网电商平台与微信服务号进行数据打通的社群电商平台，在借助微信与电商平台生意紧密结合，实现低成本、系统化社群管理，提高平台店铺的销售额和复购率方面有着专业的技术研发团队，资深社群营销大神，稳定的营销系统……！万事俱备，就缺你一个使用！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell news-list">
+                @{Html.RenderPartial("Info/_RightPartial");}
+            </div>
+        </div>
+    </div>
+</div>

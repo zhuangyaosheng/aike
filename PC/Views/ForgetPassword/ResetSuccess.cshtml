@@ -1,0 +1,29 @@
+﻿@using IMyBest.WeiXin.AgentServer.Services
+@{
+    ViewBag.Title = "ResetSuccess";
+    Layout = "~/Views/Shared/_LayoutLoginWithReg.cshtml";
+
+    string agentServer = ViewData["AgentServer"] != null ? ViewData["AgentServer"].ToString() : string.Empty;
+}
+
+<div class="regWrapper">
+    <div class="step-panel">
+        <ul>
+            <li class="activity">密码修改成功</li>
+        </ul>
+    </div>
+    <div class="reg-form" >
+        <div class="tp" style="overflow: visible; margin-top: -5px"></div>
+        <div class="mid">
+            <div class="section">
+                <div class="input-panel" style="height: 356px;padding-left:80px;">
+                    <p><img src="../../Content/themes/default/images/wx_swith_true.png" /> <span style="font-size: xx-large;margin-left:20px;">恭喜你，密码修改成功</span></p>
+                    <div style="margin-top:38px;margin-left:90px;cursor:pointer">
+                        <input type="button" class="btn" value="返回登录页面" style="cursor:pointer;" onclick="javascript: window.location.href ='@(BaseService.AddUrlParam(agentServer + "/Index/Login", ViewData["platform"]))'" /> 
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="bt"></div>
+    </div>
+</div>
